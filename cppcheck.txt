@@ -1,0 +1,11 @@
+[account.c:49]: (style) Unused variable: fileName
+[account.c:69]: (warning) Dangerous usage of strncat - 3rd parameter is the maximum number of characters to append.
+[account.c:82]: (warning) Dangerous usage of strncat - 3rd parameter is the maximum number of characters to append.
+[account.c:116]: (warning) Dangerous usage of strncat - 3rd parameter is the maximum number of characters to append.
+[account.c:141]: (warning) Dangerous usage of strncat - 3rd parameter is the maximum number of characters to append.
+[account.c:142]: (warning) Dangerous usage of strncat - 3rd parameter is the maximum number of characters to append.
+[account.c:144]: (warning) Dangerous usage of strncat - 3rd parameter is the maximum number of characters to append.
+[account.c:145]: (warning) Dangerous usage of strncat - 3rd parameter is the maximum number of characters to append.
+[account.c:104]: (warning) fscanf() without field width limits can crash with huge input data.
+[account.c:107]: (error) Resource leak: file
+(information) Cppcheck cannot find all the include files (use --check-config for details)
