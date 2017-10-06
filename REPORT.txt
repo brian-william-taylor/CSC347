@@ -60,7 +60,15 @@ Impact d:
 
 --------------------------------------------------------------------
                               ISSUE 3
-Vulnerability: By
+Vulnerability: By using negative number (using the minus "-" sign) but not by using integer overflow.
+
+$USER=num1
+$./account pw1
+$USER=num2
+$./account pw2
+$./account pw2 num1 -100
+
+There are also no lower limits on accounts, people can take far more money than is in the account.
 
 Exploit a: 
 Impact a:

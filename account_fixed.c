@@ -2,7 +2,6 @@
 #include<stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <limits>
 
 
 /**
@@ -44,12 +43,70 @@ Each user can now execute
 
 */
 
+
+
+
+// Create system to make sure there is a password and log file
+int setup(){
+	FILE * f;
+	f = fopen("/vulnerable/.passwords", "a");
+	fclose(f);
+        f = fopen("/vulnerable/.log", "a");
+	fclose(f);
+        return 0;
+}
+
+
+// To check if a user is attempting XSS
+int check(char * input){
+	int * i = input.begin();
+        while (i!=input.end()){
+                // If the user tries to run multiple commands
+                if (*i.compare(";") == 0){
+                        return 1;
+                }
+                // If the user tries to run multiple commands
+                else if(*i.compare("&") == 0){
+                        return 1;
+                }
+                // If the user attempts to access the parent direct$
+                else if (*i.compare(".") == 0){
+			return 1;
+                }
+        }
+	return 0;
+}
+
+
+
+// If we want to sanitze the users input
+int sanitize(char * input){
+	int * i = input.begin();
+	while (i!=input.end()){
+		// If the user tries to run multiple commands
+		if (*i.compare(";") == 0){
+			*i="\0";
+			break;
+		}
+		// If the user tries to run multiple commands
+		else if(*i.compare("&") == 0){
+			*i="\0";
+			break;
+		}
+		// If the user attempts to access the parent directory, terminate the string
+		else if (*i.compare(".") == 0){
+			*i="\0";
+			break;
+		}
+	}
+}
+
 // The user is not in the system, so add them and their password
 int addUser(char * user, char * password){
 	FILE * file;
 	char fileName[100];
 
-	file=fopen("/vulnerable/passwords","r+");
+	file=fopen("/vulnerable/.passwords","r+");
 	// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
 	fseek(file, 0, SEEK_END);
 	fputs(user,file);
@@ -68,7 +125,7 @@ int getAccount(char * user){
 	int amount=0;
 
 	strncpy(fileName, "/vulnerable/accounts/",100);
-	strncat(fileName, user, 100);
+	strncat(fileName, user, std::begin(fileName) - std::end(fileName));
 	// ^ Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
 	if(file=fopen(fileName, "r")){
 		// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
@@ -133,7 +190,6 @@ int report(char * user){
 }
 
 int main(int argc, char *argv[]){
-	std::cout << "Maximum value for int: " << std::numeric_limits<int>::max() << '\n';
 
 	char user[100];
 	char password[100];
