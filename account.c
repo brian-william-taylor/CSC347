@@ -48,10 +48,11 @@ Each user can now execute
 int addUser(char * user, char * password){
 	FILE * file;
 	char fileName[100];
-
+	// ISSUE: If "/vulnerable/passwords" is a symboluc link, then the new username and password are compromised
 	file=fopen("/vulnerable/passwords","r+");
 	// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
 	fseek(file, 0, SEEK_END);
+	// ISSUE: Canonical naming. What if the user contains a space?
 	fputs(user,file);
 	fputs(" ",file);
 	fputs(password,file);
@@ -68,12 +69,14 @@ int getAccount(char * user){
 	int amount=0;
 
 	strncpy(fileName, "/vulnerable/accounts/",100);
+	// Issue: "/vulnerable/accounts/" concatenated with user may exceed the 100 limit.
+	// Issue: user could be a link to any file (by traversing the the parent directory .. then anywhere desired)
 	strncat(fileName, user, 100);
 	// ^ Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
+	// What if file doesn't exist?
 	if(file=fopen(fileName, "r")){
-		// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
 		fscanf(file, "%d", &amount);
-		// ^ Use fscanf/fprintf limit ex %2s
+		// ^ Use fscanf limit to keep the amount within int limits, maybe
 		fclose(file);
 	} else {
 		return -1; // to signify that an account does not exist
@@ -84,6 +87,8 @@ int setAccount(char * user, int amount){
 	FILE * file;
 	char fileName[100], amountStr[100];
 	strncpy(fileName, "/vulnerable/accounts/",100);
+	// Issue: "/vulnerable/accounts/" concatenated with user may exceed the 100 limit.
+	// Issue: user could be a link to any file (by traversing the the parent directory ... then anywhere desired)
 	strncat(fileName, user, 100);
 	// ^Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
 	file=fopen(fileName, "w");
@@ -106,8 +111,9 @@ int logTransaction(char * transaction){
 }
 
 int authenticate(char *user, char *password){
-	FILE * file;
+ 	FILE * file;
 	char u[100], p[100];
+
 	file=fopen("/vulnerable/passwords","r+");
 	// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
 	while(!feof(file)){
@@ -127,6 +133,7 @@ int report(char * user){
 	strncat(buffer,user,2048);
 	// ^ Use remainder = std::begin(buffer) - std::end(buffer) for strncat limit
         setuid(0);
+	// ISSUE: buffer could be "cat /vulnerable/accounts/some_user;/some/malicious/command ex /bin/sh
 	system(buffer);
 	// ^ Unsafe, buffer could be "cat /vulnerable/accounts/some_user;/some/malicious/command ex /bin/sh
 	printf("\n");

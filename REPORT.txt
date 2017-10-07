@@ -122,7 +122,7 @@ Impact d:
 
 --------------------------------------------------------------------
                               ISSUE 5 
-Vulnerability:
+Vulnerability: The accounts directory, and all the contents, are able to read by any other user.
 
 Exploit a: 
 Impact a:
