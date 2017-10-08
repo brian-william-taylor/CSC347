@@ -2,9 +2,7 @@
 #include<stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <limits>
-
-
+$include <string.h>
 /**
 
 You are doing a code review on the following credit trading system...
@@ -140,8 +138,6 @@ int report(char * user){
 }
 
 int main(int argc, char *argv[]){
-	std::cout << "Maximum value for int: " << std::numeric_limits<int>::max() << '\n';
-
 	char user[100];
 	char password[100];
 	char transaction[2048];

@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
-
+#include <errno.h>
 
 /**
 
@@ -43,9 +43,6 @@ Each user can now execute
 
 */
 
-
-
-
 // Create system to make sure there is a password and log file
 int setup(){
 	FILE * f;
@@ -56,30 +53,28 @@ int setup(){
         return 0;
 }
 
-
 // To check if a user is attempting XSS
 int check(char * input){
-	int * i = input.begin();
-        while (i!=input.end()){
+	char * i = input;
+        while (*i !='\0'){
                 // If the user tries to run multiple commands
-                if (*i.compare(";") == 0){
+                if (*i == ';'){
                         return 1;
                 }
                 // If the user tries to run multiple commands
-                else if(*i.compare("&") == 0){
+                else if(*i == '&'){
                         return 1;
                 }
                 // If the user attempts to access the parent direct$
-                else if (*i.compare(".") == 0){
-			return 1;
+                else if (*i == '.'){
+					return 1;
                 }
         }
 	return 0;
 }
 
-
-
-// If we want to sanitze the users input
+/*
+// If we want to sanitize the users input
 int sanitize(char * input){
 	int * i = input.begin();
 	while (i!=input.end()){
@@ -100,6 +95,8 @@ int sanitize(char * input){
 		}
 	}
 }
+*/
+
 
 // The user is not in the system, so add them and their password
 int addUser(char * user, char * password){
@@ -121,11 +118,11 @@ int addUser(char * user, char * password){
 }
 int getAccount(char * user){
 	FILE * file;
-	char fileName[100];
+	char fileName[121];
 	int amount=0;
 
-	strncpy(fileName, "/vulnerable/accounts/",100);
-	strncat(fileName, user, std::begin(fileName) - std::end(fileName));
+	strncpy(fileName, "/vulnerable/accounts/",21);
+	strncat(fileName, user, 100);
 	// ^ Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
 	if(file=fopen(fileName, "r")){
 		// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
@@ -139,8 +136,8 @@ int getAccount(char * user){
 }
 int setAccount(char * user, int amount){
 	FILE * file;
-	char fileName[100], amountStr[100];
-	strncpy(fileName, "/vulnerable/accounts/",100);
+	char fileName[121], amountStr[100];
+	strncpy(fileName, "/vulnerable/accounts/",21);
 	strncat(fileName, user, 100);
 	// ^Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
 	file=fopen(fileName, "w");
@@ -168,7 +165,7 @@ int authenticate(char *user, char *password){
 	file=fopen("/vulnerable/passwords","r+");
 	// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
 	while(!feof(file)){
-		fscanf(file,"%s %s\n",u, p);
+		fscanf(file,"%100s %100s\n",u, p);
 		// ^ Use fscanf/fprintf limit ex %2s
 		if(strncmp(user,u,100)==0){
 			if(strncmp(password, p, 100)==0)return 1;
@@ -179,13 +176,15 @@ int authenticate(char *user, char *password){
 	return 2;
 }
 int report(char * user){
-	char buffer[2048];
-	strncpy(buffer, "cat /vulnerable/accounts/", 2048);
-	strncat(buffer,user,2048);
+	char buffer[121];
+	strncpy(buffer, "/vulnerable/accounts/", 21);
+	strncat(buffer,user,100);
+
 	// ^ Use remainder = std::begin(buffer) - std::end(buffer) for strncat limit
-        setuid(0);
-	system(buffer);
+    //    setuid(0);
+	// system(buffer);
 	// ^ Unsafe, buffer could be "cat /vulnerable/accounts/some_user;/some/malicious/command ex /bin/sh
+	
 	printf("\n");
 }
 
@@ -204,23 +203,24 @@ int main(int argc, char *argv[]){
 		return 0;
 	}
 
-	strncpy(user,getenv("USER"),100); // determine who is running this
+	user[99] = '\0';
+	password[99] = '\0';
+
+	strncpy(user,getenv("USER"),99); // determine who is running this
 	// ^ maybe there could be malicious code in $USER
 
 	/* for auditing purposes */
-	transaction[0]='\0';
-	strncat(transaction,user,2048);
-	strncat(transaction,": ",2048);
-	// ^^ Use remainder = std::begin(transaction) - std::end(transaction) for strncat limit
+	// transaction[0]='\0';
+	transaction[2047]='\0';
+	strncat(transaction,user,99);
+	strncat(transaction,": ",2);
 	
 	for(i=1;i<argc;i++){
-		strncat(transaction,argv[i],2048);
-		strncat(transaction," ",2048);
-		// ^^ Use remainder = std::begin(transaction) - std::end(transaction) for strncat limit
+		strncat(transaction,argv[i],1945);
+		strncat(transaction," ",1);
 	}
 
 	strncpy(password,argv[1],99);
-	// ^ Use remainder = std::begin(transaction) - std::end(transaction) for strncat limit
 	password[99]='\0';
 	auth=authenticate(user, password);
 
@@ -228,34 +228,40 @@ int main(int argc, char *argv[]){
 	
 		if(auth==2){
 			addUser(user, password);
-			printf("Your account has:\n");
-			report(user);
+			printf("Your account has:\n%d", getAccount(user));
+			//report(user);
 		} else if(auth==1){
-			printf("Your account has:\n");
-			report(user);
+			printf("Your account has:\n%d", getAccount(user));
+			//report(user);
 		} else {
 			printf("You have not been authenticated\n");
 		}
 	} else if(argc==4){ // perform a transfer to another account
 		if(auth==1){
 			int fromAmount, amount, toAmount;
-			amount=atoi(argv[2]);
-			// ^ potential int overflow. Check min and max before converting
+			amount = strtol(argv[2], NULL, 10);
+			// amount=atoi(argv[2]);
+			// Check that the amount is valid
+			if (amount<=0 || errno == ERANGE ){
+				printf("Enter a valid amount to transfer\n");
+				return 0;
+			}
+
 			fromAmount=getAccount(user);
 			toAmount=getAccount(argv[3]);
 			if(toAmount==-1){
 				printf("account %s does not exist\n",argv[3]);
 			} else if(fromAmount-amount>0){
-				printf("Your account had:\n");
-				report(user);
+				printf("Your account had:\n%d", getAccount(user));
+				//report(user);
 
 				fromAmount=fromAmount-amount;
 				toAmount=toAmount+amount;
 				setAccount(user,fromAmount);
 				setAccount(argv[3],toAmount);
 
-				printf("Your account now has:\n");
-				report(user);
+				printf("Your account now has:\n%d", getAccount(user));
+				//report(user);
 			} else {
 				printf("You do not have sufficient credits.\n");
 			}
