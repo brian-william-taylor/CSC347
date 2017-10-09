@@ -1,0 +1,8 @@
+Explain what the setuid bit means for race, when run by the hacker.
+
+Setuid programs are a device to allow users to acquire new privileges for a limited amount of time. 
+As such, they provide a means for overriding the protection scheme designed into UNIX.
+
+What this means for the hacker is that the file is being run with root privileges even though the hacker does not have those permissions. 
+
+ 

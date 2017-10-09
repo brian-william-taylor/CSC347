@@ -1,0 +1,14 @@
+As hacker, explain how hacker exploits /questions/race/race so that they modify the root only readable and writable file /etc/passwd2
+
+The hacker takes advantage of an operating systems context switch (program gives up its use of the CPU to the OS to continue running other programs) 
+and the SETUID bit which allows the program to be run as root.
+
+Immedately after the access check has gone through correctly and before fopen is called, the hacker is able to change what the file 
+(for which they had access) points to, via a symbolic link. By changing this it changes the file that is to be written to. This allows
+for root only files to be changed since the program is being run as root.
+
+This can be achieved by running a seperate program concurrently with race.c that changes the symbolic link of the original file. 
+For this to work a context switch needs to be performed between access and the open of the file. 
+If the program has good timing then it will change which file is being written to, 
+thus giving you access to a root only file since open is being run from root. 
+

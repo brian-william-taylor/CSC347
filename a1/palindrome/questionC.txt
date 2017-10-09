@@ -1,0 +1,5 @@
+Yes there is still exploits even if the attacker does not have access to the source code. An attacker could still experiment with
+the user input to see what could be exploited. 
+
+Something as simple as inputting %s a number of times in a single input string would cause the program to crash from the format string vulnerability. 
+The program crashing would signal to the attacker that there exists a vulnerability here. 

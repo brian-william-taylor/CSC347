@@ -1,0 +1,7 @@
+Explain how hacker exploits race so that they end up with a root shell.
+
+The hacker utilizes the race condition to change the file that is being changed from /tmp/permitted to have a symbolic link 
+to /etc/passwd.
+Once hacker changes the link they can add content to /etc/passwd, so a superuser can be added. 
+Update the user type in /etc/passwd to 0 so it is a root user and 
+using this new superuser, the hacker can login and now has root permissions therefore can run a root shell.
