@@ -7,16 +7,16 @@ char *secret = "you got me!!";
 int processOneLine(){
 	char s[1024];
 	char *s1,*s2;
+	int count=0;
 	int isPalindrome=1; // it is a palindrome until we find out otherwise
 	s1=s;
 	// Read only 1024 characters from the input
-	int charCount = 0;
-	while(charCount < 1024){
+	while(count < 1024){
 		*s1=getchar();
 		if(*s1=='\n')*s1='\0';
 		if(*s1=='\0')break;
 		s1++;
-		charCount++;
+		count++;
 	}
 
 	//Add a null terminator to the string
@@ -34,7 +34,7 @@ int processOneLine(){
 	}
 
 	//Print the user input as a string
-	printf('%s', s);
+	printf("%s", s);
 	if(isPalindrome){
 		printf(" is a palindrome\n");
 	} else {

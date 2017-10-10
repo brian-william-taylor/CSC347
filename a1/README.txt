@@ -39,8 +39,8 @@ a1/palindrome/
   ✓ palindrome.c # the fixed version of the palindrome program
   ✓ palindrome_old.c # the original version of the palindrome program
   ✓ palindrome.xinetd
-  REPORT.txt 
-  questionC
+  ✓ REPORT.txt 
+  ✓ questionC
   # any other files needed
 
 -----------
