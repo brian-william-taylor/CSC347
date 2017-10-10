@@ -1,1 +1,28 @@
-This file adds details to Question D.
+Changes made for security:
+
+The two major changes that were necessary from this:
+
+    1. Limit a users input to be equal to the size of the buffer. This will prevent buffer overflows.
+
+    2. Change printing the users input to print the input as a string. 
+         i.e printf(s) -> printf('%s', s);
+       This will prevent the format string explotation 
+
+
+--------------------------------------------------------------------
+                              ISSUE 1
+Vulnerability: There is a format string explotation
+
+Exploit a: Reading memory
+Exploit b: Reading exact memory location
+Exploit c: Altering memory with arbitrary data
+Exploit d: Altering exact memory location with arbitrary data
+Exploit e: Altering exact memory location with intentional data
+
+--------------------------------------------------------------------
+                              ISSUE 2
+Vulnerability: Possiblity of a buffer overflow of buffer s[1024]
+
+Exploit a: Is is possible to overflow s to steal information from the program.
+
+Exploit b: It is possible to overflow s an use it to overwrite the return address which could allow you to jump to malicious code.
