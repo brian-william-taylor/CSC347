@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <sys/types.h>
 
 /**
 
@@ -38,17 +39,17 @@ int main(int argc, char ** argv) {
 	char * fn = "/tmp/permitted";
 	char buffer[128];
 	FILE *fp;
+    	uid_t real_uid = getuid();
+    	uid_t effective_uid = geteuid();
 
     
-    uid_t real_uid = getuid();
-    uid_t effective_uid = geteuid();
 
     seteuid(real_uid);
 
     //Sets the uid as the user instead of root to block access to any restricted files
 
     fp = fopen(fn, "w");
-	if(fp != -1){
+	if(fp != NULL){
 		scanf("%100s", buffer );
 		fwrite("\n", sizeof(char), 1, fp);
 		fwrite(buffer, sizeof(char), strlen(buffer), fp);
