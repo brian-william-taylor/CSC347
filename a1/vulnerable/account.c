@@ -43,6 +43,7 @@ Each user can now execute
    should be addressed.
 */
 
+// Check if the file is a symbolic link, if so, terminate
 int check_slink(char * input){
 	struct stat statbuf;
 	int link = lstat (input, &statbuf);
@@ -73,8 +74,10 @@ int check_username(char * input){
 int addUser(char * user, char * password){
 	FILE * file;
 
+	if (check_slink("/vulnerable/passwords")){
+		return 0;
+	}
 	file=fopen("/vulnerable/passwords","r+");
-	// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
 	fseek(file, 0, SEEK_END);
 	fputs(user,file);
 	fputs(" ",file);
@@ -88,18 +91,18 @@ int addUser(char * user, char * password){
 
 int getAccount(char * user){
 	FILE * file;
+
 	char fileName[121] = "/vulnerable/accounts/";
 	int amount=0;
 
-	//strncpy(fileName, "/vulnerable/accounts/",strlen("/vulnerable/accounts/"));
-	//printf("filename is: %s\n", fileName);
 	strncat(fileName, user, 100);
-	//printf("filename is: %s\n", fileName);
-	// ^ Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
+
+	if (check_slink(fileName)){
+		return -1;
+	}
+
 	if(file=fopen(fileName, "r")){
-		// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
 		fscanf(file, "%d", &amount);
-		// ^ Use fscanf/fprintf limit ex %2s
 		fclose(file);
 	} else {
 		return -1; // to signify that an account does not exist
@@ -111,22 +114,26 @@ int setAccount(char * user, int amount){
 	char fileName[121] = "/vulnerable/accounts/";
 	char amountStr[100];
 
-	// strncpy(fileName, "/vulnerable/accounts/",21);
 	strncat(fileName, user, 100);
 
-	// ^Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
+	if (check_slink(fileName)){
+		return -1;
+	}
 	file=fopen(fileName, "w");
-	// ^ If /vulnerable/passwords is a symbolic link then the set amount can be applied to anyone
 	sprintf(amountStr, "%d", amount);
-	// ^ No limit on printing, could create buffer overrun
 	fputs(amountStr,file);
 	fclose(file);
 
 }
 int logTransaction(char * transaction){
 	FILE * file;
+
+	if (check_slink("/vulnerable/log")){
+		return 0;
+	}
+
 	file=fopen("/vulnerable/log","r+");
-	// ^ If /vulnerable/passwords is a symbolic link then the transaction could be deposited into another acount
+
 	fseek(file, 0, SEEK_END);
 	fputs(transaction,file);
 	fputs("\n",file);
@@ -137,11 +144,14 @@ int logTransaction(char * transaction){
 int authenticate(char *user, char *password){
 	FILE * file;
 	char u[100], p[100];
+
+	if (check_slink("/vulnerable/passwords")){
+		return 0;
+	}
+
 	file=fopen("/vulnerable/passwords","r+");
 
 	if (file==NULL){return 2;}
-	// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
-	//printf("user is still: %s\n", user);
 	
 	while(!feof(file)){
 		fscanf(file,"%s %s\n",u, p);
@@ -154,12 +164,6 @@ int authenticate(char *user, char *password){
 	fclose(file);
 	return 2;
 }
-
-/*
-int report(char * user){
-	printf("%d\n", getAccount(user));
-}
-*/
 
 int main(int argc, char *argv[]){
 
@@ -206,18 +210,18 @@ int main(int argc, char *argv[]){
 
 	strncpy(password,argv[1],99);
 	password[99] = '\0';
+	if (check_username(password)){
+		printf("Exiting\n");
+		return 0;
+	}
 	auth=authenticate(user, password);
 
 	if(argc==2){ 
-		//printf("user is still: %s\n", user);
 		if(auth==2){
 			addUser(user, password);
-			//printf("better not change user: %s\n", user);
-			printf("Your account has:\n%d", getAccount(user));
-			//report(user);
+			printf("Your account has:\n%d\n", getAccount(user));
 		} else if(auth==1){
-			printf("Your account has:\n%d", getAccount(user));
-			//report(user);
+			printf("Your account has:\n%d\n", getAccount(user));
 		} else {
 			printf("You have not been authenticated\n");
 		}
@@ -225,7 +229,6 @@ int main(int argc, char *argv[]){
 		if(auth==1){
 			int fromAmount, amount, toAmount;
 			amount = strtol(argv[2], NULL, 10);
-			// amount=atoi(argv[2]);
 			// Check that the amount is valid
 			if (amount<=0 || errno == ERANGE ){
 				printf("Enter a valid amount to transfer\n");
@@ -234,22 +237,19 @@ int main(int argc, char *argv[]){
 
 			fromAmount=getAccount(user);
 			toAmount=getAccount(argv[3]);
-			if (strcmp(user, argv[i])){
-				printf("Your account had:\n%d", getAccount(user));
-				printf("Your account now has:\n%d", getAccount(user));
+			if (strcmp(user, argv[3])==0){
+				printf("Your account had:\n%d\n", getAccount(user));
+				printf("Your account now has:\n%d\n", getAccount(user));
 			} else if(toAmount==-1){
 				printf("account %s does not exist\n",argv[3]);
 			} else if(fromAmount-amount>0){
-				printf("Your account had:\n%d", getAccount(user));
-				//report(user);
-
+				printf("Your account had:\n%d\n", getAccount(user));
 				fromAmount=fromAmount-amount;
 				toAmount=toAmount+amount;
 				setAccount(user,fromAmount);
 				setAccount(argv[3],toAmount);
 
-				printf("Your account now has:\n%d", getAccount(user));
-				//report(user);
+				printf("Your account now has:\n%d\n", getAccount(user));
 			} else {
 				printf("You do not have sufficient credits.\n");
 			}
