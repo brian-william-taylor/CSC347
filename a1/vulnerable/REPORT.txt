@@ -28,16 +28,16 @@ I wrote e1 which executes all of the following exploits in order.
 
 
 Exploit a: The buffer is system(buffer) is "cat /vulnerable/accounts/"  plus the string from $USER. The hacker can set USER="; chmod -R 7777 ." so the cat call is ended (we don't care if it fails) then we run our malicious code. In this case we escalated all priviledges.
-Impact a: Allows the hacker perform priviledge escalation. 
+Impact a: Allows the hacker perform priviledge escalation. This violates Confidentiality. hacker has gained access to content which was private.
 
 Exploit b: Write froot user to passwd. 
 
 First, backup the passwords file so we can restore them afterwards. This way the hacker gains the info but the user thinks that everything is running as usual since their account is setup and usable.
 Next, make a symbolic link from passwords to /etc/passwd. Then the hacker sets USER="froot:x:0:0:/root:/bin/bash" to create a new root user. The x denotes that the password hash is in /etc/shadow
-Impact b: Allows the hacker to add a root user to /etc/passwd
+Impact b: Allows the hacker to add a root user to /etc/passwd. This again violates Confidentiality since hacker is changing files which should be private.
 
 Exploit c: Write froot user to passwd. This uses the exact same approach as b) but we set USER="froot::::::::" to say that there is no password. Alternatively, we could also look at the contents of /etc/shadow and set the froot password hash to be the same as hacker's password hash. At this point, we also would notice that root hash the same password hash as hacker. We could easily login as root at this point. If we want to login as our newly created froot user, restart then login.
-Impact c: Allows the hacker to add a root user to /etc/shadow
+Impact c: Allows the hacker to add a root user to /etc/shadow. This again violates Confidentiality since hacker is changing files which should be private. Now that a root user is created, the hacker could easily violate Confidentiality, Integrity, and Availability but deleting files, changing content such as passwords or account balanced. 
 
 
 --------------------------------------------------------------------
@@ -45,54 +45,54 @@ Impact c: Allows the hacker to add a root user to /etc/shadow
 Vulnerability: There are several different ways that we can take advantage of unsecure transfers in this program.
 
 Exploit a: By using negative number (using the minus "-" sign), we can transfer money from another account. Effectively we can rob other accounts and there is no limit to how much we can take because the other account balance is not check before transferring since it assumes that they are only recieving money.
-Impact a: We gain limitless money and cause other account to fall deeply in debt.
+Impact a: We gain limitless money and cause other account to fall deeply in debt. This violates Integrity as the hacker is stealing money directly from users and forcing them to go in debt (which likely is not wanted for this program).
 
 Exploit b: We can transfer money to our own account but the money is only added to our account, not taken away. We can only transfer as much as our account holds though, so we start small (99) and increase.
-Impact b: We gain limitless money
+Impact b: We gain limitless money. This violates Integrity as the hacker is creating money from nowhere.
 
 Exploit c: Using malicious code from Issue 1, we could also just append 0s (or any digit) to the end of our account file, which saves our balance. 
-Impact c: We gain limitless money.
+Impact c: We gain limitless money. This violates Integrity as the hacker is creating money from nowhere.
 
 Exploit d: Another issue related to money, is that transfers are limit to 2147483646 (long int max) but the user is told that they do not have sufficient credits.
-Impact d: Transfers 
+Impact d: Does not transfer the specified amount of money. This violates Integrity as the transfer amount is not what was specified by the user.
 
 --------------------------------------------------------------------
                               ISSUE 3
 Vulnerability: Depending on the permissions on accounts, (if set using chmod 755) users can easily view everyones balance.
 
 Exploit a: Nothing special. Just read the files in accounts. This would be very easy for a regular user to figure out.
-Impact a: There is no privacy for the account balance, even from the weakest of hackers.
+Impact a: There is no privacy for the account balance, even from the weakest of hackers. This violates Confidentiality since all users can read files which should be provate.
 
 --------------------------------------------------------------------
                               ISSUE 4
 Vulnerability: There are many ways that a user can break the program just by setting their username to certain strings.
 
 Exploit a: Since the usernames are treated as directories in accounts, we can create 2 different strings that will point to the same account (u1, ./u1).
-Impact a: Multiple users can share the same account (without intending to).
+Impact a: Multiple users can share the same account (without intending to). This violates Integrity as users share accounts that are made for a single user.
 
 Exploit b: Since the username is used to "cat" the account file, a space in the username causes "cat" to look for multiple files (seperated by spaces).
-Impact b: The user with spaces cannot access their account to make transfers or view the contents.
+Impact b: The user with spaces cannot access their account to make transfers or view the contents. This violates Availability since the user cannot access their account.
 
 Exploit c: Usernames that are larger than 99 character can cause the program to crash.
-Impact c: Users cannot access their accounts in any way (besides, possible directly viewing accounts/* if chmod 755 is run in setup.bash).
+Impact c: Users cannot access their accounts in any way (besides, possible directly viewing accounts/* if chmod 755 is run in setup.bash). This violates Availability since the program cannot run properly.
 
 Exploit d: An empty username.
-Impact d: Causes the program to seg fault
+Impact d: Causes the program to seg fault. This violates Availability since the program cannot run properly.
 
 Exploit e: Special characters in the username.
-Impact e: Multiple users can share the same account (without intending to).
+Impact e: Multiple users can share the same account (without intending to). This violates Integrity as users share accounts that are made for a single user.
 
 Exploit f: hacker can overwrite the password file. This uses mailicous code similar to Issue 1. hacker can find all of the usernames by running "ls accounts".
-Impact f: hacker can take control of accounts.
+Impact f: hacker can take control of accounts. This violates Confidentiality (since the hacker has gained access to a private file), Integrity (since the hacker can modify the contents) and Availability (since the accounts could be deleted, causeing errors when the user tries to login).
 
 Exploit g: By using usernames that refer to files that are critical for this program, hacker can create undesired effects. g) h) and i) all fall under this category. Set USER=../log
-Impact g: No file is created in accounts and the contents of the log file are mixed with what should've been the acount balance.
+Impact g: No file is created in accounts and the contents of the log file are mixed with what should've been the acount balance. This violates Integrity as the contents of the log have been corrupted. This also violates Availability since the user was not created (in accounts).
 
 Exploit h: Set USER=../passwords
-Impact h: No file is created in accounts and the password file contains what should've been in the acount balance.
+Impact h: No file is created in accounts and the password file contains what should've been in the acount balance. This violates Integrity as the contents of the password file have been corrupted. This also violates Availability since the user was not created (in accounts).
 
 Exploit i: Set USER=../account
-Impact i: Causes the program to seg fault on the first try. The second time, it prints the contents of account executable
+Impact i: Causes the program to seg fault on the first try. The second time, it prints the contents of account executable. This violates Availability since the program cannot run properly.
 
 ...
 
@@ -101,11 +101,11 @@ Impact i: Causes the program to seg fault on the first try. The second time, it 
 Vulnerability: There are several ways that a user can break the program just by setting their password to certain strings.
 
 Exploit a: Passwords with spaces causes the authentication process to be incorrect.
-Impact a: Users are able to make an account but cannot access it with the password they set. Instead, they could use the first word in their password.
+Impact a: Users are able to make an account but cannot access it with the password they set. Instead, they could use the first word in their password. This violates Integrity as the contents of the password is not what was given by the user. This also violates Availability since the user is not able to login with the password they set.
 
 Exploit b: Passwords with over 99 characters are cut off. The program only stores the first 99 character so someone could login with a different password than what was set.
-Impact b: The authentication process is compromised as distinct passwords will work on the same account (without intending to).
-
+Impact b: The authentication process is compromised as distinct passwords will work on the same account (without intending to). This violate Confidentiality since users are accessing other users accounts.
+ 
 
 
 
@@ -115,7 +115,7 @@ Impact b: The authentication process is compromised as distinct passwords will w
 Vulnerability: If the account files are symbolic links, users (or hacker) may access a different account
 
 Exploit a: hacker uses malicious code (similar to Issue 1) to link accounts.
-Impact a: Users may think they are transferring to/from one account but it is actually another account.
+Impact a: Users may think they are transferring to/from one account but it is actually another account. This violates Confidentiality as a hacker can view other account balances and Integrity since the users are not necessairly transferring to the account they intended.
 
 
 --------------------------------------------------------------------
@@ -125,18 +125,10 @@ Impact a: Users may think they are transferring to/from one account but it is ac
 Vulnerability: Buffer Overrun
 
 Exploit a: Is is possible to overflow s to steal information from the program.
-
-Exploit b: It is possible to overflow s an use it to overwrite the return address which could allow you to jump to malicious code. 
-
-account.c:104: fscanf:
-  The scanf() family's %s operation, without a limit specification, permits
-  buffer overflows. Specify a limit to %s, or use a
-  different input function.
-  
-account.c:84:  sprintf:
-  Does not check for buffer overflows. Use sprintf_s, snprintf, or
-  vsnprintf. 
-
-  
-  
+account_old.c:112: fscanf(file,"%s %s\n",u, p);
                               
+Exploit b: May exceed the 100 limit
+account_old.c:71: strncat(fileName, user, 100);
+
+Exploit c: May exceed the 100 limit
+account_old.c:83: strncpy(fileName, "/vulnerable/accounts/",100);

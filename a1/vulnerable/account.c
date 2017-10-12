@@ -154,7 +154,7 @@ int authenticate(char *user, char *password){
 	if (file==NULL){return 2;}
 	
 	while(!feof(file)){
-		fscanf(file,"%s %s\n",u, p);
+		fscanf(file,"%100s %100s\n",u, p);
 		// ^ Use fscanf/fprintf limit ex %2s
 		if(strncmp(user,u,100)==0){
 			if(strncmp(password, p, 100)==0)return 1;
