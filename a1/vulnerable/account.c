@@ -72,7 +72,6 @@ int check_username(char * input){
 // The user is not in the system, so add them and their password
 int addUser(char * user, char * password){
 	FILE * file;
-	char fileName[100];
 
 	file=fopen("/vulnerable/passwords","r+");
 	// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
@@ -89,11 +88,13 @@ int addUser(char * user, char * password){
 
 int getAccount(char * user){
 	FILE * file;
-	char fileName[121];
+	char fileName[121] = "/vulnerable/accounts/";
 	int amount=0;
 
-	strncpy(fileName, "/vulnerable/accounts/",21);
+	//strncpy(fileName, "/vulnerable/accounts/",strlen("/vulnerable/accounts/"));
+	//printf("filename is: %s\n", fileName);
 	strncat(fileName, user, 100);
+	//printf("filename is: %s\n", fileName);
 	// ^ Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
 	if(file=fopen(fileName, "r")){
 		// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
@@ -107,14 +108,11 @@ int getAccount(char * user){
 }
 int setAccount(char * user, int amount){
 	FILE * file;
-	char fileName[121], amountStr[100];
-	printf("user is still: %s\n", user);
+	char fileName[121] = "/vulnerable/accounts/";
+	char amountStr[100];
 
-	strncpy(fileName, "/vulnerable/accounts/",22);
-	printf("filename is: %s\n", fileName);
+	// strncpy(fileName, "/vulnerable/accounts/",21);
 	strncat(fileName, user, 100);
-	printf("user is still: %s\n", user);
-	printf("filename is: %s\n", fileName);
 
 	// ^Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
 	file=fopen(fileName, "w");
