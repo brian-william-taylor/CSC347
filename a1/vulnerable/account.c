@@ -3,6 +3,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <errno.h>
+#include <sys/stat.h>
 
 /**
 
@@ -40,70 +41,40 @@ Each user can now execute
 2) Demonstrate that the above vulnerabilities can be exploited and list the potential outcomes.
 3) Fix the code so that the vulnerabilities are eliminated, or describe how the vulnerability/exploit
    should be addressed.
-
 */
 
-// Create system to make sure there is a password and log file
-int setup(){
-	FILE * f;
-	f = fopen("/vulnerable/.passwords", "a");
-	fclose(f);
-        f = fopen("/vulnerable/.log", "a");
-	fclose(f);
-        return 0;
+int check_slink(char * input){
+	struct stat statbuf;
+	int link = lstat (input, &statbuf);
+	return S_ISLNK(statbuf.st_mode);
 }
 
 // To check if a user is attempting XSS
-int check(char * input){
+int check_username(char * input){
 	char * i = input;
-        while (*i !='\0'){
-                // If the user tries to run multiple commands
-                if (*i == ';'){
-                        return 1;
-                }
-                // If the user tries to run multiple commands
-                else if(*i == '&'){
-                        return 1;
-                }
-                // If the user attempts to access the parent direct$
-                else if (*i == '.'){
-					return 1;
-                }
-        }
-	return 0;
-}
-
-/*
-// If we want to sanitize the users input
-int sanitize(char * input){
-	int * i = input.begin();
-	while (i!=input.end()){
-		// If the user tries to run multiple commands
-		if (*i.compare(";") == 0){
-			*i="\0";
-			break;
+	// If the username is empty
+	if (*i=='\0') {printf("right away\n"); return 1;}
+	while (*i!='\0'){
+		// AlphaNumeric
+		if ((*i >= '0' && *i <= '9') || 
+			(*i >= 'A' && *i <= 'Z') || 
+			(*i >= 'a' && *i <= 'z')){
+			i++;
 		}
-		// If the user tries to run multiple commands
-		else if(*i.compare("&") == 0){
-			*i="\0";
-			break;
-		}
-		// If the user attempts to access the parent directory, terminate the string
-		else if (*i.compare(".") == 0){
-			*i="\0";
-			break;
+		else{
+			printf("not right away\n");
+			return 1;
 		}
 	}
+	return 0;
 }
-*/
-
 
 // The user is not in the system, so add them and their password
 int addUser(char * user, char * password){
 	FILE * file;
 	char fileName[100];
 
-	file=fopen("/vulnerable/.passwords","r+");
+	file=fopen("/vulnerable/passwords","r+");
 	// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
 	fseek(file, 0, SEEK_END);
 	fputs(user,file);
@@ -116,6 +87,7 @@ int addUser(char * user, char * password){
 
 	return 0;
 }
+
 int getAccount(char * user){
 	FILE * file;
 	char fileName[121];
@@ -163,9 +135,13 @@ int authenticate(char *user, char *password){
 	FILE * file;
 	char u[100], p[100];
 	file=fopen("/vulnerable/passwords","r+");
+
+	if (file==NULL){return 2;}
 	// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
+	printf("user is still: %s\n", user);
+	
 	while(!feof(file)){
-		fscanf(file,"%100s %100s\n",u, p);
+		fscanf(file,"%s %s\n",u, p);
 		// ^ Use fscanf/fprintf limit ex %2s
 		if(strncmp(user,u,100)==0){
 			if(strncmp(password, p, 100)==0)return 1;
@@ -175,18 +151,12 @@ int authenticate(char *user, char *password){
 	fclose(file);
 	return 2;
 }
-int report(char * user){
-	char buffer[121];
-	strncpy(buffer, "/vulnerable/accounts/", 21);
-	strncat(buffer,user,100);
 
-	// ^ Use remainder = std::begin(buffer) - std::end(buffer) for strncat limit
-    //    setuid(0);
-	// system(buffer);
-	// ^ Unsafe, buffer could be "cat /vulnerable/accounts/some_user;/some/malicious/command ex /bin/sh
-	
-	printf("\n");
+/*
+int report(char * user){
+	printf("%d\n", getAccount(user));
 }
+*/
 
 int main(int argc, char *argv[]){
 
@@ -194,8 +164,8 @@ int main(int argc, char *argv[]){
 	char password[100];
 	char transaction[2048];
 	int auth;
-
-	int i;
+	int i=0;
+	int remainder=2048;
 
 	if(argc!=2 && argc!=4){
 		printf("account password (to setup/report on your account)\n");
@@ -203,31 +173,43 @@ int main(int argc, char *argv[]){
 		return 0;
 	}
 
-	user[99] = '\0';
-	password[99] = '\0';
+	//user[99] = '\0';
+	//password[99] = '\0';
 
 	strncpy(user,getenv("USER"),99); // determine who is running this
-	// ^ maybe there could be malicious code in $USER
-
+	if (check_username(user)){
+		printf("Exiting\n");
+		return 0;
+	}
+	printf("user: %s\n", user);
 	/* for auditing purposes */
-	// transaction[0]='\0';
-	transaction[2047]='\0';
+	transaction[0]='\0';
+	// transaction[2047]='\0';
+	remainder--;
 	strncat(transaction,user,99);
+	remainder-=99;
 	strncat(transaction,": ",2);
+	remainder-=2;
 	
 	for(i=1;i<argc;i++){
-		strncat(transaction,argv[i],1945);
+		strncat(transaction,argv[i],remainder);
+		remainder -= strlen(argv[i]);
+		if (remainder <= 0){
+			break;
+		}
 		strncat(transaction," ",1);
+		remainder--;
 	}
 
 	strncpy(password,argv[1],99);
-	password[99]='\0';
+	password[99] = '\0';
 	auth=authenticate(user, password);
 
 	if(argc==2){ 
-	
+		printf("user is still: %s\n", user);
 		if(auth==2){
 			addUser(user, password);
+			printf("better not change user: %s\n", user);
 			printf("Your account has:\n%d", getAccount(user));
 			//report(user);
 		} else if(auth==1){
@@ -249,7 +231,10 @@ int main(int argc, char *argv[]){
 
 			fromAmount=getAccount(user);
 			toAmount=getAccount(argv[3]);
-			if(toAmount==-1){
+			if (strcmp(user, argv[i])){
+				printf("Your account had:\n%d", getAccount(user));
+				printf("Your account now has:\n%d", getAccount(user));
+			} else if(toAmount==-1){
 				printf("account %s does not exist\n",argv[3]);
 			} else if(fromAmount-amount>0){
 				printf("Your account had:\n%d", getAccount(user));
@@ -275,4 +260,3 @@ int main(int argc, char *argv[]){
 
 	return 0;
 }
-

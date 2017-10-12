@@ -108,12 +108,11 @@ Impact b: The authentication process is compromised as distinct passwords will w
 
 
 
-if (stat(“/some_dir/some_file”, &statbuf) == -1) {
-err(1, "stat");
-}
-if (statbuf.st_size >= MAX_FILE_SIZE) {
-err(2, "file size");
-}
-if ((fd=open(“/some_dir/some_file”, O_RDONLY)) == -1) {
-err(3, "open - %s",argv[1]);
-}
+
+--------------------------------------------------------------------
+                              ISSUE 6
+
+Vulnerability: If the account files are symbolic links, users (or hacker) may access a different account
+
+Exploit a: hacker uses malicious code (similar to Issue 1) to link accounts.
+Impact a: Users may think they are transferring to/from one account but it is actually another account.
