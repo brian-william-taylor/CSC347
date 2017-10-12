@@ -116,3 +116,5 @@ Vulnerability: If the account files are symbolic links, users (or hacker) may ac
 
 Exploit a: hacker uses malicious code (similar to Issue 1) to link accounts.
 Impact a: Users may think they are transferring to/from one account but it is actually another account.
+
+

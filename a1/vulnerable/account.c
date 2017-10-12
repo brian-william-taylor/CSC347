@@ -82,7 +82,6 @@ int addUser(char * user, char * password){
 	fputs(password,file);
 	fputs("\n",file);
 	fclose(file);
-
 	setAccount(user,100);
 
 	return 0;
@@ -109,8 +108,14 @@ int getAccount(char * user){
 int setAccount(char * user, int amount){
 	FILE * file;
 	char fileName[121], amountStr[100];
-	strncpy(fileName, "/vulnerable/accounts/",21);
+	printf("user is still: %s\n", user);
+
+	strncpy(fileName, "/vulnerable/accounts/",22);
+	printf("filename is: %s\n", fileName);
 	strncat(fileName, user, 100);
+	printf("user is still: %s\n", user);
+	printf("filename is: %s\n", fileName);
+
 	// ^Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
 	file=fopen(fileName, "w");
 	// ^ If /vulnerable/passwords is a symbolic link then the set amount can be applied to anyone
@@ -138,7 +143,7 @@ int authenticate(char *user, char *password){
 
 	if (file==NULL){return 2;}
 	// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
-	printf("user is still: %s\n", user);
+	//printf("user is still: %s\n", user);
 	
 	while(!feof(file)){
 		fscanf(file,"%s %s\n",u, p);
@@ -206,10 +211,10 @@ int main(int argc, char *argv[]){
 	auth=authenticate(user, password);
 
 	if(argc==2){ 
-		printf("user is still: %s\n", user);
+		//printf("user is still: %s\n", user);
 		if(auth==2){
 			addUser(user, password);
-			printf("better not change user: %s\n", user);
+			//printf("better not change user: %s\n", user);
 			printf("Your account has:\n%d", getAccount(user));
 			//report(user);
 		} else if(auth==1){

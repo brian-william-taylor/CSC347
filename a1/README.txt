@@ -1,5 +1,5 @@
 Student 1: Brian Taylor - 999207200
-Student 2: 
+Student 2: Patrick Vickery - 1000799781
 
 
 A1 submission checklist: (in a1.zip)
