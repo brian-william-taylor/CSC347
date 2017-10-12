@@ -118,3 +118,25 @@ Exploit a: hacker uses malicious code (similar to Issue 1) to link accounts.
 Impact a: Users may think they are transferring to/from one account but it is actually another account.
 
 
+--------------------------------------------------------------------
+                              ISSUE 7
+    
+
+Vulnerability: Buffer Overrun
+
+Exploit a: Is is possible to overflow s to steal information from the program.
+
+Exploit b: It is possible to overflow s an use it to overwrite the return address which could allow you to jump to malicious code. 
+
+account.c:104: fscanf:
+  The scanf() family's %s operation, without a limit specification, permits
+  buffer overflows. Specify a limit to %s, or use a
+  different input function.
+  
+account.c:84:  sprintf:
+  Does not check for buffer overflows. Use sprintf_s, snprintf, or
+  vsnprintf. 
+
+  
+  
+                              
