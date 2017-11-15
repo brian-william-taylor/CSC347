@@ -1,0 +1,16 @@
+#!/bin/bash
+	
+# CREATING A CERTIFICATE SIGNING REQUEST (CSR)
+# SWITCH ROLES, YOU ARE NOW A CLIENT
+# WHAT DOES THE FOLLOWING DO, AS BEFORE, LIST FILES CREATED, 
+# WHAT THEY CONTAIN AND THEIR ROLE
+
+openssl genrsa -out key.pem 1024
+
+# The following is not a necessary part of generating a CSR, but it is informative...
+openssl pkey -in key.pem -pubout -out pubkey.pem
+
+openssl req -new -key key.pem -out req.pem
+# SEND YOUR CSR TO ANOTHER TEAM TO GET THEM TO GENERATE 
+# A SIGNED CERTIFICATE, PLACE YOUR SIGNED CERTIFICATE IN THIS DIRECTORY
+# WHO SIGNED YOUR CERTIFICATE?

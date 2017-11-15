@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DEMOCA="demoCA";
+
+rm -fr client
+mkdir client
+
+# ANSWER MY CSR (on the assignment page, req.pem).
+# TAKE IT, PLACE IT IN the $DEMOCA/requests DIRECTORY
+
+openssl ca -config openssl.conf  -in $DEMOCA/requests/req.pem -out client/newcert.pem
+# YOU KNOW WHAT TO DO!
+# The above does ...
+# The following files will be created in ... (take a look at newcerts directory as well)
+# ...
+
+# SEND client/newcert.pem back to the requesting client, (you can email it back to me, 
+# but leave a copy in client (as well as the one in newcerts)
+
