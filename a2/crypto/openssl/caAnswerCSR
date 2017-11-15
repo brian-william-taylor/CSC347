@@ -13,6 +13,29 @@ openssl ca -config openssl.conf  -in $DEMOCA/requests/req.pem -out client/newcer
 # The above does ...
 # The following files will be created in ... (take a look at newcerts directory as well)
 # ...
+# $DEMOCA/requests/req.pem
+#	A request to create a new certificate
+# client/newcert.pem
+#	New certificate created from the request.
+# $DEMOCA/index.txt
+#	Has been updated to include the recently created certificate. In this case it is:
+#	V	181115190737Z		1000	unknown	/C=CA/ST=Ontario/L=Mississauga/O=toBeSigned.com/OU=IT Department/CN=*.toBeSigned.com
+# $DEMOCA/index.txt.attr
+#	Contains attributes for the database index.txt. In this case:
+#	unique_subject = yes
+# $DEMOCA/index.txt.old
+#	Is a backup of the database before the last certificate was added. In this case it is empty.
+# $DEMOCA/newcerts/1000.pem
+#	This is the new certificate. It is named 1000.pem because 1000 was the initial value in serial
+# $DEMOCA/serial
+#	Since a certificate with serial number 1000 has been created, the number is this file is incremented by 1
+# $DEMOCA/serial.old
+#	Is a backup of the last serial number before the previous operation.
+
+
+
+
+
 
 # SEND client/newcert.pem back to the requesting client, (you can email it back to me, 
 # but leave a copy in client (as well as the one in newcerts)

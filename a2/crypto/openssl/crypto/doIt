@@ -9,22 +9,89 @@ openssl x509 -in sergueiscert.pem -noout -text
 # Is sergueiscert.pem self signed? If not, who signed it? How would you verify 
 # that it was correctly signed? 
 
+:'
+Certificate:                                    
+    Data:
+        Version: 3 (0x2)
+        Serial Number: 4098 (0x1002)
+    Signature Algorithm: sha1WithRSAEncryption
+        Issuer: C = CA, ST = Ontario, L = Mississauga, O = UofT Mississauga, OU = MCS, CN = *.arnold.com
+        Validity
+            Not Before: Nov 13 22:49:03 2017 GMT
+            Not After : Nov 13 22:49:03 2018 GMT
+        Subject: C = CA, ST = Ontario, L = Mississauga, O = serguei.com, OU = IT Department, CN = *.serguei.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (1024 bit)
+                Modulus:
+                    00:b9:98:fc:c0:13:f8:66:38:79:cc:bf:fb:20:12:
+                    30:ea:85:b0:38:3a:76:9b:aa:16:6e:ba:1f:db:70:
+                    80:a4:75:fe:7c:99:19:e5:b8:1d:02:e6:ae:4d:79:
+                    3f:75:ae:76:77:f8:f5:d5:7e:86:07:56:af:c2:33:
+                    43:a4:11:d5:92:f8:20:f5:fa:3f:71:f1:32:d3:df:
+                    98:c6:a3:e6:ee:58:69:1b:f1:61:c1:90:05:fe:d7:
+                    47:69:2f:cd:0d:77:28:66:51:8a:e2:a3:2d:4e:3a:
+                    f1:8e:42:5b:e5:a1:c1:cb:fc:11:3c:bd:9e:26:cd:
+                    26:53:48:7b:ca:ce:4c:0b:a9
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            Netscape Comment: 
+                OpenSSL Generated Certificate
+            X509v3 Subject Key Identifier: 
+                59:55:F4:62:DF:F6:F5:1C:D9:50:A6:31:26:33:50:81:07:C2:18:7D
+            X509v3 Authority Key Identifier: 
+                keyid:FA:C8:D4:6F:68:88:6A:93:86:ED:B7:92:88:F4:10:89:06:54:15:F0
+
+    Signature Algorithm: sha1WithRSAEncryption
+         be:12:87:55:77:f2:1a:a8:c0:1b:c3:b9:67:11:d9:92:4b:06:
+         c5:29:7d:ca:5d:78:39:73:01:91:d8:0a:b4:e0:bf:95:a9:8a:
+         fe:3d:3c:34:8f:4c:8a:3a:3f:5e:bd:c1:25:f7:d7:e1:5c:43:
+         cc:6e:33:7f:c8:2d:a1:56:7c:2d:d7:a4:95:8a:a8:ac:35:40:
+         9e:ae:b8:f1:9d:7b:ce:aa:aa:09:af:c6:d1:a4:1f:00:83:76:
+         27:ad:c1:6f:6c:c4:ce:d6:fc:76:80:16:22:69:08:62:04:7c:
+         70:c9:79:3b:b3:44:d8:1a:90:47:1f:e4:60:cc:eb:b9:9a:f7:
+         a4:b8
+'
+
+
+
+
 # Is sergueiscert.pem a Certificate Authority?
 
 # WHAT DOES THIS DO
 openssl x509 -in sergueiscert.pem -pubkey -noout > pubkey.pem
+# This is the public key from sergueiscert.pem It can be viewed using:  
+# openssl rsa -in pubkey.pem -pubin -noout -text
 
 # FIGURE OUT HOW TO USE pubkey.pem TO SEND publicfile.long TO ME
 
 # WHAT DOES THIS DO
 openssl pkeyutl -encrypt -pubin -in publicfile.long -out privatefile.long -inkey pubkey.pem  -keyform PEM
 # EXPLAIN THE ERROR MESSAGE (See the definition of RSA in the lecture notes)
-
+# The error message is:
+# Public Key operation error
+# 140442220188928:error:0406D06E:rsa routines:RSA_padding_add_PKCS1_type_2:data too large for key size:../crypto/rsa/rsa_pk1.c:125:
+# 
+# RSA encrypts the input if it is under the specified key size which is 1024 bit. Since this file is larger than 1024 bits, it cannot be encrypted.
 openssl pkeyutl -encrypt -pubin -in publicfile.short -out privatefile.short -inkey pubkey.pem  -keyform PEM
 
 # IT SEEMS THAT WE CAN ONLY USE RSA ON SHORT MESSAGES, SO ENCRYPT A SHORT SESSION KEY AND THEN
 # USE THAT WITH AES TO ENCRYPT A LONG MESSAGE
 # PRODUCE sessionKey AND privatefile.long
+
+# Generate sessionKey
+# openssl rand -base64 1020 > sessionKey
+# Encrypt long file with sessionKey using AES
+# openssl enc -aes-256-cbc -salt -in publicfile.long -out privatefile.long -pass file:sessionKey
+
+# Use RSA to encrypt and share the sessionKey
+# openssl pkeyutl -encrypt -pubin in sessionKey -out privateSessionKey -inkey pubkey.pem -keyform PEM
+
+# Decrypt long file with sessionKey
+# openssl enc -d -aes-256-cbc -in encrypted.long -out decrypted.long -pass file:sessionKey
+
 
 # If you had sergueis private key, you could decrypt the privatefile.short...
 # openssl pkeyutl -decrypt -in privatefile.short -out publicfile.short2 -inkey key.pem -keyform PEM
