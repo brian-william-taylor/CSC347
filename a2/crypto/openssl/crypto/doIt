@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# GRAB sergueis CERTIFICATE FROM THE WEB (SEE: sergueiscert.pem)
+# PLACE IT IN THIS DIRECTORY
+
+
+openssl x509 -in sergueiscert.pem -noout -text
+# DOCUMENT ITS OUTPUT, DESCRIBE THE IMPORTANT PARTS OF sergueis x509 certificate
+# Is sergueiscert.pem self signed? If not, who signed it? How would you verify 
+# that it was correctly signed? 
+
+# Is sergueiscert.pem a Certificate Authority?
+
+# WHAT DOES THIS DO
+openssl x509 -in sergueiscert.pem -pubkey -noout > pubkey.pem
+
+# FIGURE OUT HOW TO USE pubkey.pem TO SEND publicfile.long TO ME
+
+# WHAT DOES THIS DO
+openssl pkeyutl -encrypt -pubin -in publicfile.long -out privatefile.long -inkey pubkey.pem  -keyform PEM
+# EXPLAIN THE ERROR MESSAGE (See the definition of RSA in the lecture notes)
+
+openssl pkeyutl -encrypt -pubin -in publicfile.short -out privatefile.short -inkey pubkey.pem  -keyform PEM
+
+# IT SEEMS THAT WE CAN ONLY USE RSA ON SHORT MESSAGES, SO ENCRYPT A SHORT SESSION KEY AND THEN
+# USE THAT WITH AES TO ENCRYPT A LONG MESSAGE
+# PRODUCE sessionKey AND privatefile.long
+
+# If you had sergueis private key, you could decrypt the privatefile.short...
+# openssl pkeyutl -decrypt -in privatefile.short -out publicfile.short2 -inkey key.pem -keyform PEM
+
+# ANSWER: If you had sergueis private key, you could decrypt the sessionKey using...
+

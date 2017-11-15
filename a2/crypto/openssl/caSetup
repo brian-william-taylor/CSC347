@@ -1,0 +1,53 @@
+#!/bin/bash
+
+DEMOCA="demoCA";
+
+if  [ -d $DEMOCA ]; then
+	echo "$DEMOCA exists, remove first before setup";
+else 
+	echo "$DEMOCA does not exist, creating";
+	mkdir $DEMOCA
+	mkdir $DEMOCA/certs
+	mkdir $DEMOCA/crl
+	touch $DEMOCA/index.txt
+	mkdir $DEMOCA/newcerts
+	mkdir $DEMOCA/requests
+	echo "1000" > $DEMOCA/serial
+	mkdir $DEMOCA/private
+
+	# WHAT DOES THIS DO?
+	openssl genrsa -des3 -out $DEMOCA/private/cakey.pem 1024
+	# Generates a new private rsa key using the triple DES cipher where the size of the key is 1024 (in bits).
+	# This prompts for a password, and saves the key to $DEMOCA/private/cakey.pem
+
+	openssl req -config openssl.conf -new -x509 -days 1001 -key $DEMOCA/private/cakey.pem -out $DEMOCA/cacert.pem
+	# Use the previously generated private key to create a self-signed certificate.
+	# It is not a root certificate since, in the openssl.conf file:
+	# basicConstraints=CA:FALSE
+	# since this is 
+
+
+	# Look in the $DEMOCA directories and document the files that were created
+	# The above does ...
+	# The following files will be created in $DEMOCA
+	# $DEMOCA/private/cakey.pem
+	# 	YOUR DESCRIPTION OF THIS FILE BELOW, WHAT DOES IT CONTAIN, WHAT IS ITS ROLE IN THIS GAME
+	#	This is the private rsa key generated in the first openssl call. It is encrypted, and the header specifies the encryption type:
+	# 	DEK-Info: DES-EDE3-CBC,A4FA0CB0826B9978
+	#	So the key uses 3DES in EDE mode with cipher block chaining
+	# 	...
+	# $DEMOCA/cacert.pem
+	# 	YOUR DESCRIPTION OF THIS FILE BELOW, WHAT DOES IT CONTAIN, WHAT IS ITS ROLE IN THIS GAME
+	#	This is the encrypted certificate. THe contents are entirely encrypted (unlike private/cakey.pem which also contained a header).
+	#	The content can be decrypted using:
+	# 	openssl x509 -in cacert.pem -inform pem -text -noout
+	#	Once decrypted, we see that the certificate is self-signed certificate. 
+	# 	...
+	# ...
+	# 
+
+	openssl x509 -in $DEMOCA/cacert.pem -noout -text
+	# DOCUMENT ITS OUTPUT, DESCRIBE THE IMPORTANT PARTS OF YOUR x509 certificate
+	# 
+	
+fi

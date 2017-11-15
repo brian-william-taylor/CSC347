@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include <sys/types.h>
 #include <unistd.h>
-$include <string.h>
+
 /**
 
 You are doing a code review on the following credit trading system...
@@ -48,7 +48,6 @@ int addUser(char * user, char * password){
 	char fileName[100];
 	// ISSUE: If "/vulnerable/passwords" is a symboluc link, then the new username and password are compromised
 	file=fopen("/vulnerable/passwords","r+");
-	// ^ If /vulnerable/passwords is a symbolic link then the username and password are compromised
 	fseek(file, 0, SEEK_END);
 	// ISSUE: Canonical naming. What if the user contains a space?
 	fputs(user,file);
@@ -67,14 +66,11 @@ int getAccount(char * user){
 	int amount=0;
 
 	strncpy(fileName, "/vulnerable/accounts/",100);
-	// Issue: "/vulnerable/accounts/" concatenated with user may exceed the 100 limit.
-	// Issue: user could be a link to any file (by traversing the the parent directory .. then anywhere desired)
+	// ISSUE: "/vulnerable/accounts/" concatenated with user may exceed the 100 limit.
+	// ISSUE: user could be a link to any file (by traversing the the parent directory .. then anywhere desired)
 	strncat(fileName, user, 100);
-	// ^ Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
-	// What if file doesn't exist?
 	if(file=fopen(fileName, "r")){
 		fscanf(file, "%d", &amount);
-		// ^ Use fscanf limit to keep the amount within int limits, maybe
 		fclose(file);
 	} else {
 		return -1; // to signify that an account does not exist
@@ -85,22 +81,20 @@ int setAccount(char * user, int amount){
 	FILE * file;
 	char fileName[100], amountStr[100];
 	strncpy(fileName, "/vulnerable/accounts/",100);
-	// Issue: "/vulnerable/accounts/" concatenated with user may exceed the 100 limit.
-	// Issue: user could be a link to any file (by traversing the the parent directory ... then anywhere desired)
+	// ISSUE: "/vulnerable/accounts/" concatenated with user may exceed the 100 limit.
+	// ISSUE: user could be a link to any file (by traversing the the parent directory ... then anywhere desired)
+	// ISSUE: If /vulnerable/accounts/ is a symbolic link then the username and password are compromised
 	strncat(fileName, user, 100);
-	// ^Use remainder = std::begin(fileName) - std::end(fileName) for strncat limit
 	file=fopen(fileName, "w");
-	// ^ If /vulnerable/passwords is a symbolic link then the set amount can be applied to anyone
 	sprintf(amountStr, "%d", amount);
-	// ^ No limit on printing, could create buffer overrun
 	fputs(amountStr,file);
 	fclose(file);
 
 }
 int logTransaction(char * transaction){
 	FILE * file;
+	// ISSUE: If /vulnerable/log is a symbolic link then the log could be saved somewhere else: another file with accessbile permissions for hacker
 	file=fopen("/vulnerable/log","r+");
-	// ^ If /vulnerable/passwords is a symbolic link then the transaction could be deposited into another acount
 	fseek(file, 0, SEEK_END);
 	fputs(transaction,file);
 	fputs("\n",file);
@@ -129,11 +123,10 @@ int report(char * user){
 	char buffer[2048];
 	strncpy(buffer, "cat /vulnerable/accounts/", 2048);
 	strncat(buffer,user,2048);
-	// ^ Use remainder = std::begin(buffer) - std::end(buffer) for strncat limit
+	// ISSUE: needlessly escalated priviledges
         setuid(0);
 	// ISSUE: buffer could be "cat /vulnerable/accounts/some_user;/some/malicious/command ex /bin/sh
 	system(buffer);
-	// ^ Unsafe, buffer could be "cat /vulnerable/accounts/some_user;/some/malicious/command ex /bin/sh
 	printf("\n");
 }
 
@@ -151,8 +144,8 @@ int main(int argc, char *argv[]){
 		return 0;
 	}
 
+	// ISSUE: Input is not sanitized
 	strncpy(user,getenv("USER"),100); // determine who is running this
-	// ^ maybe there could be malicious code in $USER
 
 	/* for auditing purposes */
 	transaction[0]='\0';

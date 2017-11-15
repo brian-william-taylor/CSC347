@@ -14,10 +14,21 @@ The two major changes that were necessary from this:
 Vulnerability: There is a format string explotation
 
 Exploit a: Reading memory
+Input such as %s, %d, %p, %f allows for memory to be read. 
+
 Exploit b: Reading exact memory location
+Input such as "\x10\x01\x48\x08 %x %x %x %x %s" allows you to read at a specific memory location. 
+The example causes it to print out the contents in the memory address 0x10014808.
+
 Exploit c: Altering memory with arbitrary data
+
 Exploit d: Altering exact memory location with arbitrary data
+
 Exploit e: Altering exact memory location with intentional data
+
+Exploit f: Crashing the program.
+Input such as %s%s%s%s%s%s%s%s%s%s%s%s will crash the program. A %s will eventually try to read 
+a piece of memory that is either null or is protected by the kernel causing it to crash.
 
 --------------------------------------------------------------------
                               ISSUE 2
@@ -25,4 +36,6 @@ Vulnerability: Possiblity of a buffer overflow of buffer s[1024]
 
 Exploit a: Is is possible to overflow s to steal information from the program.
 
-Exploit b: It is possible to overflow s an use it to overwrite the return address which could allow you to jump to malicious code.
+Exploit b: It is possible to overflow s an use it to overwrite the return address which could allow you to jump to malicious code. 
+
+	Example input is given in tcpclientB.pl.

