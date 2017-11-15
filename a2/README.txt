@@ -1,11 +1,11 @@
 Member 1:
 
-Name: 
+Name:
 Student Number:
 UTORid:
 
 Member 2:
 
-Name: 
+Name:
 Student Number:
 UTORid:
