@@ -1,0 +1,16 @@
+# find recent changes
+ls -ltd $(find .) > sorted_changes.txt
+head sorted_changes.txt
+
+# differences 
+diff --brief -r hhd1 hdd2
+diff -r hhd1 hdd2
+
+# getent passwd | cut -d : -f 6 > homes
+then add /.bash_history to each and output each file
+
+# find recently changed users
+passwd -S -a | cut -d " " -f 3
+add awk to see users
+
+

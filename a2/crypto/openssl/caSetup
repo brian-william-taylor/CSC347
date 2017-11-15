@@ -24,7 +24,7 @@ else
 	# Use the previously generated private key to create a self-signed certificate.
 	# It is not a root certificate since, in the openssl.conf file:
 	# basicConstraints=CA:FALSE
-	# since this is 
+	# since this is not marked as critical 
 
 
 	# Look in the $DEMOCA directories and document the files that were created
