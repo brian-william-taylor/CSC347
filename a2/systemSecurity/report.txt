@@ -1,16 +1,44 @@
 # find recent changes
-ls -ltd $(find .) > sorted_changes.txt
+# ls -ltd $(find .) > sorted_changes.txt
+
+find . | xargs ls -ltd > sorted_changes.txt
+
 head sorted_changes.txt
 
 # differences 
-diff --brief -r hhd1 hdd2
-diff -r hhd1 hdd2
+diff --brief -r hhd1 hdd2 > brief_diff.txt
+diff -r hhd1 hdd2 > full_diff.txt
 
-# getent passwd | cut -d : -f 6 > homes
-then add /.bash_history to each and output each file
+# Get history from all users. You will get harmless errors for users who dont have a history file
+getent passwd | cut -d : -f 6 > users.txt
+sudo ./check_users_history.sh > all_history.txt
 
 # find recently changed users
-passwd -S -a | cut -d " " -f 3
-add awk to see users
+sudo passwd -S -a | awk '{printf $3 $1 " \n"}' | sort -nr
+
+# Login info
+# last > previous_login.txt
+# last -F > full_previous_login.txt
+
+# Check dns
+# last -d
+# Check ips
+# last -i
+# Check just failed login attempts
+# last -f /var/log/btmp > failed_login.txt
+
+
+# Recent installs and updates
+# rpm -qa --qf '%{installtime} (%{installtime:date}): %{name}-%{version}-%{release}\n' | sort -rn
+
+# Changes to cron
+diff -rq hh1:/etc/cron.weekly hdd2:/etc/cron.weekly > cron_diff_week.txt
+diff -rq hh1:/etc/cron.monthly hdd2:/etc/cron.monthly > cron_diff_monthly.txt
+diff -rq hh1:/etc/cron.hourly hdd2:/etc/cron.hourly > cron_diff_hourly.txt
+diff -rq hh1:/etc/cron.daily hdd2:/etc/cron.daily > cron_diff_daily.txt
+diff -rq hh1:/etc/cron.d hdd2:/etc/cron.d > cron_diff_d.txt
+
+# Changes to xinetd.d
+diff -rq hh1:/etc/xinetd.d hdd2:/etc/xinetd.d > xinetd_diff.d.txt
 
 
