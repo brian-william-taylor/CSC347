@@ -1,7 +1,7 @@
 All info from: https://www.owasp.org/index.php/Top_10_2013-Top_10
 
 
-A8: CSRF (Cross Site Request Forgery)
+A8: CSRF (Cross Site Request Forgery) 
 ========================================
 
 A CSRF attack forces a logged-on victim’s browser to send a forged HTTP request, including the victim’s session cookie and any other automatically included authentication information, to a vulnerable web application. This allows the attacker to force the victim’s browser to generate requests the vulnerable application thinks are legitimate requests from the victim. 
@@ -27,7 +27,7 @@ Link: https://www.sslshopper.com/apache-server-ssl-installation-instructions.htm
 
 
 
-A2: SESSION FIXATION
+A2: SESSION FIXATION 
 ========================================
 
 Application functions related to authentication and session management are often not implemented correctly, allowing attackers to compromise passwords, keys, or session tokens, or to exploit other implementation flaws to assume other users’ identities.
@@ -37,7 +37,7 @@ See A2.png
 Copying the cookie from the user in the firefox browser allowed me to access the users profile from the chrome browser.
 
 
-A4: INSECURE DIRECT OBJECT REFERENCES
+A4: INSECURE DIRECT OBJECT REFERENCES 
 ========================================
 
 A direct object reference occurs when a developer exposes a reference to an internal implementation object, such as a file, directory, or database key. Without an access control check or other protection, attackers can manipulate these references to access unauthorized data. 
@@ -52,7 +52,7 @@ Change to a different ID in order to delete another users info.
 http://10.10.10.128/fourFours/index.php?operation=deleteExpression&expressionId=15&accountId=8
 
 
-A3: XSS
+A3: XSS 
 ========================================
 
 XSS flaws occur whenever an application takes untrusted data and sends it to a web browser without proper validation or escaping. XSS allows attackers to execute scripts in the victim’s browser which can hijack user sessions, deface web sites, or redirect the user to malicious sites. 

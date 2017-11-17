@@ -13,20 +13,20 @@
 	# Fix this by creating a random page token. The page token is placed in the
 	# session. Now every reply to a page, includes the page token, in the URL, as a hidden variable etc.
 	# Before processing a request, first verify the page token.
-  # password_hash(password, PASSWORD_BCRYPT, salt)
 	###################################################################################################
 
-  #May need to change from md5 to something more secure
-  # Need to verify page token
-  if (!isset($_SESSION['token'])) {
-    $token= md5(uniqid());
-    $_SESSION['token'] = $token;
-    $_SESSION['token_time'] = time();
-  }
-  else
-  {
-      $token = $_SESSION['token'];
-  }
+	  #May need to change from md5 to something more secure
+	  # Need to verify page token
+	  if (!isset($_SESSION['token'])) {
+	    $token= md5(uniqid());
+	    $_SESSION['token'] = $token;
+	    $_SESSION['token_time'] = time();
+	  }
+	  else
+	  {
+	      $token = $_SESSION['token'];
+	  }
+	
 
 	if(!isset($_SESSION['isLoggedIn']))$_SESSION['isLoggedIn']=False;
 	$operation=$_REQUEST['operation'];
@@ -41,7 +41,7 @@
 		# Take a look at the db, whats wrong with the passwords?
 		# Fix by hashing passwords, as well, you need to fix authentication to check hashes
 		# Additionally, the application is not using https to communicate, fix this
-    # Add a check for port 443 need to generate an SSL via htaccess
+    		# Add a check for port 443 need to generate an SSL via htaccess
 		###################################################################################################
 
                 $dbconn = pg_connect("dbname=fourfours user=ff host=localhost password=adg135sfh246");
@@ -49,16 +49,18 @@
                 return $dbconn;
         }
 	if($operation == "login"){
-    #Change to something stronger than md5
+   
 		$user=$_REQUEST['user'];
-		$password=md5($_REQUEST['password']);
+		# hash and salt the password (password_hash handles both)
+		# TO SALT AND HASH password_hash($_REQUEST['password'], PASSWORD_DEFAULT); CANT USE IN VERSION 5.2.4 of php
+		$password = $_REQUEST['password'];
+		$hash_password = hash("sha256", $password);
 		$dbconn = pg_connect_db();
-		# FIX OWASP 2013 A1: SQL Injection, use prepared statements -> Needs testing
 
-
+		# FIX OWASP 2013 A1: SQL Injection
 		$query= "SELECT id, username, firstName, lastName, passwd FROM account WHERE username=$1 AND passwd=$2";
 		$result = pg_prepare($dbconn, "", $query);
-		$result = pg_execute($dbconn, "", array($user, $password));
+		$result = pg_execute($dbconn, "", array($user, $hash_password));
 		if($row = pg_fetch_row($result)) {
 
 			###################################################################################################
@@ -72,7 +74,9 @@
 			# Note: Some browsers now protect against reflection attacks, but not all.
 			# See: http://php.net/manual/en/function.session-regenerate-id.php
 			###################################################################################################
-      session_regenerate_id ();
+      			
+			#Create a new session id to stop SESSION FIXATION
+			session_regenerate_id ();
 			$_SESSION['accountId']=$row[0];
 			$_SESSION['user']=$row[1];
 			$_SESSION['firstName']=$row[2];
@@ -83,6 +87,9 @@
 			$_SESSION['isLoggedIn']=False;
 		}
 	} elseif($operation == "deleteExpression"){
+		if($token != $_REQUEST['token']){
+		exit();
+		}	
 		$expressionId = $_REQUEST['expressionId'];
 		$accountId=$_SESSION['accountId'];
 		$dbconn = pg_connect_db();
@@ -98,10 +105,17 @@
 		# insecure direct object reference, that is, referencing the account id.
 		# Note: Not: Simply not giving the user interface the option to delete is not sufficient.
 		###################################################################################################
+	
 
+	# TAKE accountId from the session instead of it being passed in.
+	# FIX OWASP 2013 A1: SQL Injection
 		$result = pg_prepare($dbconn, "", "DELETE FROM solution WHERE id=$1 AND accountId=$2");
-		$result = pg_execute($dbconn, "", array($expressionId, accountId));
+		$result = pg_execute($dbconn, "", array($expressionId, $accountId));
 	} elseif($operation == "addExpression"){
+	
+		if($token != $_REQUEST['token']){
+		exit();
+		}
 
 		###################################################################################################
 		# FIX: XSS: user input/output is not vetted
@@ -113,21 +127,23 @@
 		# http://stackoverflow.com/questions/46483/htmlentities-vs-htmlspecialchars
 		###################################################################################################
 
-		$expression = $_REQUEST['expression'];
-		$value=$_REQUEST['value'];
-		$accountId=$_REQUEST['accountId'];
+		$expression = htmlspecialchars($_REQUEST['expression']);
+		$value= htmlspecialchars($_REQUEST['value']);
+		$accountId= htmlspecialchars($_REQUEST['accountId']);
 
+		# FIX OWASP 2013 A1: SQL Injection
 		$dbconn = pg_connect_db();
-		$result = pg_prepare($dbconn, "", "SELECT * FROM solution WHERE expression='$expression'");
-		$result = pg_execute($dbconn, "", array());
+		$result = pg_prepare($dbconn, "", "SELECT * FROM solution WHERE expression=$1");
+		$result = pg_execute($dbconn, "", array($expression));
 		if(!($row = pg_fetch_row($result))) {
-			$result = pg_prepare($dbconn, "", "insert into solution (value, expression, accountId) values ($value, '$expression', $accountId)");
-			$result = pg_execute($dbconn, "", array());
+		# FIX OWASP 2013 A1: SQL Injection
+			$result = pg_prepare($dbconn, "", "insert into solution (value, expression, accountId) values ($1, $2, $3)");
+			$result = pg_execute($dbconn, "", array($value, $expression, $accountId));
 		} else {
 			$g_errors="$expression is already in our database";
 		}
 	} elseif($operation == "logout"){
-		unset($_SESSION);
+		session_destroy();
 		$_SESSION['isLoggedIn']=False;
 	}
 	$g_isLoggedIn=$_SESSION['isLoggedIn'];
@@ -176,12 +192,13 @@
 										$count=0;
 										$firstName=$row[$count++];
 										$lastName=$row[$count++];
-										$value=$row[$count++];
-										$expression=$row[$count++];
+										$value=htmlspecialchars($row[$count++]);
+										$expression=htmlspecialchars($row[$count++]);
 										$expressionAccountId=$row[$count++];
 										$expressionId=$row[$count++];
+$token = $_SESSION['token'];
 										if($expressionAccountId==$g_accountId){
-											$deleteLink="<a href=\"?operation=deleteExpression&expressionId=$expressionId&accountId=$g_accountId\"><img src=\"delete.png\" width=\"20\" border=\"0\" /></a>";
+											$deleteLink="<a href=\"?operation=deleteExpression&expressionId=$expressionId&accountId=$g_accountId&token=$token\"><img src=\"delete.png\" width=\"20\" border=\"0\" /></a>";
 										} else {
 											$deleteLink="";
 										}
@@ -195,6 +212,8 @@
 										<input type="hidden" name="value" value="<?=$i?>"/>
 										<input type="hidden" name="operation" value="addExpression"/>
 										<input type="hidden" name="accountId" value="<?=$g_accountId ?>"/>
+
+<input type="hidden" name="token" value="<?= $token?>"/>
 									</form>
 								</tr>
 							</table>
