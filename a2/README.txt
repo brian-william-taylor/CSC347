@@ -6,6 +6,6 @@ UTORid: vickeryp
 
 Member 2:
 
-Name:
-Student Number:
-UTORid:
+Name: Brian Taylor
+Student Number: 999207200
+UTORid: taylo192
