@@ -1,3 +1,3 @@
-Why:
+Why: Useful for seeing if a user was recently changed or the possibility of a root account being added.
 
-Output Explaination: 
+Output Explaination: There is no difference between the compromised system and the clean system meaning there was no changes made to the accounts.

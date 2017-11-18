@@ -1,3 +1,3 @@
-Why:
+Why: Useful since it shows when users logged in. Shows off where and when they accessed the system. 
 
-Output Explaination: 
+Output Explaination: Shows that the hacker account was logged in remotely from on the UTM network.

@@ -1,3 +1,3 @@
-Why:
+Why: This can show files that were added or deleted from the compromised system.
 
-Output Explaination: 
+Output Explaination: xinetd service was added to the compromised system that is vulnerable to buffer overruns.  

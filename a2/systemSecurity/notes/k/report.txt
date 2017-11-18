@@ -1,3 +1,3 @@
-Why:
+Why: A hacker could use cron to run there own scripts without having to log back into the system.
 
-Output Explaination: 
+Output Explaination: There was no difference between the compromised and clean systems so no new cron jobs were added.

@@ -1,3 +1,4 @@
-Why:
+Why: Useful for seeing what a users activity was and can potentially show which files and folders they were interested in as long as they do not wipe the logs.
 
-Output Explaination: 
+Output Explaination: Finding nothing does not mean that nothing happened to that account as the user could delete their history. 
+Output shows the user compiling and running a number of c files.
