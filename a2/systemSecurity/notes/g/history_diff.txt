@@ -1,0 +1,48 @@
+34,35d33
+< history
+< top
+38,39d35
+< history
+< top
+102,142d97
+< su -
+< ls
+< ls
+< cd ..
+< ls
+< cd
+< ls
+< /sbin/ifconfig
+< su -
+< ls
+< cd /vulnerable
+< ls
+< su -
+< ls
+< gcc -o swapAround swapAround.c
+< gcc -S -o swapAround swapAround.c
+< ./swapAround
+< ls
+< ./swapAround
+< ./swapAround a b
+< gcc -o swapAround -g swapAround.c
+< gcc -S -o swapAround swapAround.c
+< ./swapAround a b
+< gcc -S -o swapAround.s swapAround.c
+< ./swapAround a b
+< gcc -S -o swapAround.s swapAround.c
+< gcc -o swapAround -g swapAround.c
+< ./swapAround a b
+< gdb swapAround
+< vim script
+< ls
+< vim notes
+< cd notes
+< ls
+< cd bufferoverruns
+< ls
+< vim stackSolution.c
+< ,,
+< cd ..
+< cd ..
+< vim script

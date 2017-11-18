@@ -1,0 +1,170 @@
+/var/www-------------------------------------
+/var/spool/uucp-------------------------------------
+/var/spool/news-------------------------------------
+/var/spool/mqueue-------------------------------------
+/var/spool/mail-------------------------------------
+/var/spool/lpd-------------------------------------
+/var/lib/rpm-------------------------------------
+/var/lib/pgsql-------------------------------------
+ls
+cd /usr/local/
+ls
+cd share
+ls
+cd 
+ls
+cd data
+ls
+createuser hacker
+createdb hacker
+ls
+/var/lib/nfs-------------------------------------
+/var/lib/nfs-------------------------------------
+/var/gopher-------------------------------------
+/var/gdm-------------------------------------
+/var/ftp-------------------------------------
+/var/adm-------------------------------------
+/usr/games-------------------------------------
+/sbin-------------------------------------
+/sbin-------------------------------------
+/sbin-------------------------------------
+/sbin-------------------------------------
+/root-------------------------------------
+shutdown -h now
+history
+top
+/root-------------------------------------
+shutdown -h now
+history
+top
+/home/u2-------------------------------------
+cd ~hacker/permissions/
+ls
+cd u2g1
+ls
+cd ..
+ls
+cd u2g2
+ls
+cd ..
+ls
+ls
+cd
+ls
+cd ~hacker
+ls
+cd permissions/
+ls
+cd u2g1
+ls
+ls -al
+rm hello.txt 
+ls -al
+/home/u1-------------------------------------
+ls
+pwd
+cd ~hacker
+ls
+cd permissions/
+ls
+cd u1g1
+ls
+cd ..
+ls
+cd u1g2
+cd ..
+ls
+cd u2g1
+cd u2g2
+ls
+cd ~hacker/permissions/
+ls
+cd u1g1
+ls
+cd ..
+ls
+cd u1g2
+ls
+ls -al
+vim test1.txt 
+ls
+cd ..
+ls
+who am i
+cd u1sg1
+ls
+vim test2.txt
+ls -al
+rm test2.txt 
+ls
+/home/siduser-------------------------------------
+/home/hacker-------------------------------------
+su -
+ls
+ls
+cd ..
+ls
+cd
+ls
+/sbin/ifconfig
+su -
+ls
+cd /vulnerable
+ls
+su -
+ls
+gcc -o swapAround swapAround.c
+gcc -S -o swapAround swapAround.c
+./swapAround
+ls
+./swapAround
+./swapAround a b
+gcc -o swapAround -g swapAround.c
+gcc -S -o swapAround swapAround.c
+./swapAround a b
+gcc -S -o swapAround.s swapAround.c
+./swapAround a b
+gcc -S -o swapAround.s swapAround.c
+gcc -o swapAround -g swapAround.c
+./swapAround a b
+gdb swapAround
+vim script
+ls
+vim notes
+cd notes
+ls
+cd bufferoverruns
+ls
+vim stackSolution.c
+,,
+cd ..
+cd ..
+vim script
+/home/bobuser-------------------------------------
+mail
+mail
+mail bobuser
+mail
+man mail
+mail
+mail
+mail
+mail
+mail
+mail
+mail
+mail bobuser@127.0.0.1
+mail
+mail bobuser@localhost
+mail
+mail
+psql
+mail
+/etc/ntp-------------------------------------
+/etc/X11/fs-------------------------------------
+/bin-------------------------------------
+/-------------------------------------
+/-------------------------------------
+/-------------------------------------
+/-------------------------------------
+/-------------------------------------

@@ -1,0 +1,779 @@
+Only in /mnt/corr: .autofsck
+File /mnt/corr/dev/apm_bios is a character special file while file /mnt/clean/dev/apm_bios is a character special file
+File /mnt/corr/dev/audio is a character special file while file /mnt/clean/dev/audio is a character special file
+File /mnt/corr/dev/audio1 is a character special file while file /mnt/clean/dev/audio1 is a character special file
+File /mnt/corr/dev/audioctl is a character special file while file /mnt/clean/dev/audioctl is a character special file
+File /mnt/corr/dev/beep is a character special file while file /mnt/clean/dev/beep is a character special file
+File /mnt/corr/dev/dsp is a character special file while file /mnt/clean/dev/dsp is a character special file
+File /mnt/corr/dev/dsp1 is a character special file while file /mnt/clean/dev/dsp1 is a character special file
+File /mnt/corr/dev/dsp56k is a character special file while file /mnt/clean/dev/dsp56k is a character special file
+File /mnt/corr/dev/fb is a character special file while file /mnt/clean/dev/fb is a character special file
+File /mnt/corr/dev/fb0 is a character special file while file /mnt/clean/dev/fb0 is a character special file
+File /mnt/corr/dev/fb1 is a character special file while file /mnt/clean/dev/fb1 is a character special file
+File /mnt/corr/dev/fb10 is a character special file while file /mnt/clean/dev/fb10 is a character special file
+File /mnt/corr/dev/fb11 is a character special file while file /mnt/clean/dev/fb11 is a character special file
+File /mnt/corr/dev/fb12 is a character special file while file /mnt/clean/dev/fb12 is a character special file
+File /mnt/corr/dev/fb13 is a character special file while file /mnt/clean/dev/fb13 is a character special file
+File /mnt/corr/dev/fb14 is a character special file while file /mnt/clean/dev/fb14 is a character special file
+File /mnt/corr/dev/fb15 is a character special file while file /mnt/clean/dev/fb15 is a character special file
+File /mnt/corr/dev/fb16 is a character special file while file /mnt/clean/dev/fb16 is a character special file
+File /mnt/corr/dev/fb17 is a character special file while file /mnt/clean/dev/fb17 is a character special file
+File /mnt/corr/dev/fb18 is a character special file while file /mnt/clean/dev/fb18 is a character special file
+File /mnt/corr/dev/fb19 is a character special file while file /mnt/clean/dev/fb19 is a character special file
+File /mnt/corr/dev/fb2 is a character special file while file /mnt/clean/dev/fb2 is a character special file
+File /mnt/corr/dev/fb20 is a character special file while file /mnt/clean/dev/fb20 is a character special file
+File /mnt/corr/dev/fb21 is a character special file while file /mnt/clean/dev/fb21 is a character special file
+File /mnt/corr/dev/fb22 is a character special file while file /mnt/clean/dev/fb22 is a character special file
+File /mnt/corr/dev/fb23 is a character special file while file /mnt/clean/dev/fb23 is a character special file
+File /mnt/corr/dev/fb24 is a character special file while file /mnt/clean/dev/fb24 is a character special file
+File /mnt/corr/dev/fb25 is a character special file while file /mnt/clean/dev/fb25 is a character special file
+File /mnt/corr/dev/fb26 is a character special file while file /mnt/clean/dev/fb26 is a character special file
+File /mnt/corr/dev/fb27 is a character special file while file /mnt/clean/dev/fb27 is a character special file
+File /mnt/corr/dev/fb28 is a character special file while file /mnt/clean/dev/fb28 is a character special file
+File /mnt/corr/dev/fb29 is a character special file while file /mnt/clean/dev/fb29 is a character special file
+File /mnt/corr/dev/fb3 is a character special file while file /mnt/clean/dev/fb3 is a character special file
+File /mnt/corr/dev/fb30 is a character special file while file /mnt/clean/dev/fb30 is a character special file
+File /mnt/corr/dev/fb31 is a character special file while file /mnt/clean/dev/fb31 is a character special file
+File /mnt/corr/dev/fb4 is a character special file while file /mnt/clean/dev/fb4 is a character special file
+File /mnt/corr/dev/fb5 is a character special file while file /mnt/clean/dev/fb5 is a character special file
+File /mnt/corr/dev/fb6 is a character special file while file /mnt/clean/dev/fb6 is a character special file
+File /mnt/corr/dev/fb7 is a character special file while file /mnt/clean/dev/fb7 is a character special file
+File /mnt/corr/dev/fb8 is a character special file while file /mnt/clean/dev/fb8 is a character special file
+File /mnt/corr/dev/fb9 is a character special file while file /mnt/clean/dev/fb9 is a character special file
+File /mnt/corr/dev/fd0 is a block special file while file /mnt/clean/dev/fd0 is a block special file
+File /mnt/corr/dev/fd0CompaQ is a block special file while file /mnt/clean/dev/fd0CompaQ is a block special file
+File /mnt/corr/dev/fd0D360 is a block special file while file /mnt/clean/dev/fd0D360 is a block special file
+File /mnt/corr/dev/fd0D720 is a block special file while file /mnt/clean/dev/fd0D720 is a block special file
+File /mnt/corr/dev/fd0H1440 is a block special file while file /mnt/clean/dev/fd0H1440 is a block special file
+File /mnt/corr/dev/fd0H360 is a block special file while file /mnt/clean/dev/fd0H360 is a block special file
+File /mnt/corr/dev/fd0H720 is a block special file while file /mnt/clean/dev/fd0H720 is a block special file
+File /mnt/corr/dev/fd0d360 is a block special file while file /mnt/clean/dev/fd0d360 is a block special file
+File /mnt/corr/dev/fd0h1200 is a block special file while file /mnt/clean/dev/fd0h1200 is a block special file
+File /mnt/corr/dev/fd0h1440 is a block special file while file /mnt/clean/dev/fd0h1440 is a block special file
+File /mnt/corr/dev/fd0h1476 is a block special file while file /mnt/clean/dev/fd0h1476 is a block special file
+File /mnt/corr/dev/fd0h1494 is a block special file while file /mnt/clean/dev/fd0h1494 is a block special file
+File /mnt/corr/dev/fd0h1660 is a block special file while file /mnt/clean/dev/fd0h1660 is a block special file
+File /mnt/corr/dev/fd0h360 is a block special file while file /mnt/clean/dev/fd0h360 is a block special file
+File /mnt/corr/dev/fd0h410 is a block special file while file /mnt/clean/dev/fd0h410 is a block special file
+File /mnt/corr/dev/fd0h420 is a block special file while file /mnt/clean/dev/fd0h420 is a block special file
+File /mnt/corr/dev/fd0h720 is a block special file while file /mnt/clean/dev/fd0h720 is a block special file
+File /mnt/corr/dev/fd0h880 is a block special file while file /mnt/clean/dev/fd0h880 is a block special file
+File /mnt/corr/dev/fd0u1040 is a block special file while file /mnt/clean/dev/fd0u1040 is a block special file
+File /mnt/corr/dev/fd0u1120 is a block special file while file /mnt/clean/dev/fd0u1120 is a block special file
+File /mnt/corr/dev/fd0u1440 is a block special file while file /mnt/clean/dev/fd0u1440 is a block special file
+File /mnt/corr/dev/fd0u1660 is a block special file while file /mnt/clean/dev/fd0u1660 is a block special file
+File /mnt/corr/dev/fd0u1680 is a block special file while file /mnt/clean/dev/fd0u1680 is a block special file
+File /mnt/corr/dev/fd0u1722 is a block special file while file /mnt/clean/dev/fd0u1722 is a block special file
+File /mnt/corr/dev/fd0u1743 is a block special file while file /mnt/clean/dev/fd0u1743 is a block special file
+File /mnt/corr/dev/fd0u1760 is a block special file while file /mnt/clean/dev/fd0u1760 is a block special file
+File /mnt/corr/dev/fd0u1840 is a block special file while file /mnt/clean/dev/fd0u1840 is a block special file
+File /mnt/corr/dev/fd0u1920 is a block special file while file /mnt/clean/dev/fd0u1920 is a block special file
+File /mnt/corr/dev/fd0u2880 is a block special file while file /mnt/clean/dev/fd0u2880 is a block special file
+File /mnt/corr/dev/fd0u3200 is a block special file while file /mnt/clean/dev/fd0u3200 is a block special file
+File /mnt/corr/dev/fd0u3520 is a block special file while file /mnt/clean/dev/fd0u3520 is a block special file
+File /mnt/corr/dev/fd0u360 is a block special file while file /mnt/clean/dev/fd0u360 is a block special file
+File /mnt/corr/dev/fd0u3840 is a block special file while file /mnt/clean/dev/fd0u3840 is a block special file
+File /mnt/corr/dev/fd0u720 is a block special file while file /mnt/clean/dev/fd0u720 is a block special file
+File /mnt/corr/dev/fd0u800 is a block special file while file /mnt/clean/dev/fd0u800 is a block special file
+File /mnt/corr/dev/fd0u820 is a block special file while file /mnt/clean/dev/fd0u820 is a block special file
+File /mnt/corr/dev/fd0u830 is a block special file while file /mnt/clean/dev/fd0u830 is a block special file
+File /mnt/corr/dev/fd1 is a block special file while file /mnt/clean/dev/fd1 is a block special file
+File /mnt/corr/dev/fd1CompaQ is a block special file while file /mnt/clean/dev/fd1CompaQ is a block special file
+File /mnt/corr/dev/fd1D360 is a block special file while file /mnt/clean/dev/fd1D360 is a block special file
+File /mnt/corr/dev/fd1D720 is a block special file while file /mnt/clean/dev/fd1D720 is a block special file
+File /mnt/corr/dev/fd1H1440 is a block special file while file /mnt/clean/dev/fd1H1440 is a block special file
+File /mnt/corr/dev/fd1H360 is a block special file while file /mnt/clean/dev/fd1H360 is a block special file
+File /mnt/corr/dev/fd1H720 is a block special file while file /mnt/clean/dev/fd1H720 is a block special file
+File /mnt/corr/dev/fd1d360 is a block special file while file /mnt/clean/dev/fd1d360 is a block special file
+File /mnt/corr/dev/fd1h1200 is a block special file while file /mnt/clean/dev/fd1h1200 is a block special file
+File /mnt/corr/dev/fd1h1440 is a block special file while file /mnt/clean/dev/fd1h1440 is a block special file
+File /mnt/corr/dev/fd1h1476 is a block special file while file /mnt/clean/dev/fd1h1476 is a block special file
+File /mnt/corr/dev/fd1h1494 is a block special file while file /mnt/clean/dev/fd1h1494 is a block special file
+File /mnt/corr/dev/fd1h1660 is a block special file while file /mnt/clean/dev/fd1h1660 is a block special file
+File /mnt/corr/dev/fd1h360 is a block special file while file /mnt/clean/dev/fd1h360 is a block special file
+File /mnt/corr/dev/fd1h410 is a block special file while file /mnt/clean/dev/fd1h410 is a block special file
+File /mnt/corr/dev/fd1h420 is a block special file while file /mnt/clean/dev/fd1h420 is a block special file
+File /mnt/corr/dev/fd1h720 is a block special file while file /mnt/clean/dev/fd1h720 is a block special file
+File /mnt/corr/dev/fd1h880 is a block special file while file /mnt/clean/dev/fd1h880 is a block special file
+File /mnt/corr/dev/fd1u1040 is a block special file while file /mnt/clean/dev/fd1u1040 is a block special file
+File /mnt/corr/dev/fd1u1120 is a block special file while file /mnt/clean/dev/fd1u1120 is a block special file
+File /mnt/corr/dev/fd1u1440 is a block special file while file /mnt/clean/dev/fd1u1440 is a block special file
+File /mnt/corr/dev/fd1u1660 is a block special file while file /mnt/clean/dev/fd1u1660 is a block special file
+File /mnt/corr/dev/fd1u1680 is a block special file while file /mnt/clean/dev/fd1u1680 is a block special file
+File /mnt/corr/dev/fd1u1722 is a block special file while file /mnt/clean/dev/fd1u1722 is a block special file
+File /mnt/corr/dev/fd1u1743 is a block special file while file /mnt/clean/dev/fd1u1743 is a block special file
+File /mnt/corr/dev/fd1u1760 is a block special file while file /mnt/clean/dev/fd1u1760 is a block special file
+File /mnt/corr/dev/fd1u1840 is a block special file while file /mnt/clean/dev/fd1u1840 is a block special file
+File /mnt/corr/dev/fd1u1920 is a block special file while file /mnt/clean/dev/fd1u1920 is a block special file
+File /mnt/corr/dev/fd1u2880 is a block special file while file /mnt/clean/dev/fd1u2880 is a block special file
+File /mnt/corr/dev/fd1u3200 is a block special file while file /mnt/clean/dev/fd1u3200 is a block special file
+File /mnt/corr/dev/fd1u3520 is a block special file while file /mnt/clean/dev/fd1u3520 is a block special file
+File /mnt/corr/dev/fd1u360 is a block special file while file /mnt/clean/dev/fd1u360 is a block special file
+File /mnt/corr/dev/fd1u3840 is a block special file while file /mnt/clean/dev/fd1u3840 is a block special file
+File /mnt/corr/dev/fd1u720 is a block special file while file /mnt/clean/dev/fd1u720 is a block special file
+File /mnt/corr/dev/fd1u800 is a block special file while file /mnt/clean/dev/fd1u800 is a block special file
+File /mnt/corr/dev/fd1u820 is a block special file while file /mnt/clean/dev/fd1u820 is a block special file
+File /mnt/corr/dev/fd1u830 is a block special file while file /mnt/clean/dev/fd1u830 is a block special file
+Only in /mnt/corr/dev: gpmctl
+File /mnt/corr/dev/initctl is a fifo while file /mnt/clean/dev/initctl is a fifo
+File /mnt/corr/dev/input/js0 is a character special file while file /mnt/clean/dev/input/js0 is a character special file
+File /mnt/corr/dev/input/js1 is a character special file while file /mnt/clean/dev/input/js1 is a character special file
+File /mnt/corr/dev/input/js2 is a character special file while file /mnt/clean/dev/input/js2 is a character special file
+File /mnt/corr/dev/input/js3 is a character special file while file /mnt/clean/dev/input/js3 is a character special file
+File /mnt/corr/dev/js0 is a character special file while file /mnt/clean/dev/js0 is a character special file
+File /mnt/corr/dev/js1 is a character special file while file /mnt/clean/dev/js1 is a character special file
+File /mnt/corr/dev/js2 is a character special file while file /mnt/clean/dev/js2 is a character special file
+File /mnt/corr/dev/js3 is a character special file while file /mnt/clean/dev/js3 is a character special file
+Only in /mnt/corr/dev: log
+File /mnt/corr/dev/midi0 is a character special file while file /mnt/clean/dev/midi0 is a character special file
+File /mnt/corr/dev/midi00 is a character special file while file /mnt/clean/dev/midi00 is a character special file
+File /mnt/corr/dev/midi01 is a character special file while file /mnt/clean/dev/midi01 is a character special file
+File /mnt/corr/dev/midi02 is a character special file while file /mnt/clean/dev/midi02 is a character special file
+File /mnt/corr/dev/midi03 is a character special file while file /mnt/clean/dev/midi03 is a character special file
+File /mnt/corr/dev/midi1 is a character special file while file /mnt/clean/dev/midi1 is a character special file
+File /mnt/corr/dev/midi2 is a character special file while file /mnt/clean/dev/midi2 is a character special file
+File /mnt/corr/dev/midi3 is a character special file while file /mnt/clean/dev/midi3 is a character special file
+File /mnt/corr/dev/mixer is a character special file while file /mnt/clean/dev/mixer is a character special file
+File /mnt/corr/dev/mixer1 is a character special file while file /mnt/clean/dev/mixer1 is a character special file
+File /mnt/corr/dev/radio is a character special file while file /mnt/clean/dev/radio is a character special file
+File /mnt/corr/dev/radio0 is a character special file while file /mnt/clean/dev/radio0 is a character special file
+File /mnt/corr/dev/radio1 is a character special file while file /mnt/clean/dev/radio1 is a character special file
+File /mnt/corr/dev/radio2 is a character special file while file /mnt/clean/dev/radio2 is a character special file
+File /mnt/corr/dev/radio3 is a character special file while file /mnt/clean/dev/radio3 is a character special file
+File /mnt/corr/dev/scd0 is a block special file while file /mnt/clean/dev/scd0 is a block special file
+File /mnt/corr/dev/sequencer is a character special file while file /mnt/clean/dev/sequencer is a character special file
+File /mnt/corr/dev/systty is a character special file while file /mnt/clean/dev/systty is a character special file
+File /mnt/corr/dev/tty0 is a character special file while file /mnt/clean/dev/tty0 is a character special file
+File /mnt/corr/dev/tty1 is a character special file while file /mnt/clean/dev/tty1 is a character special file
+File /mnt/corr/dev/tty2 is a character special file while file /mnt/clean/dev/tty2 is a character special file
+File /mnt/corr/dev/tty3 is a character special file while file /mnt/clean/dev/tty3 is a character special file
+File /mnt/corr/dev/tty4 is a character special file while file /mnt/clean/dev/tty4 is a character special file
+File /mnt/corr/dev/tty5 is a character special file while file /mnt/clean/dev/tty5 is a character special file
+File /mnt/corr/dev/tty6 is a character special file while file /mnt/clean/dev/tty6 is a character special file
+File /mnt/corr/dev/tty7 is a character special file while file /mnt/clean/dev/tty7 is a character special file
+File /mnt/corr/dev/urandom is a character special file while file /mnt/clean/dev/urandom is a character special file
+File /mnt/corr/dev/usb/dc2xx0 is a character special file while file /mnt/clean/dev/usb/dc2xx0 is a character special file
+File /mnt/corr/dev/usb/dc2xx1 is a character special file while file /mnt/clean/dev/usb/dc2xx1 is a character special file
+File /mnt/corr/dev/usb/dc2xx10 is a character special file while file /mnt/clean/dev/usb/dc2xx10 is a character special file
+File /mnt/corr/dev/usb/dc2xx11 is a character special file while file /mnt/clean/dev/usb/dc2xx11 is a character special file
+File /mnt/corr/dev/usb/dc2xx12 is a character special file while file /mnt/clean/dev/usb/dc2xx12 is a character special file
+File /mnt/corr/dev/usb/dc2xx13 is a character special file while file /mnt/clean/dev/usb/dc2xx13 is a character special file
+File /mnt/corr/dev/usb/dc2xx14 is a character special file while file /mnt/clean/dev/usb/dc2xx14 is a character special file
+File /mnt/corr/dev/usb/dc2xx15 is a character special file while file /mnt/clean/dev/usb/dc2xx15 is a character special file
+File /mnt/corr/dev/usb/dc2xx2 is a character special file while file /mnt/clean/dev/usb/dc2xx2 is a character special file
+File /mnt/corr/dev/usb/dc2xx3 is a character special file while file /mnt/clean/dev/usb/dc2xx3 is a character special file
+File /mnt/corr/dev/usb/dc2xx4 is a character special file while file /mnt/clean/dev/usb/dc2xx4 is a character special file
+File /mnt/corr/dev/usb/dc2xx5 is a character special file while file /mnt/clean/dev/usb/dc2xx5 is a character special file
+File /mnt/corr/dev/usb/dc2xx6 is a character special file while file /mnt/clean/dev/usb/dc2xx6 is a character special file
+File /mnt/corr/dev/usb/dc2xx7 is a character special file while file /mnt/clean/dev/usb/dc2xx7 is a character special file
+File /mnt/corr/dev/usb/dc2xx8 is a character special file while file /mnt/clean/dev/usb/dc2xx8 is a character special file
+File /mnt/corr/dev/usb/dc2xx9 is a character special file while file /mnt/clean/dev/usb/dc2xx9 is a character special file
+File /mnt/corr/dev/usb/mdc8000 is a character special file while file /mnt/clean/dev/usb/mdc8000 is a character special file
+File /mnt/corr/dev/usb/mdc8001 is a character special file while file /mnt/clean/dev/usb/mdc8001 is a character special file
+File /mnt/corr/dev/usb/mdc80010 is a character special file while file /mnt/clean/dev/usb/mdc80010 is a character special file
+File /mnt/corr/dev/usb/mdc80011 is a character special file while file /mnt/clean/dev/usb/mdc80011 is a character special file
+File /mnt/corr/dev/usb/mdc80012 is a character special file while file /mnt/clean/dev/usb/mdc80012 is a character special file
+File /mnt/corr/dev/usb/mdc80013 is a character special file while file /mnt/clean/dev/usb/mdc80013 is a character special file
+File /mnt/corr/dev/usb/mdc80014 is a character special file while file /mnt/clean/dev/usb/mdc80014 is a character special file
+File /mnt/corr/dev/usb/mdc80015 is a character special file while file /mnt/clean/dev/usb/mdc80015 is a character special file
+File /mnt/corr/dev/usb/mdc8002 is a character special file while file /mnt/clean/dev/usb/mdc8002 is a character special file
+File /mnt/corr/dev/usb/mdc8003 is a character special file while file /mnt/clean/dev/usb/mdc8003 is a character special file
+File /mnt/corr/dev/usb/mdc8004 is a character special file while file /mnt/clean/dev/usb/mdc8004 is a character special file
+File /mnt/corr/dev/usb/mdc8005 is a character special file while file /mnt/clean/dev/usb/mdc8005 is a character special file
+File /mnt/corr/dev/usb/mdc8006 is a character special file while file /mnt/clean/dev/usb/mdc8006 is a character special file
+File /mnt/corr/dev/usb/mdc8007 is a character special file while file /mnt/clean/dev/usb/mdc8007 is a character special file
+File /mnt/corr/dev/usb/mdc8008 is a character special file while file /mnt/clean/dev/usb/mdc8008 is a character special file
+File /mnt/corr/dev/usb/mdc8009 is a character special file while file /mnt/clean/dev/usb/mdc8009 is a character special file
+File /mnt/corr/dev/usb/rio500 is a character special file while file /mnt/clean/dev/usb/rio500 is a character special file
+File /mnt/corr/dev/usb/scanner0 is a character special file while file /mnt/clean/dev/usb/scanner0 is a character special file
+File /mnt/corr/dev/usb/scanner1 is a character special file while file /mnt/clean/dev/usb/scanner1 is a character special file
+File /mnt/corr/dev/usb/scanner10 is a character special file while file /mnt/clean/dev/usb/scanner10 is a character special file
+File /mnt/corr/dev/usb/scanner11 is a character special file while file /mnt/clean/dev/usb/scanner11 is a character special file
+File /mnt/corr/dev/usb/scanner12 is a character special file while file /mnt/clean/dev/usb/scanner12 is a character special file
+File /mnt/corr/dev/usb/scanner13 is a character special file while file /mnt/clean/dev/usb/scanner13 is a character special file
+File /mnt/corr/dev/usb/scanner14 is a character special file while file /mnt/clean/dev/usb/scanner14 is a character special file
+File /mnt/corr/dev/usb/scanner15 is a character special file while file /mnt/clean/dev/usb/scanner15 is a character special file
+File /mnt/corr/dev/usb/scanner2 is a character special file while file /mnt/clean/dev/usb/scanner2 is a character special file
+File /mnt/corr/dev/usb/scanner3 is a character special file while file /mnt/clean/dev/usb/scanner3 is a character special file
+File /mnt/corr/dev/usb/scanner4 is a character special file while file /mnt/clean/dev/usb/scanner4 is a character special file
+File /mnt/corr/dev/usb/scanner5 is a character special file while file /mnt/clean/dev/usb/scanner5 is a character special file
+File /mnt/corr/dev/usb/scanner6 is a character special file while file /mnt/clean/dev/usb/scanner6 is a character special file
+File /mnt/corr/dev/usb/scanner7 is a character special file while file /mnt/clean/dev/usb/scanner7 is a character special file
+File /mnt/corr/dev/usb/scanner8 is a character special file while file /mnt/clean/dev/usb/scanner8 is a character special file
+File /mnt/corr/dev/usb/scanner9 is a character special file while file /mnt/clean/dev/usb/scanner9 is a character special file
+File /mnt/corr/dev/vbi is a character special file while file /mnt/clean/dev/vbi is a character special file
+File /mnt/corr/dev/vbi0 is a character special file while file /mnt/clean/dev/vbi0 is a character special file
+File /mnt/corr/dev/vbi1 is a character special file while file /mnt/clean/dev/vbi1 is a character special file
+File /mnt/corr/dev/vbi2 is a character special file while file /mnt/clean/dev/vbi2 is a character special file
+File /mnt/corr/dev/vbi3 is a character special file while file /mnt/clean/dev/vbi3 is a character special file
+File /mnt/corr/dev/video/em8300 is a character special file while file /mnt/clean/dev/video/em8300 is a character special file
+File /mnt/corr/dev/video/em8300_ma is a character special file while file /mnt/clean/dev/video/em8300_ma is a character special file
+File /mnt/corr/dev/video/em8300_mv is a character special file while file /mnt/clean/dev/video/em8300_mv is a character special file
+File /mnt/corr/dev/video/em8300_sp is a character special file while file /mnt/clean/dev/video/em8300_sp is a character special file
+File /mnt/corr/dev/video0 is a character special file while file /mnt/clean/dev/video0 is a character special file
+File /mnt/corr/dev/video1 is a character special file while file /mnt/clean/dev/video1 is a character special file
+File /mnt/corr/dev/video2 is a character special file while file /mnt/clean/dev/video2 is a character special file
+File /mnt/corr/dev/video3 is a character special file while file /mnt/clean/dev/video3 is a character special file
+File /mnt/corr/dev/vtx is a character special file while file /mnt/clean/dev/vtx is a character special file
+File /mnt/corr/dev/vtx0 is a character special file while file /mnt/clean/dev/vtx0 is a character special file
+File /mnt/corr/dev/vtx1 is a character special file while file /mnt/clean/dev/vtx1 is a character special file
+File /mnt/corr/dev/vtx2 is a character special file while file /mnt/clean/dev/vtx2 is a character special file
+File /mnt/corr/dev/vtx3 is a character special file while file /mnt/clean/dev/vtx3 is a character special file
+File /mnt/corr/dev/winradio is a character special file while file /mnt/clean/dev/winradio is a character special file
+File /mnt/corr/dev/winradio0 is a character special file while file /mnt/clean/dev/winradio0 is a character special file
+File /mnt/corr/dev/winradio1 is a character special file while file /mnt/clean/dev/winradio1 is a character special file
+File /mnt/corr/dev/winradio2 is a character special file while file /mnt/clean/dev/winradio2 is a character special file
+File /mnt/corr/dev/winradio3 is a character special file while file /mnt/clean/dev/winradio3 is a character special file
+Files /mnt/corr/etc/adjtime and /mnt/clean/etc/adjtime differ
+Files /mnt/corr/etc/aliases.db and /mnt/clean/etc/aliases.db differ
+Files /mnt/corr/etc/dhcpc/dhcpcd-eth0.cache and /mnt/clean/etc/dhcpc/dhcpcd-eth0.cache differ
+Files /mnt/corr/etc/dhcpc/dhcpcd-eth0.info and /mnt/clean/etc/dhcpc/dhcpcd-eth0.info differ
+Files /mnt/corr/etc/dhcpcd/dhcpcd-eth0.cache and /mnt/clean/etc/dhcpcd/dhcpcd-eth0.cache differ
+Files /mnt/corr/etc/dhcpcd/dhcpcd-eth0.info and /mnt/clean/etc/dhcpcd/dhcpcd-eth0.info differ
+Files /mnt/corr/etc/httpd/logs/access_log and /mnt/clean/etc/httpd/logs/access_log differ
+Files /mnt/corr/etc/httpd/logs/access_log.1 and /mnt/clean/etc/httpd/logs/access_log.1 differ
+Files /mnt/corr/etc/httpd/logs/access_log.4 and /mnt/clean/etc/httpd/logs/access_log.4 differ
+Files /mnt/corr/etc/httpd/logs/error_log and /mnt/clean/etc/httpd/logs/error_log differ
+Files /mnt/corr/etc/httpd/logs/error_log.1 and /mnt/clean/etc/httpd/logs/error_log.1 differ
+Files /mnt/corr/etc/httpd/logs/error_log.2 and /mnt/clean/etc/httpd/logs/error_log.2 differ
+Files /mnt/corr/etc/httpd/logs/error_log.3 and /mnt/clean/etc/httpd/logs/error_log.3 differ
+Files /mnt/corr/etc/httpd/logs/error_log.4 and /mnt/clean/etc/httpd/logs/error_log.4 differ
+Files /mnt/corr/etc/mail/statistics and /mnt/clean/etc/mail/statistics differ
+Files /mnt/corr/etc/mtab and /mnt/clean/etc/mtab differ
+Files /mnt/corr/etc/resolv.conf and /mnt/clean/etc/resolv.conf differ
+Only in /mnt/corr/etc: resolv.conf.sv
+Files /mnt/corr/etc/sysconfig/hwconf and /mnt/clean/etc/sysconfig/hwconf differ
+Files /mnt/corr/etc/vmware-tools/locations and /mnt/clean/etc/vmware-tools/locations differ
+Files /mnt/corr/home/hacker/.ICEauthority and /mnt/clean/home/hacker/.ICEauthority differ
+Files /mnt/corr/home/hacker/.bash_history and /mnt/clean/home/hacker/.bash_history differ
+Only in /mnt/corr/home/hacker/.gconf: %gconf-xml-backend.lock
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/defaults/advanced/apps/nautilus/preferences/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/defaults/advanced/apps/nautilus/preferences/%gconf.xml differ
+Only in /mnt/corr/home/hacker/.gconf/apps/nautilus/defaults/intermediate/apps/nautilus: components
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/defaults/intermediate/apps/nautilus/preferences/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/defaults/intermediate/apps/nautilus/preferences/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/defaults/intermediate/apps/nautilus/sidebar-panels/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/defaults/intermediate/apps/nautilus/sidebar-panels/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/icon-view/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/icon-view/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/list-view/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/list-view/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/news/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/news/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/preferences/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/preferences/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/sidebar-panels/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/sidebar-panels/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/sidebar-panels/tree/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/defaults/novice/apps/nautilus/sidebar-panels/tree/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/defaults/novice/system/gnome-vfs/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/defaults/novice/system/gnome-vfs/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/icon-view/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/icon-view/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/list-view/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/list-view/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/news/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/news/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/preferences/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/preferences/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/sidebar-panels/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/sidebar-panels/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/sidebar-panels/tree/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/visibility/apps/nautilus/sidebar-panels/tree/%gconf.xml differ
+Files /mnt/corr/home/hacker/.gconf/apps/nautilus/visibility/system/gnome-vfs/%gconf.xml and /mnt/clean/home/hacker/.gconf/apps/nautilus/visibility/system/gnome-vfs/%gconf.xml differ
+Only in /mnt/corr/home/hacker/.gconfd: lock
+Files /mnt/corr/home/hacker/.gconfd/saved_state and /mnt/clean/home/hacker/.gconfd/saved_state differ
+Only in /mnt/corr/home/hacker/.gnome: .gnome-smproxy-DDwpon
+Only in /mnt/corr/home/hacker/.gnome: .gnome-smproxy-DY1F5C
+Only in /mnt/corr/home/hacker/.gnome: .gnome-smproxy-IGC1f3
+Only in /mnt/corr/home/hacker/.gnome: .gnome-smproxy-JcV6k3
+Only in /mnt/corr/home/hacker/.gnome: .gnome-smproxy-dCubQe
+Only in /mnt/corr/home/hacker/.gnome: Desktop
+Only in /mnt/corr/home/hacker/.gnome: gnome-terminal-7H7rz3
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 01F40508d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 04B47B01d01
+Only in /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 066BAF2Bd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 072B0AC8d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 07749A35d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 084F9D6Fd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 0AECA5F7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 0B4E19E7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 0B9BD4A6d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 0BCC3500d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 0D98DE55d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 0F8F51DDd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 0FC67AA0d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 10070576d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 1042C9CDd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 11555142d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 11E0A24Ad01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 11E0A25Ad01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 14B14199d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 14F86A47d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 17A5D3BFd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 1A78E832d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 1A8DC983d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 1B6A2122d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 1B6A2DB3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 1CCFE4A3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 1D4AE4A3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 1D4FE4A3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 21766278d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 2495E55Ad01
+Only in /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 25410B1Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 25810F4Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 25B59106d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 2614E68Fd01
+Only in /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 2C4A4680d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 2CCD7D0Bd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 2E6F8CC3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 31D09D69d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 321F55B7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 32E990D9d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 344131B8d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 3577C7BBd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 3577D9BBd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 357DEA86d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 35A88AAFd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 35D01056d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 3C9D5394d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 401CE1B7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 4046E364d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 404ED50Fd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 405BF95Ad01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 45B1F62Ed01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 48EA4A4Dd01
+Only in /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 4A265752d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 4B414B2Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 4B415D29d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 4B5F4B2Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 4B5F5D29d01
+Only in /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 4BF05752d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 4E0F8257d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 504317A3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 505D17A3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 50A017A3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5218CEC8d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 522D439Ed01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 53FBE0C6d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5434D4A6d01
+Only in /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 54A400C6d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 54B2AC67d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5581BB9Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5582BB9Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5583BB9Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5585BB9Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5586BB9Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5587BB9Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 558DB70Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5590B70Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5591B70Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5595BB9Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5596B70Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5597BB9Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5610B426d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 56AFFF71d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5770AFA9d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 58F4C2F1d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5A68EACFd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5A70AFA3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5A905404d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5C073E07d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 5DBC45E7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 60474E09d01
+Only in /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 6156C797d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 61B75BF3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 61E7CD86d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 62629052d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 62B75BF3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 6388B987d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 63B75BF3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 64D36391d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 68DF6F55d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 6B9965D5d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 6BA510ADd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 6CCE53C4d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 6E1E5B21d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 6E67DAD7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 6F01FF5Ed01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 70D3E31Fd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 71348BE7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 717ABA2Ad01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 7323C921d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 73D76FB9d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 740478EBd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 74D80D7Bd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 76814FF7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 76F3D4EEd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 77149A36d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 781C3707d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 79E17C85d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 7B2A0E16d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 7CE88A9Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 7DCAF125d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 7E68AB11d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 7E8D1A4Fd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 7E8E1A4Fd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 7E939652d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 803DFAF0d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 82A98F27d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8364556Bd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 83B237C0d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 85770C4Ad01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8839AB2Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8AE40D2Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8BBF648Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8D4058D8d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E4B967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E53967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E58967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E59967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E5C9AEDd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E5D9AEDd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E5E967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E5F967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E62967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E63967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E68967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E699AEDd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E6A967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E6B967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E6C967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E6D967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E6E967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E6F967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E72967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E73967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E78967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E79967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E7A967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E7C967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E7D967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E7E967Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E7F9AEDd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 8E9BD4FAd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 91CAD63Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 9236E09Ad01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 937A8361d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 9877C7ACd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 9877D9ACd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 9A38D4A7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 9BC21E66d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 9BD6513Ad01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 9CA394A1d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 9D139AADd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: 9D44A613d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: A11206A9d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: A2E4BA7Fd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: A6E4BA7Fd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: A9837B81d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: AAB6EDB0d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: AF990CC5d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: B194D2C6d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: B1F8641Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: B2D6D21Fd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: B5323778d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: B6E0E24Ad01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: B8B43242d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: BA5B929Cd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: BC197098d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: BCA5D046d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: BCAE3163d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: BEC5AF76d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: BFD518E8d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: C114EB67d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: C11C3B29d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: C1990BF0d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: C2990BF0d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: C853E2ACd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: CB6817C3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: CBC0C1A4d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: CD8D4A2Dd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: CDC92A36d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: CED2BE09d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: D0E9D4A7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: D2BB13D7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: D414DDF3d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: D429DD09d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: D4E8CD92d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: D610B446d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: DA08D4A7d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: DA6CC3B8d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: DA92D1B5d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: DB229159d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: DB658BEFd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: DCAE30CDd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: DD72C95Fd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: DFDDC2F5d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: E1DDB793d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: E375D043d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: E57C8686d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: E7D5889Bd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: EBD87A99d01
+Only in /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: EBE130D6d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: ECC943CEd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: ED161FF5d01
+Files /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/NewCache/EE153DA8d01 and /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache/EE153DA8d01 differ
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: EF050B8Bd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: EF89679Bd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: F0062357d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: F46A5053d01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: FA864E2Ad01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: FB8D3FAEd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: FF8D3FAEd01
+Only in /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache: FF948584d01
+Files /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/NewCache/_CACHE_001_ and /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache/_CACHE_001_ differ
+Files /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/NewCache/_CACHE_MAP_ and /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/NewCache/_CACHE_MAP_ differ
+Files /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/cookies.txt and /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/cookies.txt differ
+Files /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/history.dat and /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/history.dat differ
+Files /mnt/corr/home/hacker/.mozilla/default/suwk56yn.slt/localstore.rdf and /mnt/clean/home/hacker/.mozilla/default/suwk56yn.slt/localstore.rdf differ
+Only in /mnt/corr/home/hacker/.sawfish/sessions: dwklsrtbcu-117f000001000141216968900000017340002
+Only in /mnt/corr/home/hacker/.sawfish/sessions: dwknkhz34g-117f000001000141216968900000017340002
+Only in /mnt/corr/home/hacker/.sawfish/sessions: dwks1j3rvd-117f000001000141218327900000011420002
+Only in /mnt/corr/home/hacker/.sawfish/sessions: dwkuk39azf-117f000001000141218327900000011420002
+Only in /mnt/corr/home/hacker/.sawfish/sessions: e86lkcids2-117f000001000144492540000000011880002
+Only in /mnt/corr/home/hacker: .script.swo
+Only in /mnt/corr/home/hacker: makeShellCode.pl
+Only in /mnt/corr/home/hacker/notes/bufferoverruns: .stackSolution.c.swp
+Only in /mnt/clean/home/hacker/notes: exam
+Only in /mnt/corr/home/hacker: swapAround
+Only in /mnt/corr/home/hacker: swapAround.c
+Only in /mnt/corr/home/hacker: swapAround.s
+Only in /mnt/corr/home/hacker: v3.c
+Only in /mnt/corr/home/hacker: v4.c
+Only in /mnt/corr/home/hacker/z: a1
+Only in /mnt/clean/home/hacker/z/bufferoverruns: ta.txt
+Only in /mnt/clean/home/hacker/z/bufferoverruns2: ta.txt
+Only in /mnt/clean/home/hacker/z: exam
+Only in /mnt/corr/mnt: corr
+Files /mnt/corr/root/.bash_history and /mnt/clean/root/.bash_history differ
+Only in /mnt/corr/root: .rpmdb
+Only in /mnt/clean: sorted_changes_clean.txt
+File /mnt/corr/tmp/.ICE-unix/1103 is a socket while file /mnt/clean/tmp/.ICE-unix/1103 is a socket
+File /mnt/corr/tmp/.ICE-unix/1185 is a socket while file /mnt/clean/tmp/.ICE-unix/1185 is a socket
+Only in /mnt/corr/tmp/.ICE-unix: 1188
+Only in /mnt/corr/tmp: .X0-lock
+Only in /mnt/corr/tmp: .X11-unix
+File /mnt/corr/tmp/.fam3jB9Jr is a socket while file /mnt/clean/tmp/.fam3jB9Jr is a socket
+File /mnt/corr/tmp/.famH21Scf is a socket while file /mnt/clean/tmp/.famH21Scf is a socket
+Only in /mnt/corr/tmp: .famPtyTWb
+Only in /mnt/corr/tmp: .famU06TWF
+File /mnt/corr/tmp/.fam_socket is a socket while file /mnt/clean/tmp/.fam_socket is a socket
+File /mnt/corr/tmp/.famagWXuQ is a socket while file /mnt/clean/tmp/.famagWXuQ is a socket
+File /mnt/corr/tmp/.font-unix/fs7100 is a socket while file /mnt/clean/tmp/.font-unix/fs7100 is a socket
+File /mnt/corr/tmp/.sawfish-hacker/localhost.localdomain:0.0 is a socket while file /mnt/clean/tmp/.sawfish-hacker/localhost.localdomain:0.0 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1004484215498136254 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1004484215498136254 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1006786816534537304 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1006786816534537304 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-10338017861711770129 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-10338017861711770129 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-10472995391620271585
+File /mnt/corr/tmp/orbit-hacker/orb-1061637489220123721 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1061637489220123721 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-1076881870653284258
+File /mnt/corr/tmp/orbit-hacker/orb-10948319121413099949 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-10948319121413099949 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-11135918861863054004 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-11135918861863054004 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-11664222281994380224 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-11664222281994380224 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1167827589795335002 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1167827589795335002 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1181233481236990040 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1181233481236990040 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1189423634412543196 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1189423634412543196 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-119471652510527408
+File /mnt/corr/tmp/orbit-hacker/orb-1194993563486817065 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1194993563486817065 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-11984236801468116532 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-11984236801468116532 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1226531278759916282 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1226531278759916282 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1243626896795303701 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1243626896795303701 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-13071954541514645805 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-13071954541514645805 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1315414123677254902 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1315414123677254902 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-13598860341479594783 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-13598860341479594783 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-13661162292066000416 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-13661162292066000416 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1403183221416525094 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1403183221416525094 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-14204095441835637177 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-14204095441835637177 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-14496603451201452655
+File /mnt/corr/tmp/orbit-hacker/orb-14615646881957599298 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-14615646881957599298 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-1466552262351898539
+Only in /mnt/corr/tmp/orbit-hacker: orb-14727740511668922372
+File /mnt/corr/tmp/orbit-hacker/orb-1477931564376152862 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1477931564376152862 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-14931840561246004247 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-14931840561246004247 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-15146371571535371154 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-15146371571535371154 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1523713703761131026 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1523713703761131026 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1529141041110448535 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1529141041110448535 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1601635026916924450 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1601635026916924450 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-1606642947409287148
+File /mnt/corr/tmp/orbit-hacker/orb-16191317031830932619 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-16191317031830932619 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-16463140411250951413 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-16463140411250951413 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-16521779682044292350
+File /mnt/corr/tmp/orbit-hacker/orb-1655252937815540684 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1655252937815540684 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-17006310131552648830 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-17006310131552648830 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-17180052832005648579 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-17180052832005648579 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-17608078411085830480 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-17608078411085830480 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-17833806921839441084 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-17833806921839441084 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1804204658268165532 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1804204658268165532 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1826091178155051359 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1826091178155051359 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-1830258157610211579
+File /mnt/corr/tmp/orbit-hacker/orb-18365982911636627770 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-18365982911636627770 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-18558519981992518091 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-18558519981992518091 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-1866982318853209454
+File /mnt/corr/tmp/orbit-hacker/orb-18772532651857955808 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-18772532651857955808 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-1892217071340187106 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-1892217071340187106 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-1916852117489673290
+Only in /mnt/corr/tmp/orbit-hacker: orb-1996671692842361657
+File /mnt/corr/tmp/orbit-hacker/orb-2001462442684482156 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-2001462442684482156 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-20342860351195559148
+Only in /mnt/corr/tmp/orbit-hacker: orb-20566509722022929386
+File /mnt/corr/tmp/orbit-hacker/orb-20927052481561497588 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-20927052481561497588 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-21057147478863801 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-21057147478863801 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-2144247184196965589 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-2144247184196965589 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-2207218871434013885
+File /mnt/corr/tmp/orbit-hacker/orb-2518659131896877471 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-2518659131896877471 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-26303607175452080 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-26303607175452080 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-28008126723699928 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-28008126723699928 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-331593787842763570 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-331593787842763570 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-3335269382064464385 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-3335269382064464385 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-351816002218649755 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-351816002218649755 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-3554277341443917253 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-3554277341443917253 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-3730297671737561228
+File /mnt/corr/tmp/orbit-hacker/orb-3781801881812009635 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-3781801881812009635 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-3842927281412235914 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-3842927281412235914 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-394476021514425708 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-394476021514425708 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-401645537188829778 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-401645537188829778 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-421247017723927962 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-421247017723927962 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-4316385071861814421 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-4316385071861814421 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-437854722869566114 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-437854722869566114 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-443128203206453571
+File /mnt/corr/tmp/orbit-hacker/orb-454549068890234881 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-454549068890234881 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-4676741801057215405
+Only in /mnt/corr/tmp/orbit-hacker: orb-484570053385849742
+File /mnt/corr/tmp/orbit-hacker/orb-48975532764781053 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-48975532764781053 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-5105087031815257726 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-5105087031815257726 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-5464220232076106719 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-5464220232076106719 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-559754527794384993
+File /mnt/corr/tmp/orbit-hacker/orb-6087062012079132455 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-6087062012079132455 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-61008101967104177 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-61008101967104177 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-6221035191079463038
+Only in /mnt/corr/tmp/orbit-hacker: orb-6449307831618569429
+File /mnt/corr/tmp/orbit-hacker/orb-6566769111705386948 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-6566769111705386948 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-6772435831503594626 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-6772435831503594626 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-7147069621262431615 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-7147069621262431615 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-7678231331622116037
+File /mnt/corr/tmp/orbit-hacker/orb-770818081091743591 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-770818081091743591 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-801588998553895476 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-801588998553895476 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-81004754429729275
+File /mnt/corr/tmp/orbit-hacker/orb-834482020165370950 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-834482020165370950 is a socket
+Only in /mnt/corr/tmp/orbit-hacker: orb-845385259458851226
+File /mnt/corr/tmp/orbit-hacker/orb-8593658221827968921 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-8593658221827968921 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-875194036728067653 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-875194036728067653 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-9009430961654453741 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-9009430961654453741 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-906950332662410217 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-906950332662410217 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-9093560961638172717 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-9093560961638172717 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-920101758400714767 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-920101758400714767 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-9579960241827338872 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-9579960241827338872 is a socket
+File /mnt/corr/tmp/orbit-hacker/orb-98644234137672794 is a socket while file /mnt/clean/tmp/orbit-hacker/orb-98644234137672794 is a socket
+File /mnt/corr/tmp/orbit-root/orb-1285770871338398412 is a socket while file /mnt/clean/tmp/orbit-root/orb-1285770871338398412 is a socket
+File /mnt/corr/tmp/orbit-root/orb-1919193134917081786 is a socket while file /mnt/clean/tmp/orbit-root/orb-1919193134917081786 is a socket
+File /mnt/corr/tmp/orbit-root/orb-53083589111631853 is a socket while file /mnt/clean/tmp/orbit-root/orb-53083589111631853 is a socket
+File /mnt/corr/tmp/orbit-root/orb-722388120797855216 is a socket while file /mnt/clean/tmp/orbit-root/orb-722388120797855216 is a socket
+File /mnt/corr/tmp/orbit-root/orb-8919849661819665113 is a socket while file /mnt/clean/tmp/orbit-root/orb-8919849661819665113 is a socket
+File /mnt/corr/tmp/orbit-root/orb-90672574475260327 is a socket while file /mnt/clean/tmp/orbit-root/orb-90672574475260327 is a socket
+Files /mnt/corr/var/cache/man/whatis and /mnt/clean/var/cache/man/whatis differ
+Files /mnt/corr/var/lib/logrotate.status and /mnt/clean/var/lib/logrotate.status differ
+Files /mnt/corr/var/lib/nfs/statd/state and /mnt/clean/var/lib/nfs/statd/state differ
+Files /mnt/corr/var/lib/random-seed and /mnt/clean/var/lib/random-seed differ
+Only in /mnt/corr/var/lib/rpm: .dbenv.lock
+Only in /mnt/corr/var/lib/rpm: __db.001
+Only in /mnt/corr/var/lib/rpm: __db.002
+Only in /mnt/corr/var/lib/rpm: __db.003
+Files /mnt/corr/var/lib/slocate/slocate.db and /mnt/clean/var/lib/slocate/slocate.db differ
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20141001-092410.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20150929-195541.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151015-121437.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151016-040201.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151017-040201.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151018-040201.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151019-040202.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151020-040201.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151021-040214.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151022-040201.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151023-040204.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151024-040208.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151025-040202.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151026-040202.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151027-040211.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151028-040221.twr
+Only in /mnt/corr/var/lib/tripwire/report: rh72-20151029-040212.twr
+Only in /mnt/corr/var/lock/subsys: anacron
+Only in /mnt/corr/var/lock/subsys: apmd
+Only in /mnt/corr/var/lock/subsys: atd
+Only in /mnt/corr/var/lock/subsys: crond
+Only in /mnt/corr/var/lock/subsys: gpm
+Only in /mnt/corr/var/lock/subsys: httpd
+Only in /mnt/corr/var/lock/subsys: keytable
+Only in /mnt/corr/var/lock/subsys: kudzu
+Only in /mnt/corr/var/lock/subsys: local
+Only in /mnt/corr/var/lock/subsys: netfs
+Only in /mnt/corr/var/lock/subsys: network
+Only in /mnt/corr/var/lock/subsys: nfslock
+Only in /mnt/corr/var/lock/subsys: portmap
+Only in /mnt/corr/var/lock/subsys: random
+Only in /mnt/corr/var/lock/subsys: sendmail
+Only in /mnt/corr/var/lock/subsys: sshd
+Only in /mnt/corr/var/lock/subsys: syslog
+Only in /mnt/corr/var/lock/subsys: xfs
+Only in /mnt/corr/var/lock/subsys: xinetd
+Files /mnt/corr/var/log/XFree86.0.log and /mnt/clean/var/log/XFree86.0.log differ
+Files /mnt/corr/var/log/boot.log and /mnt/clean/var/log/boot.log differ
+Files /mnt/corr/var/log/boot.log.1 and /mnt/clean/var/log/boot.log.1 differ
+Files /mnt/corr/var/log/boot.log.2 and /mnt/clean/var/log/boot.log.2 differ
+Files /mnt/corr/var/log/boot.log.3 and /mnt/clean/var/log/boot.log.3 differ
+Files /mnt/corr/var/log/boot.log.4 and /mnt/clean/var/log/boot.log.4 differ
+Files /mnt/corr/var/log/cron and /mnt/clean/var/log/cron differ
+Files /mnt/corr/var/log/cron.1 and /mnt/clean/var/log/cron.1 differ
+Files /mnt/corr/var/log/cron.2 and /mnt/clean/var/log/cron.2 differ
+Files /mnt/corr/var/log/cron.3 and /mnt/clean/var/log/cron.3 differ
+Files /mnt/corr/var/log/cron.4 and /mnt/clean/var/log/cron.4 differ
+Files /mnt/corr/var/log/dmesg and /mnt/clean/var/log/dmesg differ
+Files /mnt/corr/var/log/httpd/access_log and /mnt/clean/var/log/httpd/access_log differ
+Files /mnt/corr/var/log/httpd/access_log.1 and /mnt/clean/var/log/httpd/access_log.1 differ
+Files /mnt/corr/var/log/httpd/access_log.4 and /mnt/clean/var/log/httpd/access_log.4 differ
+Files /mnt/corr/var/log/httpd/error_log and /mnt/clean/var/log/httpd/error_log differ
+Files /mnt/corr/var/log/httpd/error_log.1 and /mnt/clean/var/log/httpd/error_log.1 differ
+Files /mnt/corr/var/log/httpd/error_log.2 and /mnt/clean/var/log/httpd/error_log.2 differ
+Files /mnt/corr/var/log/httpd/error_log.3 and /mnt/clean/var/log/httpd/error_log.3 differ
+Files /mnt/corr/var/log/httpd/error_log.4 and /mnt/clean/var/log/httpd/error_log.4 differ
+Files /mnt/corr/var/log/ksyms.0 and /mnt/clean/var/log/ksyms.0 differ
+Files /mnt/corr/var/log/ksyms.1 and /mnt/clean/var/log/ksyms.1 differ
+Files /mnt/corr/var/log/ksyms.2 and /mnt/clean/var/log/ksyms.2 differ
+Files /mnt/corr/var/log/ksyms.3 and /mnt/clean/var/log/ksyms.3 differ
+Files /mnt/corr/var/log/ksyms.4 and /mnt/clean/var/log/ksyms.4 differ
+Files /mnt/corr/var/log/ksyms.5 and /mnt/clean/var/log/ksyms.5 differ
+Files /mnt/corr/var/log/ksyms.6 and /mnt/clean/var/log/ksyms.6 differ
+Files /mnt/corr/var/log/lastlog and /mnt/clean/var/log/lastlog differ
+Files /mnt/corr/var/log/maillog and /mnt/clean/var/log/maillog differ
+Files /mnt/corr/var/log/maillog.1 and /mnt/clean/var/log/maillog.1 differ
+Files /mnt/corr/var/log/maillog.2 and /mnt/clean/var/log/maillog.2 differ
+Files /mnt/corr/var/log/maillog.3 and /mnt/clean/var/log/maillog.3 differ
+Files /mnt/corr/var/log/maillog.4 and /mnt/clean/var/log/maillog.4 differ
+Files /mnt/corr/var/log/messages and /mnt/clean/var/log/messages differ
+Files /mnt/corr/var/log/messages.1 and /mnt/clean/var/log/messages.1 differ
+Files /mnt/corr/var/log/messages.2 and /mnt/clean/var/log/messages.2 differ
+Files /mnt/corr/var/log/messages.3 and /mnt/clean/var/log/messages.3 differ
+Files /mnt/corr/var/log/messages.4 and /mnt/clean/var/log/messages.4 differ
+Files /mnt/corr/var/log/rpmpkgs and /mnt/clean/var/log/rpmpkgs differ
+Files /mnt/corr/var/log/rpmpkgs.1 and /mnt/clean/var/log/rpmpkgs.1 differ
+Files /mnt/corr/var/log/rpmpkgs.2 and /mnt/clean/var/log/rpmpkgs.2 differ
+Files /mnt/corr/var/log/rpmpkgs.3 and /mnt/clean/var/log/rpmpkgs.3 differ
+Files /mnt/corr/var/log/rpmpkgs.4 and /mnt/clean/var/log/rpmpkgs.4 differ
+Files /mnt/corr/var/log/secure and /mnt/clean/var/log/secure differ
+Files /mnt/corr/var/log/secure.1 and /mnt/clean/var/log/secure.1 differ
+Files /mnt/corr/var/log/secure.2 and /mnt/clean/var/log/secure.2 differ
+Files /mnt/corr/var/log/secure.3 and /mnt/clean/var/log/secure.3 differ
+Files /mnt/corr/var/log/secure.4 and /mnt/clean/var/log/secure.4 differ
+Files /mnt/corr/var/log/vmware-tools-guestd and /mnt/clean/var/log/vmware-tools-guestd differ
+Files /mnt/corr/var/log/wtmp and /mnt/clean/var/log/wtmp differ
+Files /mnt/corr/var/log/wtmp.1 and /mnt/clean/var/log/wtmp.1 differ
+Files /mnt/corr/var/mail/root and /mnt/clean/var/mail/root differ
+Only in /mnt/corr/var/run: apmd.pid
+Only in /mnt/corr/var/run: atd.pid
+Only in /mnt/corr/var/run/console: hacker
+Only in /mnt/corr/var/run: console.lock
+Only in /mnt/corr/var/run: crond.pid
+Only in /mnt/corr/var/run: dhcpcd-eth0.pid
+Only in /mnt/corr/var/run: gpm.pid
+Only in /mnt/corr/var/run: httpd.mm.1000.sem
+Only in /mnt/corr/var/run: httpd.pid
+Only in /mnt/corr/var/run: klogd.pid
+Files /mnt/corr/var/run/runlevel.dir and /mnt/clean/var/run/runlevel.dir differ
+Only in /mnt/corr/var/run: sendmail.pid
+Only in /mnt/corr/var/run: sshd.pid
+Only in /mnt/corr/var/run/sudo: hacker
+Only in /mnt/corr/var/run: syslogd.pid
+Files /mnt/corr/var/run/utmp and /mnt/clean/var/run/utmp differ
+Only in /mnt/corr/var/run: vmware-guestd.pid
+Only in /mnt/corr/var/run: xfs.pid
+Only in /mnt/corr/var/run: xinetd.pid
+Files /mnt/corr/var/spool/anacron/cron.daily and /mnt/clean/var/spool/anacron/cron.daily differ
+Files /mnt/corr/var/spool/anacron/cron.monthly and /mnt/clean/var/spool/anacron/cron.monthly differ
+Files /mnt/corr/var/spool/anacron/cron.weekly and /mnt/clean/var/spool/anacron/cron.weekly differ
+Files /mnt/corr/var/spool/mail/root and /mnt/clean/var/spool/mail/root differ
+Files /mnt/corr/vulnerable/account.c and /mnt/clean/vulnerable/account.c differ

@@ -1,0 +1,5 @@
+hacker   pts/2        142.1.46.35      Thu Oct 29 12:47    gone - no logout
+hacker   pts/1        :0               Thu Oct 15 12:39    gone - no logout
+hacker   pts/0        :0               Thu Oct 15 12:38    gone - no logout
+
+wtmp begins Thu Oct 15 12:38:18 2015

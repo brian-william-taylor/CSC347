@@ -1,0 +1,26 @@
+1,17c1,3
+< root     tty1                          Thu Sep 22 14:27 - down   (00:00)
+< hacker   tty1                          Thu Sep 22 14:27 - 14:27  (00:00)
+< root     tty1                          Thu Sep 22 14:24 - 14:27  (00:03)
+< hacker   tty1                          Thu Sep 22 14:22 - 14:24  (00:02)
+< root     tty1                          Thu Sep 22 14:21 - 14:22  (00:00)
+< hacker   tty1                          Thu Sep 22 14:17 - 14:21  (00:04)
+< root     tty1                          Thu Sep 22 14:09 - 14:17  (00:07)
+< reboot   system boot  2.4.7-10         Thu Sep 22 14:08 - 14:27  (00:19)
+< root     tty1                          Thu Sep 22 11:32 - down   (02:29)
+< reboot   system boot  2.4.7-10         Thu Sep 22 11:27 - 14:01  (02:33)
+< root     tty1                          Thu Sep 22 11:23 - down   (00:00)
+< hacker   tty1                          Thu Sep 22 11:22 - 11:23  (00:00)
+< root     tty1                          Thu Sep 22 10:42 - 11:22  (00:39)
+< reboot   system boot  2.4.7-10         Thu Sep 22 08:18 - 11:23  (03:04)
+< root     tty1                          Tue Sep 13 14:59 - 15:06  (00:06)
+< reboot   system boot  2.4.7-10         Tue Sep 13 14:58 - 15:07  (00:09)
+< root     tty1                          Tue Sep 13 14:52 - down   (00:00)
+---
+> hacker   pts/2        142.1.46.35      Thu Oct 29 12:47    gone - no logout
+> hacker   pts/1        :0               Thu Oct 15 12:39    gone - no logout
+> hacker   pts/0        :0               Thu Oct 15 12:38    gone - no logout
+19c5
+< wtmp begins Tue Sep 13 14:52:29 2011
+---
+> wtmp begins Thu Oct 15 12:38:18 2015
