@@ -1,0 +1,6 @@
+root:password:13431:0:99999:7:::
+hacker:password:13431:0:99999:7:::
+bobuser:abab123:13466:0:99999:7:::
+u1:password1:13467:0:99999:7:::
+u2:helperhelper:13485:0:99999:7:::
+
