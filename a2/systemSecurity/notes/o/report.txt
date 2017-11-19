@@ -1,3 +1,11 @@
 Why:
+1) Check apache logs
+2) Check remote logins
 
-Output Explaination: 
+Output Explaination:
+There was a remote login from UofT and a IP to University of Michigan which resulted in a 404 error.
+
+All of these IP's were safe by checking with VirusTotal.
+142.1.46.35	-	UofT Mississauga
+141.212.122.96	- 	University Of Michigan
+141.212.122.160	- 	University Of Michigan

@@ -1,3 +1,4 @@
 Why: This can show files that were added or deleted from the compromised system.
 
-Output Explaination: xinetd service was added to the compromised system that is vulnerable to buffer overruns.  
+Output Explaination: 
+We can see a lot of differences between the 2 machines so it is handy to use a brief diff to see what files have changed without seeing the specific changes. Important parts to notice are the logs changing 

@@ -1,3 +1,4 @@
 Why:
+A hacker could've enables this as a potential method of exploiting the system.
 
-Output Explaination: 
+Output Explaination: There were no changes to xinetd

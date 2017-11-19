@@ -1,0 +1,3 @@
+It seems likely that this system was hacked with a couple indicators:
+Most importantly, the logs for boot have been wiped from the corrupted VM. It is likely that a hacker accessed the machine (locally/ optaining VM) to extract the password hashes and wiped the logs.
+We also see that the compromised system has had the palindrome xinetd service run when the clean one didn't. A hacker could use this program to hack the compromised system. We don't know who did this since some of the logs have been deleted. 

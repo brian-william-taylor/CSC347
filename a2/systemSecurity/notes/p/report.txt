@@ -1,3 +1,5 @@
 Why:
+Run jonny on each of the shadow files from each OS drive. Jonny finds the hashes in the file and automatically hacks the password using a wordlist.
 
 Output Explaination: 
+The output resembles the original shadow files but the passwords are now in plaintext. Finally we run diff to eachly see if any changes have been made, and if so where. We see that there are no changes to no users have been added or updated.

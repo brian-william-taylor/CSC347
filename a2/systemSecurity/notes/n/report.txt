@@ -1,3 +1,12 @@
 Why:
-
+By running:
+diff /mnt/clean/var/log/secure /mnt/corr/var/log/secure
+# and for all secure.# logs
+we can see that the corrupted machine has had someone running the palindrome service using xinetd where the clean machine did not. 
 Output Explaination: 
+This is very important because it means that the machine is possbily compromised as a buffer overrun exploit is contained in palindrome. It is possible that the hacker gained physical access (or stole a copy of the VM), hacked the root password with john, signed in as root and started the palindrome service.
+
+
+We also see that some tripwire logs have been updated.
+
+Some of the boot logs have been wiped in the corrupted VM. Very suspicious!

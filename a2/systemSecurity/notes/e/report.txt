@@ -1,3 +1,3 @@
 Why: Useful for showing which files may have been compromised by the hacker.
 
-Output Explaination: 
+Output Explaination: The output from both VMs is saved and compared using a diff. This is useful to determine what files differ from the clean VM. 
