@@ -1,0 +1,3 @@
+If we have physical access to the system (or a copy of the VM) then we can take the hard drive(s) out of the computer and mount them as secondary devices on another computer (using Kali for example). Next, we can view the content of the drive by cd'ing to the mount point. From here we are at the root of the filesystem of the computer we are hacking. Copy the $MOUNT_POINT/etc/shadow file and run john on it to hack the password using a wordlist or brute force if needed.
+
+This can be prevented by using hard drive encryption such as LUKS. It is very easy to setup while setting up a new system (installing an OS and setting partitions ...) since it is offered right "out of the box" by most modern linux distros.
