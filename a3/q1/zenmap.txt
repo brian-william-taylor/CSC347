@@ -1,0 +1,515 @@
+
+Starting Nmap 7.60 ( https://nmap.org ) at 2017-12-06 16:14 EST
+NSE: Loaded 146 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 16:14
+Completed NSE at 16:14, 0.00s elapsed
+Initiating NSE at 16:14
+Completed NSE at 16:14, 0.00s elapsed
+Initiating ARP Ping Scan at 16:14
+Scanning 255 hosts [1 port/host]
+adjust_timeouts2: packet supposedly had rtt of -100076 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -100005 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -102122 microseconds.  Ignoring time.
+Completed ARP Ping Scan at 16:14, 3.10s elapsed (255 total hosts)
+Initiating Parallel DNS resolution of 255 hosts. at 16:14
+Completed Parallel DNS resolution of 255 hosts. at 16:14, 13.00s elapsed
+Nmap scan report for 192.168.0.0 [host down]
+Nmap scan report for 192.168.0.2 [host down]
+Nmap scan report for 192.168.0.3 [host down]
+Nmap scan report for 192.168.0.4 [host down]
+Nmap scan report for 192.168.0.5 [host down]
+Nmap scan report for 192.168.0.6 [host down]
+Nmap scan report for 192.168.0.7 [host down]
+Nmap scan report for 192.168.0.8 [host down]
+Nmap scan report for 192.168.0.9 [host down]
+Nmap scan report for 192.168.0.11 [host down]
+Nmap scan report for 192.168.0.12 [host down]
+Nmap scan report for 192.168.0.13 [host down]
+Nmap scan report for 192.168.0.14 [host down]
+Nmap scan report for 192.168.0.15 [host down]
+Nmap scan report for 192.168.0.16 [host down]
+Nmap scan report for 192.168.0.17 [host down]
+Nmap scan report for 192.168.0.18 [host down]
+Nmap scan report for 192.168.0.19 [host down]
+Nmap scan report for 192.168.0.20 [host down]
+Nmap scan report for 192.168.0.21 [host down]
+Nmap scan report for 192.168.0.22 [host down]
+Nmap scan report for 192.168.0.23 [host down]
+Nmap scan report for 192.168.0.24 [host down]
+Nmap scan report for 192.168.0.25 [host down]
+Nmap scan report for 192.168.0.26 [host down]
+Nmap scan report for 192.168.0.27 [host down]
+Nmap scan report for 192.168.0.28 [host down]
+Nmap scan report for 192.168.0.29 [host down]
+Nmap scan report for 192.168.0.30 [host down]
+Nmap scan report for 192.168.0.31 [host down]
+Nmap scan report for 192.168.0.32 [host down]
+Nmap scan report for 192.168.0.34 [host down]
+Nmap scan report for 192.168.0.35 [host down]
+Nmap scan report for 192.168.0.36 [host down]
+Nmap scan report for 192.168.0.37 [host down]
+Nmap scan report for 192.168.0.38 [host down]
+Nmap scan report for 192.168.0.39 [host down]
+Nmap scan report for 192.168.0.40 [host down]
+Nmap scan report for 192.168.0.41 [host down]
+Nmap scan report for 192.168.0.42 [host down]
+Nmap scan report for 192.168.0.43 [host down]
+Nmap scan report for 192.168.0.44 [host down]
+Nmap scan report for 192.168.0.45 [host down]
+Nmap scan report for 192.168.0.46 [host down]
+Nmap scan report for 192.168.0.47 [host down]
+Nmap scan report for 192.168.0.48 [host down]
+Nmap scan report for 192.168.0.49 [host down]
+Nmap scan report for 192.168.0.50 [host down]
+Nmap scan report for 192.168.0.51 [host down]
+Nmap scan report for 192.168.0.52 [host down]
+Nmap scan report for 192.168.0.53 [host down]
+Nmap scan report for 192.168.0.54 [host down]
+Nmap scan report for 192.168.0.55 [host down]
+Nmap scan report for 192.168.0.56 [host down]
+Nmap scan report for 192.168.0.57 [host down]
+Nmap scan report for 192.168.0.58 [host down]
+Nmap scan report for 192.168.0.59 [host down]
+Nmap scan report for 192.168.0.60 [host down]
+Nmap scan report for 192.168.0.61 [host down]
+Nmap scan report for 192.168.0.62 [host down]
+Nmap scan report for 192.168.0.63 [host down]
+Nmap scan report for 192.168.0.64 [host down]
+Nmap scan report for 192.168.0.65 [host down]
+Nmap scan report for 192.168.0.66 [host down]
+Nmap scan report for 192.168.0.67 [host down]
+Nmap scan report for 192.168.0.68 [host down]
+Nmap scan report for 192.168.0.69 [host down]
+Nmap scan report for 192.168.0.70 [host down]
+Nmap scan report for 192.168.0.71 [host down]
+Nmap scan report for 192.168.0.72 [host down]
+Nmap scan report for 192.168.0.73 [host down]
+Nmap scan report for 192.168.0.74 [host down]
+Nmap scan report for 192.168.0.76 [host down]
+Nmap scan report for 192.168.0.77 [host down]
+Nmap scan report for 192.168.0.78 [host down]
+Nmap scan report for 192.168.0.79 [host down]
+Nmap scan report for 192.168.0.80 [host down]
+Nmap scan report for 192.168.0.81 [host down]
+Nmap scan report for 192.168.0.82 [host down]
+Nmap scan report for 192.168.0.83 [host down]
+Nmap scan report for 192.168.0.84 [host down]
+Nmap scan report for 192.168.0.85 [host down]
+Nmap scan report for 192.168.0.86 [host down]
+Nmap scan report for 192.168.0.87 [host down]
+Nmap scan report for 192.168.0.88 [host down]
+Nmap scan report for 192.168.0.89 [host down]
+Nmap scan report for 192.168.0.90 [host down]
+Nmap scan report for 192.168.0.91 [host down]
+Nmap scan report for 192.168.0.92 [host down]
+Nmap scan report for 192.168.0.93 [host down]
+Nmap scan report for 192.168.0.94 [host down]
+Nmap scan report for 192.168.0.95 [host down]
+Nmap scan report for 192.168.0.96 [host down]
+Nmap scan report for 192.168.0.97 [host down]
+Nmap scan report for 192.168.0.98 [host down]
+Nmap scan report for 192.168.0.99 [host down]
+Nmap scan report for 192.168.0.101 [host down]
+Nmap scan report for 192.168.0.102 [host down]
+Nmap scan report for 192.168.0.103 [host down]
+Nmap scan report for 192.168.0.104 [host down]
+Nmap scan report for 192.168.0.105 [host down]
+Nmap scan report for 192.168.0.106 [host down]
+Nmap scan report for 192.168.0.107 [host down]
+Nmap scan report for 192.168.0.108 [host down]
+Nmap scan report for 192.168.0.109 [host down]
+Nmap scan report for 192.168.0.110 [host down]
+Nmap scan report for 192.168.0.111 [host down]
+Nmap scan report for 192.168.0.112 [host down]
+Nmap scan report for 192.168.0.113 [host down]
+Nmap scan report for 192.168.0.114 [host down]
+Nmap scan report for 192.168.0.115 [host down]
+Nmap scan report for 192.168.0.116 [host down]
+Nmap scan report for 192.168.0.117 [host down]
+Nmap scan report for 192.168.0.118 [host down]
+Nmap scan report for 192.168.0.119 [host down]
+Nmap scan report for 192.168.0.120 [host down]
+Nmap scan report for 192.168.0.121 [host down]
+Nmap scan report for 192.168.0.122 [host down]
+Nmap scan report for 192.168.0.123 [host down]
+Nmap scan report for 192.168.0.124 [host down]
+Nmap scan report for 192.168.0.125 [host down]
+Nmap scan report for 192.168.0.126 [host down]
+Nmap scan report for 192.168.0.127 [host down]
+Nmap scan report for 192.168.0.128 [host down]
+Nmap scan report for 192.168.0.130 [host down]
+Nmap scan report for 192.168.0.131 [host down]
+Nmap scan report for 192.168.0.132 [host down]
+Nmap scan report for 192.168.0.133 [host down]
+Nmap scan report for 192.168.0.134 [host down]
+Nmap scan report for 192.168.0.135 [host down]
+Nmap scan report for 192.168.0.136 [host down]
+Nmap scan report for 192.168.0.137 [host down]
+Nmap scan report for 192.168.0.138 [host down]
+Nmap scan report for 192.168.0.139 [host down]
+Nmap scan report for 192.168.0.140 [host down]
+Nmap scan report for 192.168.0.141 [host down]
+Nmap scan report for 192.168.0.142 [host down]
+Nmap scan report for 192.168.0.143 [host down]
+Nmap scan report for 192.168.0.144 [host down]
+Nmap scan report for 192.168.0.145 [host down]
+Nmap scan report for 192.168.0.146 [host down]
+Nmap scan report for 192.168.0.147 [host down]
+Nmap scan report for 192.168.0.148 [host down]
+Nmap scan report for 192.168.0.149 [host down]
+Nmap scan report for 192.168.0.150 [host down]
+Nmap scan report for 192.168.0.151 [host down]
+Nmap scan report for 192.168.0.152 [host down]
+Nmap scan report for 192.168.0.153 [host down]
+Nmap scan report for 192.168.0.154 [host down]
+Nmap scan report for 192.168.0.155 [host down]
+Nmap scan report for 192.168.0.156 [host down]
+Nmap scan report for 192.168.0.157 [host down]
+Nmap scan report for 192.168.0.158 [host down]
+Nmap scan report for 192.168.0.159 [host down]
+Nmap scan report for 192.168.0.160 [host down]
+Nmap scan report for 192.168.0.161 [host down]
+Nmap scan report for 192.168.0.162 [host down]
+Nmap scan report for 192.168.0.163 [host down]
+Nmap scan report for 192.168.0.164 [host down]
+Nmap scan report for 192.168.0.165 [host down]
+Nmap scan report for 192.168.0.166 [host down]
+Nmap scan report for 192.168.0.167 [host down]
+Nmap scan report for 192.168.0.168 [host down]
+Nmap scan report for 192.168.0.169 [host down]
+Nmap scan report for 192.168.0.170 [host down]
+Nmap scan report for 192.168.0.171 [host down]
+Nmap scan report for 192.168.0.172 [host down]
+Nmap scan report for 192.168.0.173 [host down]
+Nmap scan report for 192.168.0.174 [host down]
+Nmap scan report for 192.168.0.175 [host down]
+Nmap scan report for 192.168.0.176 [host down]
+Nmap scan report for 192.168.0.177 [host down]
+Nmap scan report for 192.168.0.178 [host down]
+Nmap scan report for 192.168.0.179 [host down]
+Nmap scan report for 192.168.0.180 [host down]
+Nmap scan report for 192.168.0.181 [host down]
+Nmap scan report for 192.168.0.182 [host down]
+Nmap scan report for 192.168.0.183 [host down]
+Nmap scan report for 192.168.0.184 [host down]
+Nmap scan report for 192.168.0.185 [host down]
+Nmap scan report for 192.168.0.186 [host down]
+Nmap scan report for 192.168.0.187 [host down]
+Nmap scan report for 192.168.0.188 [host down]
+Nmap scan report for 192.168.0.189 [host down]
+Nmap scan report for 192.168.0.190 [host down]
+Nmap scan report for 192.168.0.191 [host down]
+Nmap scan report for 192.168.0.192 [host down]
+Nmap scan report for 192.168.0.193 [host down]
+Nmap scan report for 192.168.0.194 [host down]
+Nmap scan report for 192.168.0.195 [host down]
+Nmap scan report for 192.168.0.196 [host down]
+Nmap scan report for 192.168.0.197 [host down]
+Nmap scan report for 192.168.0.198 [host down]
+Nmap scan report for 192.168.0.199 [host down]
+Nmap scan report for 192.168.0.200 [host down]
+Nmap scan report for 192.168.0.201 [host down]
+Nmap scan report for 192.168.0.202 [host down]
+Nmap scan report for 192.168.0.203 [host down]
+Nmap scan report for 192.168.0.204 [host down]
+Nmap scan report for 192.168.0.205 [host down]
+Nmap scan report for 192.168.0.206 [host down]
+Nmap scan report for 192.168.0.207 [host down]
+Nmap scan report for 192.168.0.208 [host down]
+Nmap scan report for 192.168.0.209 [host down]
+Nmap scan report for 192.168.0.210 [host down]
+Nmap scan report for 192.168.0.211 [host down]
+Nmap scan report for 192.168.0.212 [host down]
+Nmap scan report for 192.168.0.213 [host down]
+Nmap scan report for 192.168.0.214 [host down]
+Nmap scan report for 192.168.0.215 [host down]
+Nmap scan report for 192.168.0.216 [host down]
+Nmap scan report for 192.168.0.217 [host down]
+Nmap scan report for 192.168.0.218 [host down]
+Nmap scan report for 192.168.0.219 [host down]
+Nmap scan report for 192.168.0.220 [host down]
+Nmap scan report for 192.168.0.221 [host down]
+Nmap scan report for 192.168.0.222 [host down]
+Nmap scan report for 192.168.0.223 [host down]
+Nmap scan report for 192.168.0.224 [host down]
+Nmap scan report for 192.168.0.225 [host down]
+Nmap scan report for 192.168.0.226 [host down]
+Nmap scan report for 192.168.0.227 [host down]
+Nmap scan report for 192.168.0.228 [host down]
+Nmap scan report for 192.168.0.229 [host down]
+Nmap scan report for 192.168.0.230 [host down]
+Nmap scan report for 192.168.0.231 [host down]
+Nmap scan report for 192.168.0.232 [host down]
+Nmap scan report for 192.168.0.233 [host down]
+Nmap scan report for 192.168.0.234 [host down]
+Nmap scan report for 192.168.0.235 [host down]
+Nmap scan report for 192.168.0.236 [host down]
+Nmap scan report for 192.168.0.237 [host down]
+Nmap scan report for 192.168.0.238 [host down]
+Nmap scan report for 192.168.0.239 [host down]
+Nmap scan report for 192.168.0.240 [host down]
+Nmap scan report for 192.168.0.241 [host down]
+Nmap scan report for 192.168.0.242 [host down]
+Nmap scan report for 192.168.0.243 [host down]
+Nmap scan report for 192.168.0.244 [host down]
+Nmap scan report for 192.168.0.245 [host down]
+Nmap scan report for 192.168.0.246 [host down]
+Nmap scan report for 192.168.0.247 [host down]
+Nmap scan report for 192.168.0.248 [host down]
+Nmap scan report for 192.168.0.249 [host down]
+Nmap scan report for 192.168.0.250 [host down]
+Nmap scan report for 192.168.0.251 [host down]
+Nmap scan report for 192.168.0.252 [host down]
+Nmap scan report for 192.168.0.253 [host down]
+Nmap scan report for 192.168.0.255 [host down]
+Initiating Parallel DNS resolution of 1 host. at 16:14
+Completed Parallel DNS resolution of 1 host. at 16:14, 13.00s elapsed
+Initiating SYN Stealth Scan at 16:14
+Scanning 6 hosts [1000 ports/host]
+Discovered open port 80/tcp on 192.168.0.100
+Discovered open port 1025/tcp on 192.168.0.33
+Increasing send delay for 192.168.0.33 from 0 to 5 due to 11 out of 27 dropped probes since last increase.
+Increasing send delay for 192.168.0.75 from 0 to 5 due to 11 out of 27 dropped probes since last increase.
+Discovered open port 22/tcp on 192.168.0.33
+Discovered open port 3389/tcp on 192.168.0.33
+Discovered open port 445/tcp on 192.168.0.33
+Discovered open port 22/tcp on 192.168.0.1
+Discovered open port 135/tcp on 192.168.0.33
+Discovered open port 139/tcp on 192.168.0.33
+Increasing send delay for 192.168.0.100 from 0 to 5 due to 11 out of 26 dropped probes since last increase.
+Discovered open port 22/tcp on 192.168.0.10
+Discovered open port 22/tcp on 192.168.0.100
+Increasing send delay for 192.168.0.33 from 5 to 10 due to 18 out of 44 dropped probes since last increase.
+Increasing send delay for 192.168.0.75 from 5 to 10 due to 23 out of 57 dropped probes since last increase.
+Increasing send delay for 192.168.0.100 from 5 to 10 due to 15 out of 37 dropped probes since last increase.
+SYN Stealth Scan Timing: About 31.06% done; ETC: 16:16 (0:01:09 remaining)
+SYN Stealth Scan Timing: About 59.96% done; ETC: 16:16 (0:00:41 remaining)
+Completed SYN Stealth Scan against 192.168.0.254 in 61.74s (5 hosts left)
+Completed SYN Stealth Scan against 192.168.0.1 in 79.60s (4 hosts left)
+Completed SYN Stealth Scan against 192.168.0.10 in 80.02s (3 hosts left)
+Discovered open port 5000/tcp on 192.168.0.33
+Completed SYN Stealth Scan against 192.168.0.100 in 93.41s (2 hosts left)
+Completed SYN Stealth Scan against 192.168.0.75 in 96.89s (1 host left)
+Completed SYN Stealth Scan at 16:16, 97.11s elapsed (6000 total ports)
+Initiating Service scan at 16:16
+Scanning 11 services on 6 hosts
+Completed Service scan at 16:18, 118.67s elapsed (11 services on 6 hosts)
+Initiating OS detection (try #1) against 6 hosts
+adjust_timeouts2: packet supposedly had rtt of -152570 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -152570 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -152676 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -152676 microseconds.  Ignoring time.
+Retrying OS detection (try #2) against 3 hosts
+adjust_timeouts2: packet supposedly had rtt of -200177 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -200177 microseconds.  Ignoring time.
+NSE: Script scanning 6 hosts.
+Initiating NSE at 16:18
+Completed NSE at 16:18, 5.27s elapsed
+Initiating NSE at 16:18
+Completed NSE at 16:18, 1.02s elapsed
+Nmap scan report for 192.168.0.1
+Host is up (0.00012s latency).
+Not shown: 999 filtered ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 64:a8:11:95:fc:c5:3f:9c:75:b2:73:c1:e1:05:9b:7e (RSA)
+|   256 3c:8f:a7:30:a3:a5:3f:45:5e:67:2d:58:fa:a6:8d:22 (ECDSA)
+|_  256 ff:ae:fb:37:55:a6:9a:bc:33:01:ec:cc:7c:9f:b0:a6 (EdDSA)
+MAC Address: 00:50:56:C0:00:08 (VMware)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 3.X|4.X
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4
+OS details: Linux 3.10 - 4.8, Linux 3.16 - 4.6, Linux 3.2 - 4.8, Linux 4.4
+Uptime guess: 2.003 days (since Mon Dec  4 16:13:55 2017)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.12 ms 192.168.0.1
+
+Nmap scan report for 192.168.0.10
+Host is up (0.00026s latency).
+Not shown: 996 filtered ports
+PORT   STATE  SERVICE VERSION
+21/tcp closed ftp
+22/tcp open   ssh     OpenSSH 4.0 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 a0:f8:a6:4d:0e:e0:47:a1:4e:99:3a:e1:24:f4:41:b9 (DSA)
+|_  1024 92:2e:f8:8d:cd:c1:b3:e5:6f:9d:f5:77:55:8c:50:6d (RSA)
+25/tcp closed smtp
+80/tcp closed http
+MAC Address: 00:0C:29:FC:33:6B (VMware)
+Device type: proxy server|general purpose|PBX|terminal server|WAP|specialized
+Running (JUST GUESSING): Riverbed embedded (98%), Linux 2.6.X|2.4.X (97%), Cisco embedded (96%), Lantronix embedded (95%), Ruckus embedded (95%), Riverbed RiOS (92%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/h:cisco:uc320 cpe:/h:lantronix:slc_8 cpe:/o:linux:linux_kernel:2.6.15 cpe:/h:ruckus:zd1050 cpe:/o:linux:linux_kernel:2.4.30 cpe:/o:riverbed:rios
+Aggressive OS guesses: Riverbed Steelhead proxy server (98%), Linux 2.6.9 - 2.6.27 (97%), Cisco UC320 PBX (Linux 2.6) (96%), Linux 2.6.11 (Auditor) (96%), Linux 2.6.23 (95%), Lantronix SLC 8 terminal server (Linux 2.6) (95%), Linux 2.6.15 (likely TP-LINK WAP) (95%), Ruckus ZD1050 WAP (95%), Linux 2.6.20 (Ubuntu, x86_64) (95%), Linux 2.6.5 (SUSE Enterprise Server 9) (95%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.096 days (since Wed Dec  6 14:00:45 2017)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=205 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.26 ms 192.168.0.10
+
+Nmap scan report for 192.168.0.33
+Host is up (0.00046s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE        VERSION
+22/tcp   open  ssh            OpenSSH 4.6 (protocol 1.99)
+| ssh-hostkey: 
+|   2048 7c:81:fa:51:50:e3:70:ba:13:bc:19:39:4c:a4:24:63 (RSA1)
+|   1024 15:04:db:03:4b:89:9a:dc:0f:cf:9a:bd:29:93:c1:41 (DSA)
+|_  2048 34:d1:ff:ff:bc:26:4e:8d:26:8c:77:b0:e2:9d:ef:4f (RSA)
+|_sshv1: Server supports SSHv1
+135/tcp  open  msrpc          Microsoft Windows RPC
+139/tcp  open  netbios-ssn    Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds   Windows XP microsoft-ds
+1025/tcp open  msrpc          Microsoft Windows RPC
+3389/tcp open  ms-wbt-server?
+5000/tcp open  upnp?
+| fingerprint-strings: 
+|   FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, RTSPRequest, SIPOptions: 
+|_    HTTP/1.1 400 Bad Request
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port3389-TCP:V=7.60%I=7%D=12/6%Time=5A285E3E%P=x86_64-pc-linux-gnu%r(Te
+SF:rminalServerCookie,B,"\x03\0\0\x0b\x06\xd0\0\0\x124\0");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port5000-TCP:V=7.60%I=7%D=12/6%Time=5A285E39%P=x86_64-pc-linux-gnu%r(Ge
+SF:nericLines,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(GetReques
+SF:t,1C,"HTTP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(RTSPRequest,1C,"HT
+SF:TP/1\.1\x20400\x20Bad\x20Request\r\n\r\n")%r(HTTPOptions,1C,"HTTP/1\.1\
+SF:x20400\x20Bad\x20Request\r\n\r\n")%r(FourOhFourRequest,1C,"HTTP/1\.1\x2
+SF:0400\x20Bad\x20Request\r\n\r\n")%r(SIPOptions,1C,"HTTP/1\.1\x20400\x20B
+SF:ad\x20Request\r\n\r\n");
+MAC Address: 00:0C:29:35:FC:FD (VMware)
+Device type: general purpose
+Running: Microsoft Windows 2000|XP
+OS CPE: cpe:/o:microsoft:windows_2000::- cpe:/o:microsoft:windows_2000::sp1 cpe:/o:microsoft:windows_2000::sp2 cpe:/o:microsoft:windows_2000::sp3 cpe:/o:microsoft:windows_2000::sp4 cpe:/o:microsoft:windows_xp::- cpe:/o:microsoft:windows_xp::sp1
+OS details: Microsoft Windows 2000 SP0 - SP4 or Windows XP SP0 - SP1
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=137 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Host script results:
+|_clock-skew: mean: -1s, deviation: 0s, median: -1s
+| nbstat: NetBIOS name: UNIVERSI-Q2S87T, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:35:fc:fd (VMware)
+| Names:
+|   UNIVERSI-Q2S87T<00>  Flags: <unique><active>
+|   UNIVERSI-Q2S87T<20>  Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|_  \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   OS CPE: cpe:/o:microsoft:windows_xp::-
+|   Computer name: universi-q2s87t
+|   NetBIOS computer name: UNIVERSI-Q2S87T\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2017-12-06T16:18:39-05:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.46 ms 192.168.0.33
+
+Nmap scan report for 192.168.0.75
+Host is up (0.00027s latency).
+All 1000 scanned ports on 192.168.0.75 are closed
+MAC Address: 00:0C:29:15:84:E7 (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.27 ms 192.168.0.75
+
+Nmap scan report for 192.168.0.100
+Host is up (0.00039s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 4.7p1 Debian 8ubuntu1.2 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 1f:8d:f9:86:f9:c8:d0:01:f5:b7:49:e0:f4:ae:1c:58 (DSA)
+|_  2048 a0:c2:08:b4:9b:db:a0:86:2b:ef:d9:be:94:5f:64:e4 (RSA)
+80/tcp open  http    Apache httpd 2.2.8 ((Ubuntu) PHP/5.2.4-2ubuntu5.7 with Suhosin-Patch)
+| http-methods: 
+|   Supported Methods: GET HEAD POST OPTIONS TRACE
+|_  Potentially risky methods: TRACE
+|_http-server-header: Apache/2.2.8 (Ubuntu) PHP/5.2.4-2ubuntu5.7 with Suhosin-Patch
+|_http-title: Site doesn't have a title (text/html).
+MAC Address: 00:0C:29:95:C6:0C (VMware)
+Device type: general purpose
+Running: Linux 2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.6.9 - 2.6.33
+Uptime guess: 0.095 days (since Wed Dec  6 14:02:03 2017)
+Network Distance: 1 hop
+TCP Sequence Prediction: Difficulty=208 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE
+HOP RTT     ADDRESS
+1   0.39 ms 192.168.0.100
+
+Nmap scan report for 192.168.0.254
+Host is up (-0.10s latency).
+All 1000 scanned ports on 192.168.0.254 are filtered
+MAC Address: 00:50:56:F9:9D:4C (VMware)
+Too many fingerprints match this host to give specific OS details
+Network Distance: 1 hop
+
+TRACEROUTE
+HOP RTT ADDRESS
+1   --  192.168.0.254
+
+Initiating SYN Stealth Scan at 16:18
+Scanning 192.168.0.129 [1000 ports]
+Completed SYN Stealth Scan at 16:18, 1.58s elapsed (1000 total ports)
+Initiating Service scan at 16:18
+Initiating OS detection (try #1) against 192.168.0.129
+Retrying OS detection (try #2) against 192.168.0.129
+adjust_timeouts2: packet supposedly had rtt of -202843 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -202843 microseconds.  Ignoring time.
+WARNING: OS didn't match until try #2
+NSE: Script scanning 192.168.0.129.
+Initiating NSE at 16:18
+Completed NSE at 16:18, 0.01s elapsed
+Initiating NSE at 16:18
+Completed NSE at 16:18, 0.00s elapsed
+Nmap scan report for 192.168.0.129
+Host is up (0.000013s latency).
+All 1000 scanned ports on 192.168.0.129 are closed
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Linux 2.4.X|2.6.X
+OS CPE: cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:linux:linux_kernel:2.6
+OS details: Linux 2.4.20, Linux 2.6.14 - 2.6.34, Linux 2.6.17 (Mandriva), Linux 2.6.23, Linux 2.6.24
+Network Distance: 0 hops
+
+NSE: Script Post-scanning.
+Initiating NSE at 16:18
+Completed NSE at 16:18, 0.00s elapsed
+Initiating NSE at 16:18
+Completed NSE at 16:18, 0.00s elapsed
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 256 IP addresses (7 hosts up) scanned in 262.09 seconds
+           Raw packets sent: 14592 (658.150KB) | Rcvd: 8223 (352.460KB)
+

