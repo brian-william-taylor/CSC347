@@ -1,3 +1,31 @@
+a) Report everything you know about my network and its systems.
+
+Devices: 
+128.100.3.30
+192.168.1.130
+192.168.1.255 destination_only
+239.255.255.250 destination_only - local website
+
+Dell_9f:f3:b0
+	192.168.1.138 - CUPS server
+	00:12:3f:9f:f3:b0
+
+Cisco-Li_a5:a2:2b
+	192.168.1.1
+	00:21:29:a5:a2:2b
+
+PcsComp_37:5b:43
+	192.168.1.130
+	08:00:27:37:5b:43
+
+
+Canon-iP4200
+Canon-MF4100
+
+
+
+b) Riddle: Whats the question? Whats the answer?  
+
 Question is: Who is fast?
 Answer is Arnold!
 
