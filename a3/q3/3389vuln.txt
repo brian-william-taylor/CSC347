@@ -4,8 +4,12 @@ https://www.youtube.com/watch?v=8FhEK296jPg
 Potential Vulnerability:
 
 	PORT: 3389
-	CVE: 
-	DESCRIPTION:  
+	CVE: CVE-2012-0002
+	DESCRIPTION:  The Remote Desktop Protocol (RDP) implementation in Microsoft Windows XP SP2 and SP3, Windows Server 
+		      2003 SP2, Windows Vista SP2, Windows Server 2008 SP2, R2, and R2 SP1, and Windows 7 Gold and SP1 does 
+		      not properly process packets in memory, which allows remote attackers to execute arbitrary code by 
+		      sending crafted RDP packets triggering access to an object that (1) was not properly initialized or (2)
+		      is deleted, aka "Remote Desktop Protocol Vulnerability."	
 	IMPACT: Run code of attacker's choice
 
 The system is exploitable:
@@ -17,8 +21,11 @@ The system is exploitable:
 		exploit
 
 	C: Below explain ways one fixes the VM. 
+		https://docs.microsoft.com/en-us/security-updates/SecurityBulletins/2012/ms12-020
+		
+		1. Disable Terminal Services, Remote Desktop, Remote Assistance feature if no longer required
+		2. 
 
-		1. 
 		
 MetaSploit Log
 ====================================================================================================================
