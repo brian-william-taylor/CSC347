@@ -24,7 +24,8 @@ The system is exploitable:
 		https://docs.microsoft.com/en-us/security-updates/SecurityBulletins/2012/ms12-020
 		
 		1. Disable Terminal Services, Remote Desktop, Remote Assistance feature if no longer required
-		2. 
+		2. Block TCP port 3389 at the firewall
+		3. Update Security Patch
 
 		
 MetaSploit Log
