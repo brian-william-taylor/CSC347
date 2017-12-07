@@ -2,50 +2,24 @@ https://www.offensive-security.com/metasploit-unleashed/scanner-ssh-auxiliary-mo
 https://www.rapid7.com/db/modules/exploit/windows/ssh/sysax_ssh_username
 
 
-
-set auxiliary/scanner/ssh/ssh_login
-set USER_FILE user_list
-set PASS_FILE pass_list
-# as long as csc347:password is a combo, its pwned
-
-
 Potential Vulnerability:
 
-	DESCRIPTION, CVE, PORT etc. GOES HERE
+	PORT: 22
+	DESCRIPTION: This module will test ssh logins on a range of machines and report successful logins. If you have loaded 
+		      a database plugin and connected to a database this module will record successful logins and hosts so 
+		      you can track your access.	
 
 Two possibilities, either it is exploitable or not.
 Fill out below as appropriate.
 
 The system is exploitable:
-	A: I can't seem to find a way to exploit it using MSF.
-
-		SHOW THAT YOU TRIED
-
 	B: Below is an MSF script to exploit it
 
-		YOUR SCRIPT GOES HERE
+		set auxiliary/scanner/ssh/ssh_login
+		set USER_FILE user_list
+		set PASS_FILE pass_list
+		# as long as csc347:password is a combo, its pwned
 
 	C: Below explain ways one fixes the VM. 
 
-		YOUR EXPLANATION GOES HERE
-
-The system is not exploitable, explain why the system is not exploitable
-by filling in the following as appropriate:
-
-	A: There is no known vulnerability
-
-		EXPLAIN HOW YOU KNOW
-
-	B: There appears to be a vulnerability, 
-		but the system is configured to mitigate
-		against it.
-
-		EXPLAIN, SHOW THE CONFIG/MITIGATION
-
-	C: Some versions of the service are vulnerable, this one is not. 
-
-		I searched: YOUR ANSWER HERE (PROVIDE LINKS)
-
-		Vulnerable versions include: YOUR ANSWER HERE (LINKS)
-
-		The system is using version: YOUR ANSWER HERE (HOW DID YOU FIND THIS)
+		1. Change passwords and users from being easy to guess and increase complexity. 
