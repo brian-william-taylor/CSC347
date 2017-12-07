@@ -2,6 +2,13 @@ https://www.offensive-security.com/metasploit-unleashed/scanner-ssh-auxiliary-mo
 https://www.rapid7.com/db/modules/exploit/windows/ssh/sysax_ssh_username
 
 
+
+set auxiliary/scanner/ssh/ssh_login
+set USER_FILE user_list
+set PASS_FILE pass_list
+# as long as csc347:password is a combo, its pwned
+
+
 Potential Vulnerability:
 
 	DESCRIPTION, CVE, PORT etc. GOES HERE
