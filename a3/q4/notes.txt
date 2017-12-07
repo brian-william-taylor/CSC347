@@ -1,0 +1,33 @@
+https://www.perturb.org/content/iptables-rules.html
+http://ipcalc.nmonitoring.com/
+
+
+
+
+# a) block everything from public to private
+iptables --append FORWARD --src 10.10.10.0 / 24 --dst 192.168.0.0 / 24 --jump DROP
+
+# b) accept http
+iptables --append FORWARD --src 10.10.10.0 / 24 --dst 192.168.0.100 --dport 80 --jump ACCEPT
+# and stmp, although that port is not open now on the mail server
+iptables --append FORWARD --src 10.10.10.0 / 24 --dst 192.168.0.100 --dport 587 --jump ACCEPT
+
+# c) allow ssh from 192.168.0.75 to firewall
+iptables --append INPUT --src 192.168.0.75 --sport 22 --jump ACCEPT
+# and block everything else
+iptables --append INPUT --jump DROP
+
+# d) allow ssh from 10.10.10.75 via port 2222 to 192.168.0.100
+iptables --append FORWARD --src 10.10.10.75 --sport 2222 --dst 192.168.0.100 --dport 22 --jump ACCEPT
+# and drop remainder
+iptables --append FORWARD --dst 192.168.0.100 --dport 22 --jump DROP
+
+e) check
+
+# f) Allow CEO RDP, maybe 2 lines for 3389 udp and tcp
+iptables --append FORWARD --src 10.10.10.33 --dst 192.168.0.33 --dport 3389 --jump ACCEPT
+# no one else can connect
+iptables --append FORWARD --dst 192.168.0.33 --dport 3389 --jump DROP
+
+
+# g) Use port forwarding like in d

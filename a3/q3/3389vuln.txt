@@ -1,3 +1,8 @@
+https://www.rapid7.com/db/modules/auxiliary/dos/windows/rdp/ms12_020_maxchannelids
+https://www.youtube.com/watch?v=8FhEK296jPg
+
+
+
 Potential Vulnerability:
 
 	DESCRIPTION, CVE, PORT etc. GOES HERE

@@ -1,4 +1,7 @@
+https://blog.rapid7.com/2014/02/03/new-ms08-067/#https://github.com/sho-luv/getMSPatches
+
 Potential Vulnerability:
+
 
 	DESCRIPTION, CVE, PORT etc. GOES HERE
 

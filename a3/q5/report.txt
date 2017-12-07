@@ -1,0 +1,5 @@
+Question is: Who is fast?
+Answer is Arnold!
+
+Found packet 69 from 192.168.1.130 to 128.100.3.30 accessing /~arnold/347/11f/assignments/03/special/
+Under credentials -> http -> authorization -> credientials we see smartStudent:problemSolved
