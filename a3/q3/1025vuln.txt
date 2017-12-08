@@ -1,24 +1,17 @@
 https://www.rapid7.com/db/modules/exploit/windows/dcerpc/ms05_017_msmq
+https://cyruslab.net/2012/03/06/metasploit-gaining-remote-access-to-windows-xp/
+
 
 Potential Vulnerability:
 
-	DESCRIPTION, CVE, PORT etc. GOES HERE
+	PORT: 1025
+	CVE: CVE-2003-0352
+	DESCRIPTION:  Buffer overflow in a certain DCOM interface for RPC in Microsoft Windows NT 4.0, 2000, XP, and Server
+		      2003 allows remote attackers to execute arbitrary code via a malformed message, as exploited by the 
+		      Blaster/MSblast/LovSAN and Nachi/Welchia worms.	
+	IMPACT: Run code of attacker's choice
 
-Two possibilities, either it is exploitable or not.
-Fill out below as appropriate.
 
-The system is exploitable:
-	A: I can't seem to find a way to exploit it using MSF.
-
-		SHOW THAT YOU TRIED
-
-	B: Below is an MSF script to exploit it
-
-		YOUR SCRIPT GOES HERE
-
-	C: Below explain ways one fixes the VM. 
-
-		YOUR EXPLANATION GOES HERE
 
 The system is not exploitable, explain why the system is not exploitable
 by filling in the following as appropriate:
@@ -31,12 +24,13 @@ by filling in the following as appropriate:
 		but the system is configured to mitigate
 		against it.
 
-		EXPLAIN, SHOW THE CONFIG/MITIGATION
-
+		
 	C: Some versions of the service are vulnerable, this one is not. 
 
-		I searched: YOUR ANSWER HERE (PROVIDE LINKS)
+		I searched: - https://www.rapid7.com/db/search?utf8=%E2%9C%93&q=1025+msrpc&t=a
+			    - https://www.rapid7.com/db/search?utf8=%E2%9C%93&q=msrpc&t=a
 
-		Vulnerable versions include: YOUR ANSWER HERE (LINKS)
+		Vulnerable versions include: - https://cyruslab.net/2012/03/06/metasploit-gaining-remote-access-to-windows-xp/
+					     - https://docs.microsoft.com/en-us/security-updates/securitybulletins/2003/ms03-026
 
-		The system is using version: YOUR ANSWER HERE (HOW DID YOU FIND THIS)
+		The system is using version: Port 1025 for msrpc
