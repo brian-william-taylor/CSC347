@@ -26,7 +26,7 @@
 /sbin/iptables -A FORWARD -p tcp -d 192.168.0.100 --dport 80 -j ACCEPT
 
 # (c) Allow 192.168.0.75 to ssh into the firewall. No other access into the firewall is permitted. 
-/sbin/iptables -A INPUT -p tcp --dport 22 -s 192.168.0.80 -j ACCEPT
+/sbin/iptables -A INPUT -p tcp --dport 22 -s 192.168.0.75 -j ACCEPT
 
 # (d) Allow 10.10.10.75 (outside the local network) to ssh into the web/mail
 # server by using port 2222 on the external side of the firewall.
@@ -38,11 +38,16 @@
 /sbin/iptables -t nat -A PREROUTING -s 10.10.10.33 -p tcp --dport 7784 -i eth0 -j DNAT --to 192.168.0.33:3389
 /sbin/iptables -A FORWARD -p tcp -d 192.168.0.33 --dport 3389 -j ACCEPT
 
-# (h)  Finally, imagine that the only routable IP is 10.10.10.10. 
+# (g) Sid has a windows box inside the private network (192.168.0.37). 
+# Sid (with fixed IP 10.10.10.211) would like to have remote desktop access to his desktop on port _.
+/sbin/iptables -t nat -A PREROUTING -s 10.10.10.37 -p tcp --dport 7785 -i eth0 -j DNAT --to 192.168.0.37:3389
+/sbin/iptables -A FORWARD -p tcp -d 192.168.0.37 --dport 3389 -j ACCEPT
+
+
+
+# (i)  Finally, imagine that the only routable IP is 10.10.10.10. 
 # All internal machines should share this IP for Internet traffic. 
-#	- We only allow (http,https) to be the Internet traffic
-#/sbin/iptables -t nat -A POSTROUTING -o eth0 -j SNAT --to 10.10.10.10
+/sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE 
 #	- Allow http
 #/sbin/iptables -A FORWARD -s 192.168.0.0/255.255.255.0 -p tcp --dport 80 -j ACCEPT
-#	- Allow https
-#/sbin/iptables -A FORWARD -s 192.168.0.0/255.255.255.0 -p tcp --dport 443 -j ACCEPT
+
