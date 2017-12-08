@@ -42,6 +42,7 @@
 # Sid (with fixed IP 10.10.10.211) would like to have remote desktop access to his desktop on port _.
 /sbin/iptables -t nat -A PREROUTING -s 10.10.10.37 -p tcp --dport 7785 -i eth0 -j DNAT --to 192.168.0.37:3389
 /sbin/iptables -A FORWARD -p tcp -d 192.168.0.37 --dport 3389 -j ACCEPT
+/sbin/iptables -A INPUT -s 10.10.10.128 -j DROP
 
 
 
