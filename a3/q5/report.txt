@@ -1,11 +1,6 @@
 a) Report everything you know about my network and its systems.
 
 Devices: 
-128.100.3.30
-192.168.1.130
-192.168.1.255 destination_only
-239.255.255.250 destination_only - local website
-
 Dell_9f:f3:b0
 	192.168.1.138 - CUPS server
 	00:12:3f:9f:f3:b0
@@ -13,14 +8,20 @@ Dell_9f:f3:b0
 Cisco-Li_a5:a2:2b
 	192.168.1.1
 	00:21:29:a5:a2:2b
+	colony.cs.toronto.edu
 
 PcsComp_37:5b:43
 	192.168.1.130
 	08:00:27:37:5b:43
 
+IntelCor_ce:32:c5 (00:13:02:ce:32:c5)
 
+Printers:
 Canon-iP4200
 Canon-MF4100
+
+The cups server connects to the 2 printers using port 631. It also send out an ARP request to find who has 192.168.1.137. 
+192.168.1.130 makes multiple attempts to login to /~arnold/347/11f/assignments/03/special/ one of which is successful. We can see the DNS protocol which allows us to map website URL's to IPs.
 
 
 
