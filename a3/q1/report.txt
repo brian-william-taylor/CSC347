@@ -1,1 +1,41 @@
 Place your zenmap report here + a summary of what you found.
+
+
+192.168.0.1:
+	00:50:56:c0:00:08
+	Linux 3.10-4.8
+	Port 22 open for ssh
+
+192.168.0.10:
+	00:0c:29:fc:33:6b
+	Riverbed Steelhead proxy server
+	Port 22 open for ssh
+	Ports 21, 25 and 80 are closed (for ftp,smtp,http respectively)
+	
+192.168.0.33:
+	00:0c:29:35:fc:fd
+	Microsoft Windows 2000 SP0-SP4 or (correctly) Windows XP SP0-SP1
+	Port 22 open for ssh
+	Port 135 open for msrpc
+	Port 139 open for netbios-ssn
+	Port 445 open for microsoft-ds
+	Port 1025 open for msrpc
+	Port 3389 open for ms-wbt-server
+	Port 5000 open for upnp
+
+192.168.0.75:
+	00:0c:29:15:84:e7
+	
+192.168.0.100:
+	00:0c:29:95:c6:0c
+	Linux 2.6.9-2.6.33
+	Port 22 open for ssh
+	Port 80 open for http
+
+192.168.0.129:
+	Linux 2.4.20
+
+192.168.0.254:
+	00:50:56:f9:9d:4c
+	
+
