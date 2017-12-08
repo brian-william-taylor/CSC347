@@ -49,6 +49,5 @@
 # (i)  Finally, imagine that the only routable IP is 10.10.10.10. 
 # All internal machines should share this IP for Internet traffic. 
 /sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE 
-#	- Allow http
 #/sbin/iptables -A FORWARD -s 192.168.0.0/255.255.255.0 -p tcp --dport 80 -j ACCEPT
 
