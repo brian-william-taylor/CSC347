@@ -1,15 +1,17 @@
 Potential Vulnerability:
 
-	DESCRIPTION, CVE, PORT etc. GOES HERE
+	CVE: CVE-2012-1823
+	DESCRIPTION:  sapi/cgi/cgi_main.c in PHP before 5.3.12 and 5.4.x before 5.4.2, when configured as a CGI script (aka php-cgi), 
+			does not properly handle query strings that lack an = (equals sign) character, which allows remote attackers to 
+			execute arbitrary code by placing command-line options in the query string, related to lack of skipping a certain 
+			php_getopt for the 'd' case.	
 
 
 The system is not exploitable, explain why the system is not exploitable
 by filling in the following as appropriate:
 
 
-	B: There appears to be a vulnerability, 
-		but the system is configured to mitigate
-		against it.
+	B: There appears to be a vulnerability, but the system is configured to mitigate against it.
 		http://eindbazen.net/2012/05/php-cgi-advisory-cve-2012-1823
 		https://www.rapid7.com/db/modules/exploit/multi/http/php_cgi_arg_injection
 		https://www.cvedetails.com/cve/CVE-2012-1823/#metasploit
