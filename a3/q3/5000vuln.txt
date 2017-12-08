@@ -1,43 +1,27 @@
 https://www.rapid7.com/db/vulnerabilities/HTTP-UPNP-0001
+https://docs.microsoft.com/en-us/security-updates/securitybulletins/2001/ms01-059
 
 
 Potential Vulnerability:
 
-	DESCRIPTION, CVE, PORT etc. GOES HERE
-
+	PORT: 5000
+	CVE: CVE-2001-0876
+	DESCRIPTION:  Buffer overflow in Universal Plug and Play (UPnP) on Windows 98, 98SE, ME, and XP allows remote attackers to 
+		      execute arbitrary code via a NOTIFY directive with a long Location URL.
+	
 Two possibilities, either it is exploitable or not.
 Fill out below as appropriate.
-
-The system is exploitable:
-	A: I can't seem to find a way to exploit it using MSF.
-
-		SHOW THAT YOU TRIED
-
-	B: Below is an MSF script to exploit it
-
-		YOUR SCRIPT GOES HERE
-
-	C: Below explain ways one fixes the VM. 
-
-		YOUR EXPLANATION GOES HERE
 
 The system is not exploitable, explain why the system is not exploitable
 by filling in the following as appropriate:
 
-	A: There is no known vulnerability
-
-		EXPLAIN HOW YOU KNOW
-
-	B: There appears to be a vulnerability, 
-		but the system is configured to mitigate
-		against it.
-
-		EXPLAIN, SHOW THE CONFIG/MITIGATION
 
 	C: Some versions of the service are vulnerable, this one is not. 
+		The original version of XP was vunerable to Unchecked Buffer in Universal Plug and Play can Lead to System Compromise
+		which was fixed in Windows XP service pack 1.
+		
+		I searched: https://www.rapid7.com/db/search?utf8=%E2%9C%93&q=Windows+XP+UPnP&t=a
 
-		I searched: YOUR ANSWER HERE (PROVIDE LINKS)
+		Vulnerable versions include: Windows XP 
 
-		Vulnerable versions include: YOUR ANSWER HERE (LINKS)
-
-		The system is using version: YOUR ANSWER HERE (HOW DID YOU FIND THIS)
+		The system is using version: Windows XP Service Pack One
